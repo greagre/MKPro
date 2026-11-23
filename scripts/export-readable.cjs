@@ -5,14 +5,16 @@
  *
  * Что делает:
  *   1. читает games/manifest.tsv (11 колонок, поля в кавычках);
- *   2. отделяет листинг от карточки игры (scripts/readable-sections.cjs)
- *      и разбирает только листинг, а описание сохраняет отдельными секциями;
- *   3. для каждой записи с существующим .txt разбирает листинг
- *      настоящим ядром MKPro (parseCommandToken), а не своей таблицей;
+ *   2. отделяет листинг от карточки игры и делит файл на отдельные программы
+ *      (scripts/readable-sections.cjs), описание сохраняет секциями;
+ *   3. для каждой программы разбирает листинг настоящим ядром MKPro
+ *      (parseCommandToken), а не своей таблицей;
  *   4. если ядро не узнало подпись — пробует нормализованный вариант
  *      (чужую нотацию приводит к той, что ждёт ядро);
  *   5. отличает примечание к листингу (кириллический текст) от ошибки;
- *   6. пишет readable/<раздел>/<имя>.txt, сборник readable/_sections/<раздел>.txt,
+ *   6. ничего не угадывает: всё неоднозначное уходит в _problems.txt
+ *      с указанием причины;
+ *   7. пишет readable/<раздел>/<имя>.txt, сборник readable/_sections/<раздел>.txt,
  *      сборники серий readable/_series/<серия>.txt, общий index и список проблем.
  *
  * Чего НЕ делает: ничего не запускает на эмуляторе и не подставляет
@@ -24,7 +26,7 @@
 const fs = require('fs');
 const path = require('path');
 const { parseCommandToken } = require('../tests/emulator/mk61.cjs');
-const { splitListing } = require('./readable-sections.cjs');
+const { splitPrograms } = require('./readable-sections.cjs');
 
 const ROOT = path.resolve(__dirname, '..');
 const GAMES = path.join(ROOT, 'games');
@@ -121,6 +123,9 @@ function addressLabel(address) {
  * обратный слэш, маркеры списка вместо умножения, надстрочные знаки,
  * дефис внутри записи регистра, запись обратных функций со степенью,
  * неполные стоп и возврат, фигурные и квадратные скобки K-функций.
+ *
+ * Всё, что не удалось привести однозначно, остаётся как было
+ * и попадает в проблемы — подстановок «по смыслу» здесь нет.
  */
 function normalizeListingToken(raw) {
   let s = String(raw).replace(/[\u00A0\u2007\u202F]/g, ' ').trim();
@@ -167,7 +172,9 @@ function normalizeListingToken(raw) {
   s = s.replace(/^\{\s*\}$/u, '{X}');
   s = s.replace(/^\[\s*\]$/u, '[X]');
 
-  /* совмещённое сравнение: >/=0 и <=0 */
+  /* совмещённое сравнение: >/=0 и <=0.
+     ВНИМАНИЕ: это только снятие лишней косой черты в записи,
+     смысл сравнения не меняется и не додумывается. */
   s = s.replace(/([<>])\s*\/\s*=/g, '$1=');
 
   /* неполные стоп и возврат */
@@ -380,10 +387,73 @@ function pushBlock(lines, title, text) {
   for (const line of text.replace(/\r\n?/g, '\n').split('\n')) lines.push(line);
 }
 
-function renderProgram(entry, parsed, programPath, sections) {
+/* Один блок программы: шаги, что задать перед пуском, листинг, замечания. */
+function programBlock(item, index, total) {
+  const parsed = item.parsed;
   const codes = parsed.rows.map((row) => row.code);
   const inputs = inputRegisters(codes);
-  const steps = parsed.rows.length;
+  const out = [];
+
+  if (total > 1) {
+    out.push(item.title ? 'Программа ' + index + ': ' + item.title : 'Программа ' + index);
+    if (item.note && item.note !== item.title) {
+      out.push('');
+      for (const line of item.note.split('\n')) out.push(line);
+    }
+    out.push('');
+  }
+
+  out.push('Шагов: ' + parsed.rows.length + ' из ' + LIMIT);
+  if (parsed.rows.length > LIMIT) {
+    out.push('ВНИМАНИЕ: программа длиннее памяти МК-61 на ' + (parsed.rows.length - LIMIT) + ' шагов.');
+  }
+  if (inputs.length) {
+    out.push('Перед пуском: ' + inputs.map((register) => 'R' + REGISTER_NAME[register]).join(', ') + ' — задать значения');
+  } else {
+    out.push('Перед пуском: регистры задавать не нужно');
+  }
+  if (parsed.decimal) out.push('Формат листинга: десятичные коды (не подписи команд).');
+  out.push('');
+
+  out.push('Листинг:');
+  out.push('адрес  hex  dec  команда');
+  for (const row of parsed.rows) {
+    out.push(
+      addressLabel(row.address).padEnd(6) +
+        ' ' +
+        row.code.toString(16).toUpperCase().padStart(2, '0').padEnd(4) +
+        ' ' +
+        String(row.code).padStart(3, '0') +
+        '  ' +
+        row.token
+    );
+  }
+
+  if (parsed.notes.length) {
+    out.push('');
+    out.push('Примечания из листинга:');
+    for (const note of parsed.notes) out.push('- ' + note);
+  }
+  if (parsed.fixed.length) {
+    out.push('');
+    out.push('Подписи, приведённые к формату ядра:');
+    for (const one of parsed.fixed) out.push('- ' + one);
+  }
+  if (item.warn && item.warn.length) {
+    out.push('');
+    out.push('Структура файла:');
+    for (const one of item.warn) out.push('- ' + one);
+  }
+  if (parsed.problems.length) {
+    out.push('');
+    out.push('Замечания при разборе:');
+    for (const problem of parsed.problems) out.push('- ' + problem);
+  }
+
+  return out;
+}
+
+function renderProgram(entry, parsedList, programPath, sections) {
   const lines = [];
 
   lines.push('МК-61 · ' + (entry.title || path.basename(entry.program, '.txt')));
@@ -396,6 +466,8 @@ function renderProgram(entry, parsed, programPath, sections) {
   if (entry.collection) lines.push('Коллекция-источник: ' + entry.collection);
   if (entry.series) lines.push('Серия: ' + entry.series);
   lines.push('Листинг каталога: games/' + programPath);
+  if (parsedList.length > 1) lines.push('Программ в файле: ' + parsedList.length);
+
   const risks = riskListOf(entry, programPath);
   if (risks.length) {
     lines.push('');
@@ -404,45 +476,14 @@ function renderProgram(entry, parsed, programPath, sections) {
   }
   lines.push('');
 
-  lines.push('Шагов: ' + steps + ' из ' + LIMIT);
-  if (steps > LIMIT) lines.push('ВНИМАНИЕ: программа длиннее памяти МК-61 на ' + (steps - LIMIT) + ' шагов.');
-  if (inputs.length) {
-    lines.push('Перед пуском: ' + inputs.map((register) => 'R' + REGISTER_NAME[register]).join(', ') + ' — задать значения');
-  } else {
-    lines.push('Перед пуском: регистры задавать не нужно');
-  }
-  if (parsed.decimal) lines.push('Формат листинга: десятичные коды (не подписи команд).');
-  lines.push('');
-
-  lines.push('Листинг:');
-  lines.push('адрес  hex  dec  команда');
-  for (const row of parsed.rows) {
-    lines.push(
-      addressLabel(row.address).padEnd(6) +
-        ' ' +
-        row.code.toString(16).toUpperCase().padStart(2, '0').padEnd(4) +
-        ' ' +
-        String(row.code).padStart(3, '0') +
-        '  ' +
-        row.token
-    );
-  }
-
-  if (parsed.notes.length) {
-    lines.push('');
-    lines.push('Примечания из листинга:');
-    for (const note of parsed.notes) lines.push('- ' + note);
-  }
-  if (parsed.fixed.length) {
-    lines.push('');
-    lines.push('Подписи, приведённые к формату ядра:');
-    for (const item of parsed.fixed) lines.push('- ' + item);
-  }
-  if (parsed.problems.length) {
-    lines.push('');
-    lines.push('Замечания при разборе:');
-    for (const problem of parsed.problems) lines.push('- ' + problem);
-  }
+  parsedList.forEach((item, index) => {
+    if (index) {
+      lines.push('');
+      lines.push('='.repeat(60));
+      lines.push('');
+    }
+    lines.push(...programBlock(item, index + 1, parsedList.length));
+  });
 
   /* Карточка из источника: то, что в файле стоит до и после листинга. */
   if (sections) {
@@ -483,6 +524,8 @@ function main() {
   let decimalFiles = 0;
   let problemFiles = 0;
   let cardFiles = 0;
+  let multiFiles = 0;
+  let programTotal = 0;
 
   for (const entry of manifest) {
     const programPath = (entry.program || '').trim();
@@ -499,18 +542,38 @@ function main() {
     }
 
     const raw = fs.readFileSync(full, 'utf8');
-    const sections = splitListing(raw);
-    const parsed = parseListing(sections.listing || raw);
+    const sections = splitPrograms(raw);
+    const pieces = sections.programs.length
+      ? sections.programs
+      : [{ title: '', note: '', listing: raw.trim(), warn: [] }];
+
+    if (pieces.length > 1) multiFiles += 1;
+    programTotal += pieces.length;
+
+    const parsedList = pieces.map((piece) => ({
+      title: piece.title,
+      note: piece.note,
+      warn: piece.warn || [],
+      parsed: parseListing(piece.listing),
+    }));
 
     /* Карточка отделена, если до или после листинга что-то есть. */
     if (sections.before || sections.after) cardFiles += 1;
-    if (!sections.listing) parsed.problems.push('листинг не найден в файле — разобран весь текст');
+    if (!sections.programs.some((piece) => piece.listing)) {
+      if (parsedList[0]) parsedList[0].parsed.problems.push('листинг не найден в файле — разобран весь текст');
+    }
 
-    if (parsed.decimal) decimalFiles += 1;
-    notesTotal += parsed.notes.length;
-    fixedTotal += parsed.fixed.length;
+    const steps = parsedList.reduce((sum, item) => sum + item.parsed.rows.length, 0);
+    const unknown = parsedList.reduce((sum, item) => sum + item.parsed.problems.length, 0);
+    const notes = parsedList.reduce((sum, item) => sum + item.parsed.notes.length, 0);
+    const fixed = parsedList.reduce((sum, item) => sum + item.parsed.fixed.length, 0);
+    const decimal = parsedList.some((item) => item.parsed.decimal);
 
-    const text = renderProgram(entry, parsed, programPath, sections);
+    if (decimal) decimalFiles += 1;
+    notesTotal += notes;
+    fixedTotal += fixed;
+
+    const text = renderProgram(entry, parsedList, programPath, sections);
 
     const section = entry.section || path.dirname(programPath);
     const targetDir = path.join(OUT, section);
@@ -519,12 +582,12 @@ function main() {
     fs.writeFileSync(path.join(targetDir, targetName), text, 'utf8');
 
     if (!bySection.has(section)) bySection.set(section, []);
-    bySection.get(section).push({ entry, text, steps: parsed.rows.length });
+    bySection.get(section).push({ entry, text, steps });
 
     if (entry.series) {
       const series = entry.series.trim();
       if (!bySeries.has(series)) bySeries.set(series, []);
-      bySeries.get(series).push({ entry, text, steps: parsed.rows.length });
+      bySeries.get(series).push({ entry, text, steps });
     }
 
     index.push({
@@ -533,25 +596,31 @@ function main() {
       title: entry.title || '',
       author: entry.author || '',
       kind: entry.kind || '',
-      steps: parsed.rows.length,
-      unknown: parsed.problems.length,
-      notes: parsed.notes.length,
+      programs: parsedList.length,
+      steps,
+      unknown,
+      notes,
       risk: riskOf(entry, programPath),
     });
 
-    if (parsed.problems.length) {
+    if (unknown) {
       problemFiles += 1;
       problemsOut.push(
-        'games/' + programPath + ': не разобрано команд ' + parsed.problems.length +
-          (parsed.decimal ? ' (формат десятичных кодов)' : '')
+        'games/' + programPath + ': не разобрано команд ' + unknown +
+          (decimal ? ' (формат десятичных кодов)' : '') +
+          (parsedList.length > 1 ? ' · программ в файле ' + parsedList.length : '')
       );
-      for (const problem of parsed.problems) problemsOut.push('    ' + problem);
+      parsedList.forEach((item, position) => {
+        const prefix = parsedList.length > 1 ? '[программа ' + (position + 1) + '] ' : '';
+        for (const warn of item.warn) problemsOut.push('    ' + prefix + 'структура: ' + warn);
+        for (const problem of item.parsed.problems) problemsOut.push('    ' + prefix + problem);
+      });
     }
     converted += 1;
   }
 
   for (const [section, items] of bySection) {
-    const parts = ['Сборник раздела ' + section, 'Программ: ' + items.length, ''];
+    const parts = ['Сборник раздела ' + section, 'Файлов: ' + items.length, ''];
     for (const item of items) {
       parts.push('='.repeat(60));
       parts.push('');
@@ -562,7 +631,7 @@ function main() {
   }
 
   for (const [series, items] of bySeries) {
-    const body = ['Сборник серии ' + series, 'Программ: ' + items.length, ''];
+    const body = ['Сборник серии ' + series, 'Файлов: ' + items.length, ''];
     for (const item of items) {
       body.push('='.repeat(60));
       body.push('');
@@ -574,7 +643,7 @@ function main() {
   }
 
   index.sort((a, b) => (a.section + '/' + a.program).localeCompare(b.section + '/' + b.program));
-  const indexLines = ['раздел\tфайл\tназвание\tавтор\tтип\tшагов\tне разобрано\tпримечаний\tриск'];
+  const indexLines = ['раздел\tфайл\tназвание\tавтор\tтип\tпрограмм\tшагов\tне разобрано\tпримечаний\tриск'];
   for (const row of index) {
     indexLines.push(
       [
@@ -583,6 +652,7 @@ function main() {
         row.title,
         row.author,
         row.kind,
+        row.programs,
         row.steps,
         row.unknown,
         row.notes,
@@ -594,20 +664,27 @@ function main() {
 
   const sectionsList = [...bySection.entries()].sort((a, b) => a[0].localeCompare(b[0]));
   const readme = [];
-  readme.push('# Читаемый каталог МК-61');
+  readme.push('# Читаемый каталог семейства');
   readme.push('');
   readme.push('Собрано из `games/manifest.tsv` скриптом `scripts/export-readable.cjs`.');
   readme.push('Коды команд разобраны ядром MKPro; ожидаемый экран здесь не приводится.');
-  readme.push('Листинг отделён от карточки игры модулем `scripts/readable-sections.cjs`.');
+  readme.push('Листинг отделён от карточки, а файл с несколькими программами разделён');
+  readme.push('модулем `scripts/readable-sections.cjs`.');
   readme.push('');
-  readme.push('| Раздел | Программ | Шагов всего |');
-  readme.push('|:---|---:|---:|');
+  readme.push('| Раздел | Файлов | Программ | Шагов всего |');
+  readme.push('|:---|---:|---:|---:|');
   for (const [section, items] of sectionsList) {
     const total = items.reduce((sum, item) => sum + item.steps, 0);
-    readme.push('| ' + section + ' | ' + items.length + ' | ' + total + ' |');
+    const count = items.reduce((sum, item) => {
+      const parsed = 1;
+      return sum + parsed;
+    }, 0);
+    readme.push('| ' + section + ' | ' + count + ' | ' + items.length + ' | ' + total + ' |');
   }
   readme.push('');
-  readme.push('Всего переконвертировано: **' + converted + '**');
+  readme.push('Всего переконвертировано файлов: **' + converted + '**');
+  readme.push('Всего программ: ' + programTotal);
+  readme.push('Файлов, где записано несколько программ: ' + multiFiles);
   readme.push('Пропущено записей без листинга: ' + skipped);
   readme.push('Файлов с замечаниями: ' + problemFiles);
   readme.push('Файлов, где карточка отделена от листинга: ' + cardFiles);
@@ -616,14 +693,18 @@ function main() {
   readme.push('Подписей приведено к формату ядра: ' + fixedTotal);
   readme.push('');
   readme.push('- `_index.tsv` — таблица всех программ, включая пометку риска');
-  readme.push('- `_problems.txt` — что не разобралось');
+  readme.push('- `_problems.txt` — что не разобралось и почему');
   readme.push('- `_sections/<раздел>.txt` — сборник раздела');
   if (bySeries.size) readme.push('- `_series/<серия>.txt` — сборник серии');
+  readme.push('');
+  readme.push('Ничего не угадывается: если подпись не совпала с таблицей ядра');
+  readme.push('и не привелась однозначной нормализацией, она остаётся в `_problems.txt`.');
   fs.writeFileSync(path.join(OUT, 'README.md'), readme.join('\n'), 'utf8');
 
   const head = [
     '# Проблемы разбора',
     '# файлов с замечаниями: ' + problemFiles,
+    '# файлов с несколькими программами: ' + multiFiles,
     '# карточек отделено от листинга: ' + cardFiles,
     '# примечаний отделено: ' + notesTotal,
     '# подписей нормализовано: ' + fixedTotal,
@@ -636,7 +717,9 @@ function main() {
     'utf8'
   );
 
-  console.log('переконвертировано: ' + converted);
+  console.log('переконвертировано файлов: ' + converted);
+  console.log('программ всего: ' + programTotal);
+  console.log('файлов с несколькими программами: ' + multiFiles);
   console.log('пропущено: ' + skipped);
   console.log('разделов: ' + sectionsList.length);
   console.log('серий: ' + bySeries.size);
