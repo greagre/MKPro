@@ -94,8 +94,8 @@ adventure	adventure/black-lord.txt	Black Lord	Евгений Кузниченк�
 adventure	adventure/brodyaga-vselennoy-2.txt	brodyaga vselennoy-2	А. Пирожков	game	99	0	0	
 adventure	adventure/brodyaga-vselennoy-3.txt	brodyaga vselennoy-3	А. Пирожков	game	105	2	0	
 adventure	adventure/brodyaga.txt	brodyaga	Михаил Храмов	game	90	0	0	
-adventure	adventure/cave.txt	Cave	illi4	game	105	23	0	
-adventure	adventure/colis-secret-base-dolgushin-notebook-2.txt	COLiS: SECRET BASE	Александр Долгушин	game	106	72	1	manuscript
+adventure	adventure/cave.txt	Cave	illi4	game	105	1	0	
+adventure	adventure/colis-secret-base-dolgushin-notebook-2.txt	COLiS: SECRET BASE	Александр Долгушин	game	106	19	1	manuscript
 adventure	adventure/dolina.txt	dolina	А. Н. Гришин, Владимир Трофимчук	game	105	1	0	
 adventure	adventure/dracula-dolgushin-notebook.txt	DRACULA	Александр Долгушин	game	105	0	0	manuscript
 adventure	adventure/dungeon.txt	Dungeon	С. Андрианов	game	105	0	0	
@@ -186,7 +186,7 @@ arcade	arcade/pi-cho-variant.txt	Пи-чо		game	105	1	0
 arcade	arcade/pi-cho.txt	pi-cho	А. В. Раков	game	101	0	0	
 arcade	arcade/safari.txt	safari	Сергей Чурсанов	game	99	0	0	
 arcade	arcade/skala.txt	skala	С. И. Пономарёв	game	99	0	0	
-arcade	arcade/teenage-mutant-ninja-turtles-dolgushin-notebook-2.txt	TEENAGE-MUTANT NINJA TURTLES	Александр Долгушин	game	114	70	0	manuscript
+arcade	arcade/teenage-mutant-ninja-turtles-dolgushin-notebook-2.txt	TEENAGE-MUTANT NINJA TURTLES	Александр Долгушин	game	108	18	0	manuscript
 arcade	arcade/tetris-lordbss.txt	tetris	Дмитрий Моргунов	game	60	0	0	
 arcade	arcade/tetris.txt	tetris	Александр Михолап	game	60	0	0	
 arcade	arcade/tom-i-dzherri-2.txt	tom i dzherri-2	Евгений Кузниченко	game	100	0	0	
@@ -240,7 +240,7 @@ gambling	gambling/karusel-loto-gaishtut-1988.txt	Карусель-лото		game
 gambling	gambling/kazino.txt	kazino	Евгений Кузниченко	game	105	0	0	
 gambling	gambling/klondayk-dolgushin-notebook.txt	Клондайк	А. Щекалев	game	105	0	0	manuscript
 gambling	gambling/klondayk.txt	klondayk	А. Щекалев	game	105	0	0	
-gambling	gambling/loterei-kubik-orel-reshka-renat-notebook.txt	Лотереи: кубик, перебор, орёл-решка с заданной вероятностью	автор неизвестен	game	69	39	0	manuscript
+gambling	gambling/loterei-kubik-orel-reshka-renat-notebook.txt	Лотереи: кубик, перебор, орёл-решка с заданной вероятностью	автор неизвестен	game	69	38	0	manuscript
 gambling	gambling/lotereya-2000-dolgushin-notebook.txt	Лотерея 2000	Александр Долгушин	game	98	0	0	manuscript
 gambling	gambling/lotereya-renat-notebook.txt	Лотерея	автор неизвестен	game	25	0	0	manuscript
 gambling	gambling/monte-karlo.txt	monte-karlo	Анатолий Кондратьев	game	81	1	0	
@@ -330,7 +330,7 @@ logic	logic/missionery-i-lyudoedy-shapiro-boyko-1989.txt	Миссионеры и
 logic	logic/monti.txt	monti	Евгений Кузниченко	game	105	0	0	
 logic	logic/mushketery-belymi-c3000.txt	Игра белыми в «Мушкетеры»	Я. К. Трохименко	game	57	0	0	c3000
 logic	logic/mustang-8x8-variant.txt	Охота на мустанга		game	98	0	0	
-logic	logic/mustang-8x8.txt	Mustang 8x8	Н. Ромашов	game	98	26	0	
+logic	logic/mustang-8x8.txt	Mustang 8x8	Н. Ромашов	game	98	1	0	
 logic	logic/nim-s-odnoy-kuchey.txt	Ним с одной кучей	Сергей Храмов	game	80	0	0	
 logic	logic/nim-tri-kuchi-brp4.txt	Ним с тремя кучами — БРП-4		game	98	0	0	brp4
 logic	logic/nim-tri-mnozhestva-c3000.txt	Ним с тремя множествами предметов	Я. К. Трохименко	game	98	0	0	c3000
@@ -421,20 +421,20 @@ simulation	simulation/combat-maneuver-turn.txt	Combat Maneuvering: Unsteady Turn
 simulation	simulation/combat-maneuver-vertical.txt	Combat Maneuvering: Vertical Flight	В. Довбня, В. Теряев	game	96	0	0	
 simulation	simulation/cooperative-2.txt	Cooperative 2	st	game	105	3	0	
 simulation	simulation/cooperative-cafe-variant.txt	Кооперативное кафе		game	105	0	0	
-simulation	simulation/cooperative-cafe.txt	Cooperative Cafe	illi4	game	105	22	0	
-simulation	simulation/course-of-voyage-caston-city-dolgushin-notebook-2.txt	COURSE OF <VOYAGE> - CASTON CITY	Александр Долгушин	game	113	63	0	manuscript
+simulation	simulation/cooperative-cafe.txt	Cooperative Cafe	illi4	game	105	2	0	
+simulation	simulation/course-of-voyage-caston-city-dolgushin-notebook-2.txt	COURSE OF <VOYAGE> - CASTON CITY	Александр Долгушин	game	108	17	0	manuscript
 simulation	simulation/dangerous-loading.txt	Опасная погрузка		game	101	0	0	
 simulation	simulation/dispetcher-2.txt	dispetcher-2	Александр Михолап	game	105	0	0	
 simulation	simulation/dispetcher.txt	dispetcher	П. Аронович	game	104	2	0	
 simulation	simulation/elita.txt	elita	Владимир Сивицкий	game	104	0	0	
 simulation	simulation/elite-2-dolgushin-notebook.txt	ELITE 2	Александр Долгушин	game	102	0	0	manuscript
 simulation	simulation/elite-dolgushin-notebook.txt	ELITE	Александр Долгушин	game	105	0	0	manuscript
-simulation	simulation/elite-iii-coriolis-dolgushin-notebook-2.txt	ELITE III (CORiOLiS)	Александр Долгушин	game	105	71	0	manuscript
+simulation	simulation/elite-iii-coriolis-dolgushin-notebook-2.txt	ELITE III (CORiOLiS)	Александр Долгушин	game	105	13	0	manuscript
 simulation	simulation/elite.txt	Elite	Владимир Трофимчук	game	105	0	0	
 simulation	simulation/fondovaya-birzha.txt	fondovaya birzha	Сергей Блищавенко	game	105	0	0	
 simulation	simulation/hamurabi-poloczek-1983.txt	Хаммурапи — компактная экономическая модель	Peter G. Poloczek	game	105	0	0	modernized
-simulation	simulation/harvest-extensive-model.txt	Harvest Extensive Model	illi4	game	105	32	0	
-simulation	simulation/harvest-intensive-model.txt	Harvest Intensive Model	illi4	game	105	33	0	
+simulation	simulation/harvest-extensive-model.txt	Harvest Extensive Model	illi4	game	105	1	0	
+simulation	simulation/harvest-intensive-model.txt	Harvest Intensive Model	illi4	game	105	1	0	
 simulation	simulation/ispytateli-vertoletov-c3000.txt	Испытатели вертолетов	Я. К. Трохименко	game	62	0	0	c3000
 simulation	simulation/kafe-geocities.txt	Кафе (GeoCities)	В. Алексеев	game	98	0	0	
 simulation	simulation/kapitan.txt	kapitan	А. Тимошкин	game	60	0	0	
@@ -557,7 +557,7 @@ sports	sports/camel-trophy.txt	Camel Trophy	Павел Меркулов	game	102
 sports	sports/detskiy-billiard-gaishtut-1988.txt	Детский бильярд		game	66	0	0	
 sports	sports/elektronnye-gorodki-gaishtut-1988.txt	Электронные городки		game	84	0	0	
 sports	sports/elektronnye-gorodki.txt	elektronnye gorodki	А. Зайцев	game	98	0	0	
-sports	sports/fifa-2001-taktic-game-dolgushin-notebook-2.txt	FIFA 2001 TAKTIC GAME	Александр Долгушин	game	113	108	0	manuscript
+sports	sports/fifa-2001-taktic-game-dolgushin-notebook-2.txt	FIFA 2001 TAKTIC GAME	Александр Долгушин	game	107	40	0	manuscript
 sports	sports/formula-1-dolgushin-notebook.txt	FORMULA-1	Александр Долгушин	game	98	0	0	manuscript
 sports	sports/futbol-vratar-dolgushin-notebook.txt	Футбол	автор неизвестен	game	102	0	0	manuscript
 sports	sports/futbol.txt	futbol	Александр Михолап	game	105	2	0	
@@ -634,7 +634,7 @@ strategy	strategy/morskoy-boy-igra-erichware.txt	Морской бой: игра
 strategy	strategy/morskoy-boy-rasstanovka-erichware.txt	Морской бой: расстановка		game	84	0	0	
 strategy	strategy/morskoy-boy-srazhenie-erichware.txt	Сражение		game	98	0	0	
 strategy	strategy/morskoy-boy-xvadim.txt	morskoy boy	Г. Горовой; Android conversion by А. Лаврик	game	105	0	0	
-strategy	strategy/naval-battle.txt	Naval Battle	illi4	game	105	13	0	
+strategy	strategy/naval-battle.txt	Naval Battle	illi4	game	105	1	0	
 strategy	strategy/neulovimaya-podvodnaya-lodka-gaishtut-1988.txt	Неуловимая подводная лодка		game	47	0	0	
 strategy	strategy/nochnoy-boy.txt	Ночной бой		game	105	0	0	
 strategy	strategy/obnaruzhit-i-unichtozhit-lineynyy-korabl-gaishtut-1988.txt	Обнаружить и уничтожить линейный корабль		game	59	0	0	
