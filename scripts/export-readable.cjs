@@ -5,12 +5,14 @@
  *
  * Что делает:
  *   1. читает games/manifest.tsv (11 колонок, поля в кавычках);
- *   2. для каждой записи с существующим .txt разбирает листинг
+ *   2. отделяет листинг от карточки игры (scripts/readable-sections.cjs)
+ *      и разбирает только листинг, а описание сохраняет отдельными секциями;
+ *   3. для каждой записи с существующим .txt разбирает листинг
  *      настоящим ядром MKPro (parseCommandToken), а не своей таблицей;
- *   3. если ядро не узнало подпись — пробует нормализованный вариант
+ *   4. если ядро не узнало подпись — пробует нормализованный вариант
  *      (чужую нотацию приводит к той, что ждёт ядро);
- *   4. отличает примечание к листингу (кириллический текст) от ошибки;
- *   5. пишет readable/<раздел>/<имя>.txt, сборник readable/_sections/<раздел>.txt,
+ *   5. отличает примечание к листингу (кириллический текст) от ошибки;
+ *   6. пишет readable/<раздел>/<имя>.txt, сборник readable/_sections/<раздел>.txt,
  *      сборники серий readable/_series/<серия>.txt, общий index и список проблем.
  *
  * Чего НЕ делает: ничего не запускает на эмуляторе и не подставляет
@@ -22,6 +24,7 @@
 const fs = require('fs');
 const path = require('path');
 const { parseCommandToken } = require('../tests/emulator/mk61.cjs');
+const { splitListing } = require('./readable-sections.cjs');
 
 const ROOT = path.resolve(__dirname, '..');
 const GAMES = path.join(ROOT, 'games');
@@ -123,8 +126,9 @@ function normalizeListingToken(raw) {
   let s = String(raw).replace(/[\u00A0\u2007\u202F]/g, ' ').trim();
   if (!s) return s;
 
-  /* все виды тире и минуса — к обычному дефису */
-  s = s.replace(/[\u2212\u1408\u2010-\u2015\uFE63\uFF0D]/g, '-');
+  /* все виды тире и минуса — к обычному дефису.
+     \u1400-\u167F — канадский слоговой блок: там сидит «ᐨ» из Ftgᐨ¹ */
+  s = s.replace(/[\u2212\u1400-\u167F\u2010-\u2015\uFE63\uFF0D\u02D7]/g, '-');
 
   /* обратный слэш: «С\П» — частая запись стопа в тетрадях */
   s = s.replace(/\\/g, '/');
@@ -213,12 +217,17 @@ function entriesOf(raw) {
   return { entries, badLines };
 }
 
-/* Файл записан десятичными кодами: больше трети токенов — числа 100+ */
+/*
+ * Файл записан десятичными кодами: заметная доля токенов — числа 100+.
+ * Порог снижен с 0.6/0.3 до 0.15/0.05: в реальных файлах (harvest, mustang,
+ * naval-battle, cooperative-cafe) числа занимают 15–35 %, остальное —
+ * мнемоники, и прежний порог не срабатывал ни разу.
+ */
 function isDecimalListing(entries) {
   if (entries.length < 5) return false;
   const numeric = entries.filter((entry) => /^\d{1,3}$/.test(entry.token.trim()));
   const large = numeric.filter((entry) => Number(entry.token.trim()) >= 100);
-  return numeric.length / entries.length > 0.6 && large.length / entries.length > 0.3;
+  return numeric.length / entries.length > 0.15 && large.length / entries.length > 0.05;
 }
 
 function resolveToken(rawToken, address, labels, decimal) {
@@ -363,7 +372,15 @@ function compactList(value) {
   return value ? value.split(';').map((part) => part.trim()).filter(Boolean).join(', ') : '—';
 }
 
-function renderProgram(entry, parsed, programPath) {
+/* Длинные карточки не режем: описание из источника — ценная часть каталога. */
+function pushBlock(lines, title, text) {
+  if (!text || !text.trim()) return;
+  lines.push('');
+  lines.push(title);
+  for (const line of text.replace(/\r\n?/g, '\n').split('\n')) lines.push(line);
+}
+
+function renderProgram(entry, parsed, programPath, sections) {
   const codes = parsed.rows.map((row) => row.code);
   const inputs = inputRegisters(codes);
   const steps = parsed.rows.length;
@@ -427,6 +444,12 @@ function renderProgram(entry, parsed, programPath) {
     for (const problem of parsed.problems) lines.push('- ' + problem);
   }
 
+  /* Карточка из источника: то, что в файле стоит до и после листинга. */
+  if (sections) {
+    pushBlock(lines, 'Карточка из источника (до листинга):', sections.before);
+    pushBlock(lines, 'Описание и примечания источника (после листинга):', sections.after);
+  }
+
   lines.push('');
   lines.push('Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),');
   lines.push('ожидаемый экран здесь не указан: он берётся из отдельного прогона.');
@@ -459,6 +482,7 @@ function main() {
   let fixedTotal = 0;
   let decimalFiles = 0;
   let problemFiles = 0;
+  let cardFiles = 0;
 
   for (const entry of manifest) {
     const programPath = (entry.program || '').trim();
@@ -475,12 +499,18 @@ function main() {
     }
 
     const raw = fs.readFileSync(full, 'utf8');
-    const parsed = parseListing(raw);
+    const sections = splitListing(raw);
+    const parsed = parseListing(sections.listing || raw);
+
+    /* Карточка отделена, если до или после листинга что-то есть. */
+    if (sections.before || sections.after) cardFiles += 1;
+    if (!sections.listing) parsed.problems.push('листинг не найден в файле — разобран весь текст');
+
     if (parsed.decimal) decimalFiles += 1;
     notesTotal += parsed.notes.length;
     fixedTotal += parsed.fixed.length;
 
-    const text = renderProgram(entry, parsed, programPath);
+    const text = renderProgram(entry, parsed, programPath, sections);
 
     const section = entry.section || path.dirname(programPath);
     const targetDir = path.join(OUT, section);
@@ -562,16 +592,17 @@ function main() {
   }
   fs.writeFileSync(path.join(OUT, '_index.tsv'), indexLines.join('\n') + '\n', 'utf8');
 
-  const sections = [...bySection.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+  const sectionsList = [...bySection.entries()].sort((a, b) => a[0].localeCompare(b[0]));
   const readme = [];
   readme.push('# Читаемый каталог МК-61');
   readme.push('');
   readme.push('Собрано из `games/manifest.tsv` скриптом `scripts/export-readable.cjs`.');
   readme.push('Коды команд разобраны ядром MKPro; ожидаемый экран здесь не приводится.');
+  readme.push('Листинг отделён от карточки игры модулем `scripts/readable-sections.cjs`.');
   readme.push('');
   readme.push('| Раздел | Программ | Шагов всего |');
   readme.push('|:---|---:|---:|');
-  for (const [section, items] of sections) {
+  for (const [section, items] of sectionsList) {
     const total = items.reduce((sum, item) => sum + item.steps, 0);
     readme.push('| ' + section + ' | ' + items.length + ' | ' + total + ' |');
   }
@@ -579,6 +610,7 @@ function main() {
   readme.push('Всего переконвертировано: **' + converted + '**');
   readme.push('Пропущено записей без листинга: ' + skipped);
   readme.push('Файлов с замечаниями: ' + problemFiles);
+  readme.push('Файлов, где карточка отделена от листинга: ' + cardFiles);
   readme.push('Файлов в формате десятичных кодов: ' + decimalFiles);
   readme.push('Отделено примечаний: ' + notesTotal);
   readme.push('Подписей приведено к формату ядра: ' + fixedTotal);
@@ -592,6 +624,7 @@ function main() {
   const head = [
     '# Проблемы разбора',
     '# файлов с замечаниями: ' + problemFiles,
+    '# карточек отделено от листинга: ' + cardFiles,
     '# примечаний отделено: ' + notesTotal,
     '# подписей нормализовано: ' + fixedTotal,
     '# файлов в формате десятичных кодов: ' + decimalFiles,
@@ -605,8 +638,9 @@ function main() {
 
   console.log('переконвертировано: ' + converted);
   console.log('пропущено: ' + skipped);
-  console.log('разделов: ' + sections.length);
+  console.log('разделов: ' + sectionsList.length);
   console.log('серий: ' + bySeries.size);
+  console.log('карточек отделено: ' + cardFiles);
   console.log('файлов с замечаниями: ' + problemFiles);
 }
 
