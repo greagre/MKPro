@@ -324,7 +324,7 @@ logic	logic/magicheskiy-kvadrat.txt	Магический квадрат	М. Ва
 logic	logic/magiya-tsifr.txt	magiya tsifr	Владимир Хмелюк	game	1	63	0	0	
 logic	logic/mastermind.txt	Мастермайнд		game	1	86	0	0	
 logic	logic/minesweeper-9x9.txt	Сапёр 9x9		game	1	95	0	0	
-logic	logic/minesweeper.txt	Minesweeper	Олег Булычёв	game	1	104	1	0	
+logic	logic/minesweeper.txt	Minesweeper	Олег Булычёв	game	1	104	0	0	
 logic	logic/minipoddavki-trokhimenko-lyubich-1985.txt	Миниподдавки	Я. К. Трохименко, Ф. Д. Любич	game	1	64	0	0	
 logic	logic/missionery-i-lyudoedy-shapiro-boyko-1989.txt	Миссионеры и людоеды		game	1	55	0	0	
 logic	logic/monti.txt	monti	Евгений Кузниченко	game	1	105	0	0	
