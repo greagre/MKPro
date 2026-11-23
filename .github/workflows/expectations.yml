@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
@@ -40,7 +40,7 @@ jobs:
           --section utilities
           --out tmp/imports/expectations-utilities.json
           --verbose
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v4
         with:
           name: expectations-utilities
           path: tmp/imports/expectations-utilities.json
@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
@@ -66,7 +66,7 @@ jobs:
               --verbose || echo "серия $s: прервано с ошибкой"
             echo "::endgroup::"
           done
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v4
         with:
           name: expectations-series
           path: tmp/imports/series-*.json
@@ -77,7 +77,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
@@ -92,7 +92,7 @@ jobs:
             --series lunar-landing \
             --out tmp/imports/expectations-lunar-landing.json \
             --verbose || echo "lunar-landing: прервано с ошибкой"
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v4
         with:
           name: expectations-kon-tiki
           path: tmp/imports/expectations-*.json
@@ -101,16 +101,17 @@ jobs:
   commit:
     name: commit expectations
     needs: [utilities, series, kon-tiki]
+    if: always()
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/download-artifact@v7
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
         with:
           path: tmp/imports
           merge-multiple: true
       - name: List results
-        run: ls -la tmp/imports
+        run: ls -la tmp/imports || echo "артефактов нет"
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
