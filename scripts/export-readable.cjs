@@ -7,9 +7,11 @@
  *   1. читает games/manifest.tsv (11 колонок, поля в кавычках);
  *   2. для каждой записи с существующим .txt разбирает листинг
  *      настоящим ядром MKPro (parseCommandToken), а не своей таблицей;
- *   3. считает шаги, находит регистры, которые надо задать перед пуском;
- *   4. пишет readable/<раздел>/<имя>.txt, сборник readable/_sections/<раздел>.txt,
- *      общий index и список проблем.
+ *   3. если ядро не узнало подпись — пробует нормализованный вариант
+ *      (чужую нотацию приводит к той, что ждёт ядро);
+ *   4. отличает примечание к листингу (кириллический текст) от ошибки;
+ *   5. пишет readable/<раздел>/<имя>.txt, сборник readable/_sections/<раздел>.txt,
+ *      сборники серий readable/_series/<серия>.txt, общий index и список проблем.
  *
  * Чего НЕ делает: ничего не запускает на эмуляторе и не подставляет
  * ожидаемый результат. Прогон — отдельная задача (expectations).
@@ -107,45 +109,184 @@ function addressLabel(address) {
 }
 
 /* ------------------------------------------------------------------ */
+/* Нормализация чужой нотации                                          */
+/* ------------------------------------------------------------------ */
+
+/*
+ * Ядро (normalizeMnemonic) уже приводит регистр букв, минусы, знаки
+ * операций и пробелы. Здесь добавляется только то, чего там нет:
+ * обратный слэш, маркеры списка вместо умножения, надстрочные знаки,
+ * дефис внутри записи регистра, запись обратных функций со степенью,
+ * неполные стоп и возврат, фигурные и квадратные скобки K-функций.
+ */
+function normalizeListingToken(raw) {
+  let s = String(raw).replace(/[\u00A0\u2007\u202F]/g, ' ').trim();
+  if (!s) return s;
+
+  /* все виды тире и минуса — к обычному дефису */
+  s = s.replace(/[\u2212\u1408\u2010-\u2015\uFE63\uFF0D]/g, '-');
+
+  /* обратный слэш: «С\П» — частая запись стопа в тетрадях */
+  s = s.replace(/\\/g, '/');
+
+  /* маркеры перечисления вместо умножения */
+  s = s.replace(/[\u2022\u00B7\u2219\u22C5\u25E6]/g, '*');
+
+  /* степень: надстрочные символы и хвост «^» без операнда */
+  s = s.replace(/[\u02E3\u1D61]/g, '^');
+  s = s.replace(/\^\s*$/, '^X');
+
+  /* обратные тригонометрические: Ftg^-1 -> arctg и так далее */
+  s = s.replace(/^F\s*(sin|cos|tg)\s*\^?\s*-?\s*1$/i, (whole, fn) => {
+    const name = fn.toLowerCase();
+    if (name === 'sin') return 'arcsin';
+    if (name === 'cos') return 'arccos';
+    return 'arctg';
+  });
+
+  /* «Fx^10» и «F10ˣ» — это одна и та же команда 10 в степени X */
+  s = s.replace(/^F\s*X\s*\^\s*10$/i, '10^X');
+  s = s.replace(/^F\s*10\s*\^\s*X$/i, '10^X');
+
+  /* запись регистра через дефис и стрелку: х-Пd, П-Х9, КП-хA, Kx-ПA */
+  s = s.replace(/^(К|K)\s*(X|Х|х|x)\s*-?\s*(>|→)?\s*П\s*([0-9A-EА-Яа-яa-e])$/u, 'KXП$4');
+  s = s.replace(/^(К|K)\s*П\s*-?\s*(>|→)?\s*(X|Х|х|x)\s*([0-9A-EА-Яа-яa-e])$/u, 'KПX$4');
+  s = s.replace(/^(X|Х|х|x)\s*-?\s*(>|→)?\s*П\s*([0-9A-EА-Яа-яa-e])\s*(\([^)]*\))?$/u, 'XП$3');
+  s = s.replace(/^П\s*-?\s*(>|→)?\s*(X|Х|х|x)\s*([0-9A-EА-Яа-яa-e])\s*(\([^)]*\))?$/u, 'ПX$3');
+
+  /* стрелки внутри склеенных записей K-функций: К°->′ и К°<-′" */
+  s = s.replace(/-\s*>/g, '→').replace(/<\s*-/g, '←');
+
+  /* скобки без операнда */
+  s = s.replace(/^(К|K)\s*\{\s*\}$/u, 'K{X}');
+  s = s.replace(/^(К|K)\s*\[\s*\]$/u, 'K[X]');
+  s = s.replace(/^\{\s*\}$/u, '{X}');
+  s = s.replace(/^\[\s*\]$/u, '[X]');
+
+  /* совмещённое сравнение: >/=0 и <=0 */
+  s = s.replace(/([<>])\s*\/\s*=/g, '$1=');
+
+  /* неполные стоп и возврат */
+  s = s.replace(/^(С|C)\s*\/?\s*(П|N)$/u, 'С/П');
+  s = s.replace(/^(В|B)\s*\/?\s*(О|O)$/u, 'В/О');
+
+  /* квадратный корень словами */
+  s = s.replace(/^F?\s*sqrt$/i, 'F√');
+  s = s.replace(/^F\s*F\s*√$/u, 'F√');
+
+  return s;
+}
+
+/*
+ * Примечание к листингу, а не команда: кириллический текст без цифр
+ * и без символов, из которых состоят команды. Такие строки в каталоге
+ * описывают, что делает программа, и в проблемах им не место.
+ */
+function looksLikeNote(token) {
+  const text = String(token).trim();
+  if (!/[А-Яа-яЁё]{4,}/u.test(text)) return false;
+  if (/[0-9]/u.test(text)) return false;
+  return /^[А-Яа-яЁё\s.,:;!?'"«»()\-—–]+$/u.test(text);
+}
+
+/* ------------------------------------------------------------------ */
 /* Разбор листинга                                                     */
 /* ------------------------------------------------------------------ */
 
 const SKIP_LINE = /^\s*(#|\/\/|;|—|–|--)/u;
+const ADDRESS_CELL = /^\s*([0-9A-Fa-f]{2}|[.\-][0-9A-Fa-f]|[АA][0-4])\s+(.+?)\s*$/u;
 
-function parseListing(raw) {
-  const rows = [];
-  const problems = [];
-  const seen = new Map();
-  const emptyLabels = new Map();
-
+function entriesOf(raw) {
+  const entries = [];
+  const badLines = [];
   for (const rawLine of raw.split(/\r?\n/)) {
     const line = rawLine.replace(/\u00A0/g, ' ');
     if (!line.trim()) continue;
     if (SKIP_LINE.test(line)) continue;
-
-    const match = line.match(/^\s*([0-9A-Fa-f]{2}|[.\-][0-9A-Fa-f])\s+(.+?)\s*$/u);
+    const match = line.match(ADDRESS_CELL);
     if (!match) {
-      problems.push('строка не похожа на команду: ' + line.trim());
+      badLines.push('строка не похожа на команду: ' + line.trim());
       continue;
     }
-    const addressToken = match[1].toUpperCase().replace(/[.\-]/g, 'A');
+    entries.push({ addressToken: match[1], token: match[2].replace(/\s+/g, ' ') });
+  }
+  return { entries, badLines };
+}
+
+/* Файл записан десятичными кодами: больше трети токенов — числа 100+ */
+function isDecimalListing(entries) {
+  if (entries.length < 5) return false;
+  const numeric = entries.filter((entry) => /^\d{1,3}$/.test(entry.token.trim()));
+  const large = numeric.filter((entry) => Number(entry.token.trim()) >= 100);
+  return numeric.length / entries.length > 0.6 && large.length / entries.length > 0.3;
+}
+
+function resolveToken(rawToken, address, labels, decimal) {
+  const direct = parseCommandToken(rawToken, address, labels);
+  if (!direct.warning) return { code: direct.code, via: 'как есть' };
+
+  const normalized = normalizeListingToken(rawToken);
+  if (normalized && normalized !== rawToken) {
+    const again = parseCommandToken(normalized, address, labels);
+    if (!again.warning) return { code: again.code, via: 'нормализация', fixed: normalized };
+  }
+
+  if (decimal) {
+    const text = rawToken.trim();
+    if (/^\d{1,3}$/.test(text)) {
+      const code = Number(text);
+      if (code >= 0 && code <= 255) return { code, via: 'десят. код' };
+    }
+  }
+
+  if (looksLikeNote(rawToken)) return { code: 0, via: 'примечание' };
+
+  return { code: null, warning: direct.warning || ('не разобрано: ' + rawToken) };
+}
+
+function parseListing(raw) {
+  const { entries, badLines } = entriesOf(raw);
+  const decimal = isDecimalListing(entries);
+  const rows = [];
+  const problems = badLines.slice();
+  const notes = [];
+  const fixed = [];
+  const seen = new Map();
+  const labels = new Map();
+
+  for (const entry of entries) {
+    const addressToken = entry.addressToken.toUpperCase().replace(/[.\-А]/g, 'A');
     const opcode = parseInt(addressToken, 16);
     let address = formalAddress(opcode);
     if (address === null) {
-      problems.push('адрес вне памяти: ' + match[1]);
+      problems.push('адрес вне памяти: ' + entry.addressToken);
       address = rows.length;
     }
-    const token = match[2].replace(/\s+/g, ' ');
-    const parsed = parseCommandToken(token, address, emptyLabels);
-    if (parsed.warning) problems.push(parsed.warning);
+
+    const resolved = resolveToken(entry.token, address, labels, decimal);
+
+    if (resolved.via === 'примечание') {
+      notes.push(addressLabel(address) + ': ' + entry.token);
+      continue;
+    }
+    if (resolved.code === null) {
+      problems.push('не разобрано на ' + addressLabel(address) + ': ' + entry.token);
+      rows.push({ address, token: entry.token, code: 0 });
+      continue;
+    }
+    if (resolved.via === 'нормализация') {
+      fixed.push(entry.token + ' → ' + resolved.fixed);
+    }
+
     if (seen.has(address)) {
-      problems.push('адрес ' + addressLabel(address) + ' задан дважды: ' + token);
+      problems.push('адрес ' + addressLabel(address) + ' задан дважды: ' + entry.token);
     }
     seen.set(address, true);
-    rows.push({ address, token, code: parsed.code });
+    rows.push({ address, token: entry.token, code: resolved.code });
   }
 
-  return { rows, problems };
+  rows.sort((a, b) => a.address - b.address);
+  return { rows, problems, notes, fixed, decimal };
 }
 
 /* ------------------------------------------------------------------ */
@@ -171,7 +312,7 @@ function inputRegisters(codes) {
       written[normalizeRegister(lo)] = true;
       continue;
     }
-    if (READ_OPS.has(hi) && hi !== 0xd && hi !== 0xe ? true : READ_OPS.has(hi)) {
+    if (READ_OPS.has(hi)) {
       const register = normalizeRegister(lo);
       if (!written[register]) read[register] = true;
     }
@@ -189,6 +330,30 @@ function inputRegisters(codes) {
 }
 
 /* ------------------------------------------------------------------ */
+/* Риск: почему запись нельзя считать проверенной                      */
+/* ------------------------------------------------------------------ */
+
+function riskOf(entry, programPath) {
+  const marks = [];
+  const haystack = [programPath, entry.collection, entry.source_url, entry.tags].join(' ').toLowerCase();
+  if (/-c3000/.test(haystack) || /3000/.test(entry.collection || '')) marks.push('c3000');
+  if (/brp4|брп-4/.test(haystack)) marks.push('brp4');
+  if (/notebook|тетрад|manuscript/.test(haystack)) marks.push('manuscript');
+  if (/modernized|codex/.test(haystack)) marks.push('modernized');
+  return marks.join(';');
+}
+
+function riskListOf(entry, programPath) {
+  const marks = riskOf(entry, programPath).split(';').filter(Boolean);
+  const list = [];
+  if (marks.includes('c3000')) list.push('другой калькулятор (C3000), не МК-61');
+  if (marks.includes('brp4')) list.push('модуль расширения БРП-4, коды из PDF и бинарника');
+  if (marks.includes('manuscript')) list.push('листинг перепечатан с фото, часть кодов могла не сохраниться');
+  if (marks.includes('modernized')) list.push('современная переработка, не оригинал 1980-х');
+  return list;
+}
+
+/* ------------------------------------------------------------------ */
 /* Один файл                                                           */
 /* ------------------------------------------------------------------ */
 
@@ -198,7 +363,7 @@ function compactList(value) {
   return value ? value.split(';').map((part) => part.trim()).filter(Boolean).join(', ') : '—';
 }
 
-function renderProgram(entry, parsed) {
+function renderProgram(entry, parsed, programPath) {
   const codes = parsed.rows.map((row) => row.code);
   const inputs = inputRegisters(codes);
   const steps = parsed.rows.length;
@@ -213,7 +378,13 @@ function renderProgram(entry, parsed) {
   lines.push('Теги: ' + compactList(entry.tags));
   if (entry.collection) lines.push('Коллекция-источник: ' + entry.collection);
   if (entry.series) lines.push('Серия: ' + entry.series);
-  lines.push('Листинг каталога: games/' + entry.program);
+  lines.push('Листинг каталога: games/' + programPath);
+  const risks = riskListOf(entry, programPath);
+  if (risks.length) {
+    lines.push('');
+    lines.push('Осторожно:');
+    for (const risk of risks) lines.push('- ' + risk);
+  }
   lines.push('');
 
   lines.push('Шагов: ' + steps + ' из ' + LIMIT);
@@ -223,6 +394,7 @@ function renderProgram(entry, parsed) {
   } else {
     lines.push('Перед пуском: регистры задавать не нужно');
   }
+  if (parsed.decimal) lines.push('Формат листинга: десятичные коды (не подписи команд).');
   lines.push('');
 
   lines.push('Листинг:');
@@ -239,6 +411,16 @@ function renderProgram(entry, parsed) {
     );
   }
 
+  if (parsed.notes.length) {
+    lines.push('');
+    lines.push('Примечания из листинга:');
+    for (const note of parsed.notes) lines.push('- ' + note);
+  }
+  if (parsed.fixed.length) {
+    lines.push('');
+    lines.push('Подписи, приведённые к формату ядра:');
+    for (const item of parsed.fixed) lines.push('- ' + item);
+  }
   if (parsed.problems.length) {
     lines.push('');
     lines.push('Замечания при разборе:');
@@ -265,12 +447,18 @@ function main() {
   const manifest = readManifest();
   ensureDir(OUT);
   ensureDir(path.join(OUT, '_sections'));
+  ensureDir(path.join(OUT, '_series'));
 
   const index = [];
   const problemsOut = [];
   const bySection = new Map();
+  const bySeries = new Map();
   let converted = 0;
   let skipped = 0;
+  let notesTotal = 0;
+  let fixedTotal = 0;
+  let decimalFiles = 0;
+  let problemFiles = 0;
 
   for (const entry of manifest) {
     const programPath = (entry.program || '').trim();
@@ -288,7 +476,11 @@ function main() {
 
     const raw = fs.readFileSync(full, 'utf8');
     const parsed = parseListing(raw);
-    const text = renderProgram(entry, parsed);
+    if (parsed.decimal) decimalFiles += 1;
+    notesTotal += parsed.notes.length;
+    fixedTotal += parsed.fixed.length;
+
+    const text = renderProgram(entry, parsed, programPath);
 
     const section = entry.section || path.dirname(programPath);
     const targetDir = path.join(OUT, section);
@@ -297,9 +489,14 @@ function main() {
     fs.writeFileSync(path.join(targetDir, targetName), text, 'utf8');
 
     if (!bySection.has(section)) bySection.set(section, []);
-    bySection.get(section).push({ entry, text });
+    bySection.get(section).push({ entry, text, steps: parsed.rows.length });
 
-    const unknown = parsed.problems.filter((problem) => problem.startsWith('Command at'));
+    if (entry.series) {
+      const series = entry.series.trim();
+      if (!bySeries.has(series)) bySeries.set(series, []);
+      bySeries.get(series).push({ entry, text, steps: parsed.rows.length });
+    }
+
     index.push({
       section,
       program: programPath,
@@ -307,12 +504,18 @@ function main() {
       author: entry.author || '',
       kind: entry.kind || '',
       steps: parsed.rows.length,
-      unknown: unknown.length,
-      notes: parsed.problems.length,
+      unknown: parsed.problems.length,
+      notes: parsed.notes.length,
+      risk: riskOf(entry, programPath),
     });
-    if (unknown.length) {
-      problemsOut.push('games/' + programPath + ': не разобрано команд ' + unknown.length);
-      for (const problem of unknown) problemsOut.push('    ' + problem);
+
+    if (parsed.problems.length) {
+      problemFiles += 1;
+      problemsOut.push(
+        'games/' + programPath + ': не разобрано команд ' + parsed.problems.length +
+          (parsed.decimal ? ' (формат десятичных кодов)' : '')
+      );
+      for (const problem of parsed.problems) problemsOut.push('    ' + problem);
     }
     converted += 1;
   }
@@ -328,11 +531,33 @@ function main() {
     fs.writeFileSync(path.join(OUT, '_sections', section + '.txt'), parts.join('\n'), 'utf8');
   }
 
+  for (const [series, items] of bySeries) {
+    const body = ['Сборник серии ' + series, 'Программ: ' + items.length, ''];
+    for (const item of items) {
+      body.push('='.repeat(60));
+      body.push('');
+      body.push(item.text);
+      body.push('');
+    }
+    const safe = series.replace(/[^A-Za-zА-Яа-я0-9._-]+/gu, '-');
+    fs.writeFileSync(path.join(OUT, '_series', safe + '.txt'), body.join('\n'), 'utf8');
+  }
+
   index.sort((a, b) => (a.section + '/' + a.program).localeCompare(b.section + '/' + b.program));
-  const indexLines = ['раздел\tфайл\tназвание\tавтор\tтип\tшагов\tне разобрано'];
+  const indexLines = ['раздел\tфайл\tназвание\tавтор\tтип\tшагов\tне разобрано\tпримечаний\tриск'];
   for (const row of index) {
     indexLines.push(
-      [row.section, row.program, row.title, row.author, row.kind, row.steps, row.unknown].join('\t')
+      [
+        row.section,
+        row.program,
+        row.title,
+        row.author,
+        row.kind,
+        row.steps,
+        row.unknown,
+        row.notes,
+        row.risk,
+      ].join('\t')
     );
   }
   fs.writeFileSync(path.join(OUT, '_index.tsv'), indexLines.join('\n') + '\n', 'utf8');
@@ -347,27 +572,42 @@ function main() {
   readme.push('| Раздел | Программ | Шагов всего |');
   readme.push('|:---|---:|---:|');
   for (const [section, items] of sections) {
-    const total = items.reduce((sum, item) => sum + (item.entry ? 0 : 0), 0);
-    readme.push('| ' + section + ' | ' + items.length + ' | — |');
+    const total = items.reduce((sum, item) => sum + item.steps, 0);
+    readme.push('| ' + section + ' | ' + items.length + ' | ' + total + ' |');
   }
   readme.push('');
   readme.push('Всего переконвертировано: **' + converted + '**');
   readme.push('Пропущено записей без листинга: ' + skipped);
+  readme.push('Файлов с замечаниями: ' + problemFiles);
+  readme.push('Файлов в формате десятичных кодов: ' + decimalFiles);
+  readme.push('Отделено примечаний: ' + notesTotal);
+  readme.push('Подписей приведено к формату ядра: ' + fixedTotal);
   readme.push('');
-  readme.push('- `_index.tsv` — таблица всех программ');
+  readme.push('- `_index.tsv` — таблица всех программ, включая пометку риска');
   readme.push('- `_problems.txt` — что не разобралось');
   readme.push('- `_sections/<раздел>.txt` — сборник раздела');
+  if (bySeries.size) readme.push('- `_series/<серия>.txt` — сборник серии');
   fs.writeFileSync(path.join(OUT, 'README.md'), readme.join('\n'), 'utf8');
 
+  const head = [
+    '# Проблемы разбора',
+    '# файлов с замечаниями: ' + problemFiles,
+    '# примечаний отделено: ' + notesTotal,
+    '# подписей нормализовано: ' + fixedTotal,
+    '# файлов в формате десятичных кодов: ' + decimalFiles,
+    '',
+  ];
   fs.writeFileSync(
     path.join(OUT, '_problems.txt'),
-    problemsOut.length ? problemsOut.join('\n') + '\n' : 'Проблем не найдено.\n',
+    head.concat(problemsOut).join('\n') + '\n',
     'utf8'
   );
 
   console.log('переконвертировано: ' + converted);
   console.log('пропущено: ' + skipped);
   console.log('разделов: ' + sections.length);
+  console.log('серий: ' + bySeries.size);
+  console.log('файлов с замечаниями: ' + problemFiles);
 }
 
 main();
