@@ -1,64 +1,55 @@
 name: Readable
 
-# Готовит читаемые TXT по ожиданиям эталона:
-# отдельный файл на программу + сборник на раздел.
-# Запускать ПОСЛЕ workflow Expectations.
-
 on:
   workflow_dispatch:
-    inputs:
-      input:
-        description: 'JSON с ожиданиями'
-        required: false
-        default: 'tmp/imports/expectations.json'
-      out:
-        description: 'Папка для TXT'
-        required: false
-        default: 'tmp/imports/readable'
-
-permissions:
-  contents: write
-
-concurrency:
-  group: readable
-  cancel-in-progress: true
+  push:
+    paths:
+      - 'games/manifest.tsv'
+      - 'scripts/export-readable.cjs'
+      - '.github/workflows/readable.yml'
 
 jobs:
-  export:
+  convert:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Export readable TXT
+      - name: Convert catalog
+        run: node scripts/export-readable.cjs
+
+      - name: Show summary
+        if: always()
         run: |
-          node scripts/export-readable.cjs \
-            --in "${{ inputs.input }}" \
-            --out "${{ inputs.out }}" \
-            --verbose
+          echo '--- README ---'
+          head -40 readable/README.md || true
+          echo '--- problems ---'
+          head -40 readable/_problems.txt || true
+
+      - name: Commit result
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add readable
+          if git diff --cached --quiet; then
+            echo 'нет изменений'
+          else
+            git commit -m 'readable: обновление читаемого каталога'
+            git push
+          fi
 
       - name: Upload artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: readable
-          path: ${{ inputs.out }}
-          if-no-files-found: warn
-
-      - name: Commit results
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "${{ inputs.out }}"
-          if git diff --staged --quiet; then
-            echo "Нет изменений"
-          else
-            git commit -m "chore: читаемые TXT программ МК-61"
-            git push
-          fi
+          path: readable
+          retention-days: 14
