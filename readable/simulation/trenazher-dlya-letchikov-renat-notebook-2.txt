@@ -1,0 +1,67 @@
+МК-61 · ТРЕНАЖЁР ДЛЯ ЛЁТЧИКОВ
+
+Автор: автор неизвестен
+Источник: ручная перепечатка пользователя из тетради Рената Менькова "Мои игры МК-61 (Тетрадь 2)", Рисунок (5).jpg
+Раздел: simulation · тип: trainer
+Теги: aviation, manuscript
+Коллекция-источник: renat-menkov-notebook
+Листинг каталога: games/simulation/trenazher-dlya-letchikov-renat-notebook-2.txt
+
+Шагов: 35 из 105
+Перед пуском: регистры задавать не нужно
+
+Листинг:
+адрес  hex  dec  команда
+00     00   000  П-х9
+01     00   000  х-П2
+02     00   000  х-П7
+03     13   019  /
+04     02   002  2
+05     0A   010  .
+06     21   033  F√
+07     00   000  х-П3
+08     00   000  х-П6
+09     0A   010  .
+10     10   016  +
+11     00   000  х-П1
+12     0A   010  .
+13     00   000  П-хA
+14     BA   186  КхПA
+15     00   000  х-ПA
+16     00   000  х-П9
+17     11   017  -
+18     5E   094  Fx=0
+19     21   033  21
+20     00   000  х-П0
+21     50   080  С/П
+22     B6   182  КхП6
+23     00   000  х-П6
+24     03   003  3
+25     11   017  -
+26     59   089  Fx>=0
+27     01   001  01
+28     0D   013  Сх
+29     00   000  П-х6
+30     B5   181  КхП5
+31     00   000  х-П5
+32     50   080  С/П
+33     51   081  БП
+34     00   000  00
+
+Замечания при разборе:
+- Command at 0 was not recognized: П-х9
+- Command at 1 was not recognized: х-П2
+- Command at 2 was not recognized: х-П7
+- Command at 7 was not recognized: х-П3
+- Command at 8 was not recognized: х-П6
+- Command at 11 was not recognized: х-П1
+- Command at 13 was not recognized: П-хA
+- Command at 15 was not recognized: х-ПA
+- Command at 16 was not recognized: х-П9
+- Command at 20 was not recognized: х-П0
+- Command at 23 was not recognized: х-П6
+- Command at 29 was not recognized: П-х6
+- Command at 31 was not recognized: х-П5
+
+Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
+ожидаемый экран здесь не указан: он берётся из отдельного прогона.

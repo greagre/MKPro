@@ -1,0 +1,87 @@
+МК-61 · АВТОГОНКИ
+
+Автор: автор неизвестен
+Источник: ручная перепечатка пользователя из тетради Рената Менькова "Мои игры МК-61 (Тетрадь 2)", Рисунок (1).jpg; Рисунок (2).jpg
+Раздел: sports · тип: game
+Теги: manuscript, racing
+Коллекция-источник: renat-menkov-notebook
+Листинг каталога: games/sports/avtogonki-renat-notebook-2.txt
+
+Шагов: 55 из 105
+Перед пуском: R1 — задать значения
+
+Листинг:
+адрес  hex  dec  команда
+00     00   000  х-Пd
+01     08   008  8
+02     15   021  F10^x
+03     09   009  9
+04     13   019  /
+05     00   000  х-ПВ
+06     53   083  ПП
+07     47   071  47
+08     00   000  х-ПА
+09     53   083  ПП
+10     47   071  47
+11     00   000  х-ПС
+12     00   000  П-хА
+13     15   021  F10^x
+14     02   002  2
+15     12   018  ×
+16     00   000  П-хС
+17     15   021  F10^x
+18     05   005  5
+19     12   018  ×
+20     10   016  +
+21     00   000  П-хВ
+22     10   016  +
+23     0E   014  В↑
+24     0E   014  В↑
+25     02   002  2
+26     15   021  F10^x
+27     1D   029  Fcos
+28     32   050  КЗН
+29     00   000  П-хА
+30     10   016  +
+31     00   000  х-ПА
+32     00   000  П-хС
+33     11   017  -
+34     57   087  Fx≠0
+35     40   064  40
+36     5D   093  FL0
+37     09   009  09
+38     20   032  Fπ
+39     50   080  С/П
+40     0C   012  ВП
+41     0A   010  ,
+42     5B   091  FL1
+43     06   006  06
+44     00   000  П-хВ
+45     21   033  F√
+46     50   080  С/П
+47     00   000  П-хd
+48     0E   014  В↑
+49     3B   059  КСЧ
+50     00   000  х-Пd
+51     08   008  8
+52     12   018  ×
+53     34   052  К[x]
+54     52   082  В/О
+
+Замечания при разборе:
+- Command at 0 was not recognized: х-Пd
+- Command at 5 was not recognized: х-ПВ
+- Command at 8 was not recognized: х-ПА
+- Command at 11 was not recognized: х-ПС
+- Command at 12 was not recognized: П-хА
+- Command at 16 was not recognized: П-хС
+- Command at 21 was not recognized: П-хВ
+- Command at 29 was not recognized: П-хА
+- Command at 31 was not recognized: х-ПА
+- Command at 32 was not recognized: П-хС
+- Command at 44 was not recognized: П-хВ
+- Command at 47 was not recognized: П-хd
+- Command at 50 was not recognized: х-Пd
+
+Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
+ожидаемый экран здесь не указан: он берётся из отдельного прогона.

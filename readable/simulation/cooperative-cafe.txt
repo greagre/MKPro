@@ -1,0 +1,147 @@
+МК-61 · Cooperative Cafe
+
+Автор: illi4
+Источник: https://habr.com/ru/articles/125484/
+Раздел: simulation · тип: game
+Теги: classic, economy, magazine, management
+Коллекция-источник: tekhnika-molodezhi
+Серия: cooperative-cafe
+Листинг каталога: games/simulation/cooperative-cafe.txt
+
+Шагов: 105 из 105
+Перед пуском: R4, R5, R6, R7 — задать значения
+
+Листинг:
+адрес  hex  dec  команда
+00     00   000  103
+01     64   100  64
+02     00   000  168
+03     21   033  F√
+04     10   016  +
+05     74   116  74
+06     0A   010  .
+07     21   033  F√
+08     1B   027  Farctg
+09     02   002  2
+10     13   019  ÷
+11     01   001  1
+12     10   016  +
+13     00   000  208
+14     12   018  ×
+15     34   052  К[x]
+16     76   118  76
+17     00   000  168
+18     00   000  101
+19     13   019  ÷
+20     97   151  97
+21     14   020  ↔
+22     10   016  +
+23     0F   015  FВx
+24     00   000  109
+25     0F   015  FВx
+26     11   017  -
+27     00   000  Б/К
+28     38   056  К∨
+29     10   016  +
+30     00   000  0
+31     20   032  Fπ
+32     13   019  ÷
+33     77   119  77
+34     25   037  F↻
+35     13   019  ÷
+36     65   101  65
+37     0F   015  FВx
+38     34   052  К[x]
+39     00   000  108
+40     00   000  107
+41     0E   014  В↑
+42     10   016  +
+43     10   016  +
+44     00   000  Б/К
+45     54   084  КНОП
+46     0D   013  Cx
+47     00   000  102
+48     12   018  ×
+49     97   151  97
+50     13   019  ÷
+51     34   052  К[x]
+52     11   017  -
+53     75   117  75
+54     59   089  Fx>=0
+55     00   000  104
+56     11   017  -
+57     0F   015  FВx
+58     03   003  3
+59     13   019  ÷
+60     77   119  77
+61     25   037  F↻
+62     76   118  76
+63     97   151  97
+64     12   018  ×
+65     00   000  106
+66     10   016  +
+67     01   001  1
+68     00   000  105
+69     11   017  -
+70     12   018  ×
+71     74   116  74
+72     00   000  137
+73     00   000  106
+74     96   150  96
+75     50   080  С/П
+76     00   000  152
+77     00   000  106
+78     14   020  ↔
+79     11   017  -
+80     00   000  152
+81     74   116  74
+82     0F   015  FВx
+83     52   082  В/О
+84     00   000  0
+85     00   000  0
+86     00   000  0
+87     00   000  0
+88     00   000  0
+89     00   000  0
+90     00   000  0
+91     00   000  0
+92     00   000  0
+93     00   000  0
+94     00   000  0
+95     00   000  0
+96     00   000  0
+97     00   000  0
+98     65   101  65
+99     00   000  100
+−0     13   019  ÷
+−1     00   000  208
+−2     10   016  +
+−3     77   119  77
+−4     00   000  168
+
+Замечания при разборе:
+- Command at 0 was not recognized: 103
+- Command at 2 was not recognized: 168
+- Command at 13 was not recognized: 208
+- Command at 17 was not recognized: 168
+- Command at 18 was not recognized: 101
+- Command at 24 was not recognized: 109
+- Command at 27 was not recognized: Б/К
+- Command at 39 was not recognized: 108
+- Command at 40 was not recognized: 107
+- Command at 44 was not recognized: Б/К
+- Command at 47 was not recognized: 102
+- Command at 55 was not recognized: 104
+- Command at 65 was not recognized: 106
+- Command at 68 was not recognized: 105
+- Command at 72 was not recognized: 137
+- Command at 73 was not recognized: 106
+- Command at 76 was not recognized: 152
+- Command at 77 was not recognized: 106
+- Command at 80 was not recognized: 152
+- Command at 99 was not recognized: 100
+- Command at 101 was not recognized: 208
+- Command at 104 was not recognized: 168
+
+Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
+ожидаемый экран здесь не указан: он берётся из отдельного прогона.

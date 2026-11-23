@@ -1,0 +1,151 @@
+МК-61 · ТАНКОВАЯ АТАКА
+
+Автор: автор неизвестен
+Источник: ручная перепечатка пользователя из тетради Рената Менькова "Мои игры МК-61 (Тетрадь 2)", Рисунок (2).jpg; Рисунок (3).jpg; Рисунок (4).jpg; Рисунок (5).jpg
+Раздел: strategy · тип: game
+Теги: manuscript, military, variant
+Коллекция-источник: renat-menkov-notebook
+Серия: tankovaya-ataka
+Листинг каталога: games/strategy/tankovaya-ataka-renat-notebook-2.txt
+
+Шагов: 98 из 105
+Перед пуском: R0, R2 — задать значения
+
+Листинг:
+адрес  hex  dec  команда
+00     57   087  Fx≠0
+01     47   071  47
+02     00   000  х-П9
+03     1C   028  Fsin
+04     02   002  2
+05     12   018  ×
+06     00   000  П-х3
+07     12   018  ×
+08     00   000  П-х7
+09     13   019  /
+10     00   000  х-П8
+11     00   000  П-х2
+12     10   016  +
+13     00   000  П-х4
+14     12   018  ×
+15     00   000  П-х1
+16     14   020  ↔
+17     11   017  -
+18     00   000  х-П1
+19     00   000  П-х3
+20     00   000  П-х8
+21     12   018  ×
+22     00   000  П-х9
+23     1D   029  Fcos
+24     12   018  ×
+25     11   017  -
+26     5C   092  Fx<0
+27     41   065  41
+28     00   000  П-х5
+29     10   016  +
+30     00   000  П-х6
+31     00   000  П-х9
+32     1E   030  Ftg
+33     13   019  /
+34     10   016  +
+35     59   089  Fx>=0
+36     39   057  39
+37     00   000  П-хd
+38     50   080  С/П
+39     0F   015  FBx
+40     11   017  -
+41     0B   011  /-/
+42     50   080  С/П
+43     5D   093  FL0
+44     53   083  53
+45     00   000  П-хС
+46     50   080  С/П
+47     00   000  П-х1
+48     00   000  П-х2
+49     00   000  П-х4
+50     12   018  ×
+51     11   017  -
+52     00   000  х-П1
+53     00   000  П-х1
+54     09   009  9
+55     11   017  -
+56     5C   092  Fx<0
+57     62   098  62
+58     00   000  П-хВ
+59     0C   012  ВП
+60     07   007  7
+61     50   080  С/П
+62     00   000  П-х9
+63     05   005  5
+64     12   018  ×
+65     0E   014  В↑
+66     00   000  П-хА
+67     13   019  /
+68     01   001  1
+69     10   016  +
+70     00   000  х-П9
+71     00   000  КПЧ9
+72     00   000  F круг
+73     00   000  F круг
+74     00   000  П-х9
+75     01   001  1
+76     11   017  -
+77     00   000  П-хА
+78     12   018  ×
+79     11   017  -
+80     04   004  4
+81     11   017  -
+82     57   087  Fx≠0
+83     58   088  58
+84     59   089  Fx>=0
+85     91   145  91
+86     04   004  4
+87     10   016  +
+88     50   080  С/П
+89     51   081  БП
+90     00   000  00
+91     00   000  П-х2
+92     02   002  2
+93     12   018  ×
+94     00   000  х-П2
+95     00   000  П-хВ
+96     51   081  БП
+97     88   136  88
+
+Замечания при разборе:
+- Command at 2 was not recognized: х-П9
+- Command at 6 was not recognized: П-х3
+- Command at 8 was not recognized: П-х7
+- Command at 10 was not recognized: х-П8
+- Command at 11 was not recognized: П-х2
+- Command at 13 was not recognized: П-х4
+- Command at 15 was not recognized: П-х1
+- Command at 18 was not recognized: х-П1
+- Command at 19 was not recognized: П-х3
+- Command at 20 was not recognized: П-х8
+- Command at 22 was not recognized: П-х9
+- Command at 28 was not recognized: П-х5
+- Command at 30 was not recognized: П-х6
+- Command at 31 was not recognized: П-х9
+- Command at 37 was not recognized: П-хd
+- Command at 45 was not recognized: П-хС
+- Command at 47 was not recognized: П-х1
+- Command at 48 was not recognized: П-х2
+- Command at 49 was not recognized: П-х4
+- Command at 52 was not recognized: х-П1
+- Command at 53 was not recognized: П-х1
+- Command at 58 was not recognized: П-хВ
+- Command at 62 was not recognized: П-х9
+- Command at 66 was not recognized: П-хА
+- Command at 70 was not recognized: х-П9
+- Command at 71 was not recognized: КПЧ9
+- Command at 72 was not recognized: F круг
+- Command at 73 was not recognized: F круг
+- Command at 74 was not recognized: П-х9
+- Command at 77 was not recognized: П-хА
+- Command at 91 was not recognized: П-х2
+- Command at 94 was not recognized: х-П2
+- Command at 95 was not recognized: П-хВ
+
+Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
+ожидаемый экран здесь не указан: он берётся из отдельного прогона.
