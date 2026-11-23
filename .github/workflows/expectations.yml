@@ -1,0 +1,124 @@
+name: Expectations
+
+# Прогоняет каталог games/ через эталонный эмулятор (tests/emulator/mk61.cjs)
+# и складывает ожидания в tmp/imports/. Ничего не публикует в games/ и не
+# меняет каталог: только читает листинги и коммитит JSON с результатами.
+#
+# Группы (как договорились):
+#   1. utilities        — детерминированные программы, пары «итеративно/формула»
+#   2. series           — клоны одной игры (морской бой, каратэ, танковая атака и др.)
+#   3. kon-tiki         — линейка Пухова + посадки на Луну
+#
+# Extended = true (105 шагов), фильтрации недокументированных команд нет,
+# экран снимается целиком, включая символы L, С, Г, Е.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: expectations-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  utilities:
+    name: utilities
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Node version
+        run: node --version
+      - name: Generate utilities
+        run: >
+          node scripts/generate-game-expectations.cjs
+          --section utilities
+          --out tmp/imports/expectations-utilities.json
+          --verbose
+      - uses: actions/upload-artifact@v6
+        with:
+          name: expectations-utilities
+          path: tmp/imports/expectations-utilities.json
+          if-no-files-found: warn
+
+  series:
+    name: series
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Generate series
+        run: |
+          set -u
+          for s in sea-battle karate tankovaya-ataka fox-hunt bashe nim odd-even hanoi minesweeper bulls-and-cows mastermind; do
+            echo "::group::серия $s"
+            node scripts/generate-game-expectations.cjs \
+              --series "$s" \
+              --out "tmp/imports/series-$s.json" \
+              --verbose || echo "серия $s: прервано с ошибкой"
+            echo "::endgroup::"
+          done
+      - uses: actions/upload-artifact@v6
+        with:
+          name: expectations-series
+          path: tmp/imports/series-*.json
+          if-no-files-found: warn
+
+  kon-tiki:
+    name: kon-tiki
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Generate kon-tiki and lunar landings
+        run: |
+          set -u
+          node scripts/generate-game-expectations.cjs \
+            --series kon-tiki \
+            --out tmp/imports/expectations-kon-tiki.json \
+            --verbose || echo "kon-tiki: прервано с ошибкой"
+          node scripts/generate-game-expectations.cjs \
+            --series lunar-landing \
+            --out tmp/imports/expectations-lunar-landing.json \
+            --verbose || echo "lunar-landing: прервано с ошибкой"
+      - uses: actions/upload-artifact@v6
+        with:
+          name: expectations-kon-tiki
+          path: tmp/imports/expectations-*.json
+          if-no-files-found: warn
+
+  commit:
+    name: commit expectations
+    needs: [utilities, series, kon-tiki]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/download-artifact@v7
+        with:
+          path: tmp/imports
+          merge-multiple: true
+      - name: List results
+        run: ls -la tmp/imports
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f tmp/imports
+          if git diff --cached --quiet; then
+            echo "Изменений нет — коммит не нужен."
+          else
+            git commit -m "chore(expectations): прогон каталога через эталонный эмулятор"
+            git push
+          fi
