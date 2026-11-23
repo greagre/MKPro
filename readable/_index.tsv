@@ -1,212 +1,212 @@
 раздел	файл	название	автор	тип	шагов	не разобрано	примечаний	риск
 action	action/afrikanskoe-safari.txt	Африканское сафари	В. Кононов	game	94	0	0	
-action	action/alaram.txt	Alaram	Сергей Шинкевич	game	105	0	0	
-action	action/american-ninja.txt	American Ninja	Евгений Кузниченко	game	105	0	0	
+action	action/alaram.txt	Alaram	Сергей Шинкевич	game	100	0	0	
+action	action/american-ninja.txt	American Ninja	Евгений Кузниченко	game	100	0	0	
 action	action/artilleriyskiy-boy-c3000.txt	Артиллерийский бой	Я. К. Трохименко	game	54	0	0	c3000
 action	action/ataka.txt	ataka	В. Ю. Солдатов	game	42	0	0	
 action	action/ballisticheskaya-igra-sistepskiy-1986.txt	Баллистическая игра	Л. Н. Систепский	game	67	0	0	
 action	action/bomber-video.txt	bomber-video	Сергей Чурсанов	game	90	0	0	
 action	action/boy-v-tumane-kibernetika-1986.txt	Бой в тумане	коллектив авторов	game	50	0	0	
-action	action/chase-h-q.txt	Chase H.Q.	Константин Сергеев	game	105	0	0	
-action	action/chronos.txt	Chronos	Сергей Чурсанов	game	104	1	0	
-action	action/chuzhie.txt	chuzhie	Сергей Устюгов	game	105	0	0	
-action	action/cowboy.txt	Cowboy	Евгений Кузниченко	game	105	0	0	
+action	action/chase-h-q.txt	Chase H.Q.	Константин Сергеев	game	100	0	0	
+action	action/chronos.txt	Chronos	Сергей Чурсанов	game	100	1	0	
+action	action/chuzhie.txt	chuzhie	Сергей Устюгов	game	100	0	0	
+action	action/cowboy.txt	Cowboy	Евгений Кузниченко	game	100	0	0	
 action	action/diversant-dolgushin-notebook.txt	Диверсант	Александр Долгушин	game	48	0	0	manuscript
-action	action/diversant.txt	diversant	Сергей Устюгов	game	105	0	0	
+action	action/diversant.txt	diversant	Сергей Устюгов	game	100	0	0	
 action	action/duel-pchely-s-ovodom-romanovsky-1989.txt	Дуэль пчелы с оводом	Т. Б. Романовский	game	97	0	0	
-action	action/dzheyms-bond-agent-007-2.txt	dzheyms bond - agent 007 - 2	Евгений Кузниченко	game	105	0	0	
-action	action/dzheyms-bond-agent-007.txt	dzheyms bond - agent 007	Евгений Кузниченко	game	105	0	0	
+action	action/dzheyms-bond-agent-007-2.txt	dzheyms bond - agent 007 - 2	Евгений Кузниченко	game	100	0	0	
+action	action/dzheyms-bond-agent-007.txt	dzheyms bond - agent 007	Евгений Кузниченко	game	100	0	0	
 action	action/f-19.txt	F-19	А. Беликов	game	98	1	0	
-action	action/galakticheskie-piraty.txt	galakticheskie piraty	Евгений Кузниченко	game	104	0	0	
-action	action/galakticheskiy-patrul.txt	galakticheskiy patrul	Евгений Кузниченко	game	105	0	0	
+action	action/galakticheskie-piraty.txt	galakticheskie piraty	Евгений Кузниченко	game	100	0	0	
+action	action/galakticheskiy-patrul.txt	galakticheskiy patrul	Евгений Кузниченко	game	100	0	0	
 action	action/gangstery.txt	gangstery	С. И. Пономарёв	game	46	0	0	
 action	action/hogans-alley-dolgushin-notebook.txt	HOGAN'S ALLEY	Александр Долгушин	game	67	0	0	manuscript
-action	action/kapral.txt	kapral	Сергей Устюгов	game	105	0	0	
+action	action/kapral.txt	kapral	Сергей Устюгов	game	100	0	0	
 action	action/katapulta-gaishtut-1988.txt	Катапульта		game	55	0	0	
-action	action/kiber-ubiytsa.txt	kiber-ubiytsa	Сергей Чурсанов	game	104	0	0	
-action	action/klingi-2.txt	klingi-2	Сергей Чурсанов	game	105	0	0	
-action	action/klingi-2m2.txt	klingi-2m2	Александр Михолап	game	103	1	2	
-action	action/klingi.txt	klingi	Сергей Чурсанов	game	105	0	0	
-action	action/komandos-2.txt	komandos-2	Владимир Трофимчук	game	103	0	0	
-action	action/komandos.txt	komandos	Владимир Трофимчук	game	104	0	0	
+action	action/kiber-ubiytsa.txt	kiber-ubiytsa	Сергей Чурсанов	game	100	0	0	
+action	action/klingi-2.txt	klingi-2	Сергей Чурсанов	game	100	0	0	
+action	action/klingi-2m2.txt	klingi-2m2	Александр Михолап	game	98	1	2	
+action	action/klingi.txt	klingi	Сергей Чурсанов	game	100	0	0	
+action	action/komandos-2.txt	komandos-2	Владимир Трофимчук	game	100	0	0	
+action	action/komandos.txt	komandos	Владимир Трофимчук	game	100	0	0	
 action	action/komissar-politsii.txt	komissar politsii	А. Щекалев	game	95	0	0	
 action	action/kosmicheskiy-desant.txt	kosmicheskiy desant	М. Голиков	game	42	0	0	
-action	action/kosmopol.txt	kosmopol	Александр Михолап	game	105	0	0	
+action	action/kosmopol.txt	kosmopol	Александр Михолап	game	100	0	0	
 action	action/kung-fu.txt	Kung-Fu	Константин Сергеев	game	65	0	0	
-action	action/mafiozi.txt	mafiozi	А. Камоедов	game	105	0	0	
-action	action/myatezhnik.txt	myatezhnik	Сергей Шинкевич	game	105	0	0	
+action	action/mafiozi.txt	mafiozi	А. Камоедов	game	100	0	0	
+action	action/myatezhnik.txt	myatezhnik	Сергей Шинкевич	game	100	0	0	
 action	action/navesnaya-strelba-c3000.txt	Навесная стрельба	Я. К. Трохименко	game	20	0	0	c3000
 action	action/navesnaya-strelba-dolgushin-notebook.txt	Навесная стрельба	автор неизвестен; редакция Александра Долгушина	game	49	0	0	manuscript
-action	action/nindzya-terminator.txt	nindzya-terminator	Владимир Трофимчук	game	105	0	0	
-action	action/okhota-na-dinozavrov.txt	okhota na dinozavrov	Владимир Трофимчук	game	105	0	0	
-action	action/okhota-na-medvedya-4pda.txt	Охота на медведя, доработка 4PDA	Сергей Храмов; доработка 4PDA user 9123742	game	105	0	0	
-action	action/okhota-na-medvedya-variant.txt	Охота на медведя		game	105	0	0	
-action	action/okhota-na-medvedya.txt	Охота на медведя	Сергей Храмов	game	105	0	0	
+action	action/nindzya-terminator.txt	nindzya-terminator	Владимир Трофимчук	game	100	0	0	
+action	action/okhota-na-dinozavrov.txt	okhota na dinozavrov	Владимир Трофимчук	game	100	0	0	
+action	action/okhota-na-medvedya-4pda.txt	Охота на медведя, доработка 4PDA	Сергей Храмов; доработка 4PDA user 9123742	game	100	0	0	
+action	action/okhota-na-medvedya-variant.txt	Охота на медведя		game	100	0	0	
+action	action/okhota-na-medvedya.txt	Охота на медведя	Сергей Храмов	game	100	0	0	
 action	action/okhota-na-skaloeda.txt	okhota na skaloeda	М. Пухов	game	100	0	0	
 action	action/okhota-na-sklyupikov.txt	okhota na sklyupikov	Александр Клишин	game	72	0	0	
-action	action/opasnaya-igra.txt	opasnaya igra	Сергей Тарасов	game	94	0	0	manuscript
-action	action/peredovoy-otryad.txt	peredovoy otryad	П. Аронович	game	102	0	0	
+action	action/opasnaya-igra.txt	opasnaya igra	Сергей Тарасов	game	90	0	0	manuscript
+action	action/peredovoy-otryad.txt	peredovoy otryad	П. Аронович	game	100	0	0	
 action	action/perekhvat.txt	perekhvat	В. Масенков, Михаил Лялин	game	60	0	0	
 action	action/perekhvatchik.txt	perekhvatchik	Сергей Чурсанов	game	84	0	0	
-action	action/pervoprokhodets.txt	pervoprokhodets	Игорь Вершинин	game	104	0	0	
-action	action/planet-z.txt	Planet Z	Сергей Устюгов	game	104	0	0	
+action	action/pervoprokhodets.txt	pervoprokhodets	Игорь Вершинин	game	100	0	0	
+action	action/planet-z.txt	Planet Z	Сергей Устюгов	game	100	0	0	
 action	action/poedinok-na-orbite.txt	poedinok na orbite	Игорь Вершинин	game	96	1	0	
 action	action/poedinok-s-tankom-gaishtut-1988.txt	Поединок с танком		game	84	0	0	
-action	action/poedinok.txt	poedinok	Евгений Кузниченко	game	105	0	0	
-action	action/pogonya-v-lesu.txt	pogonya v lesu	Александр Михолап	game	105	0	0	
-action	action/pogonya.txt	pogonya	Сергей Шинкевич	game	105	0	0	
-action	action/policeman.txt	Policeman	Евгений Кузниченко	game	106	7	0	
+action	action/poedinok.txt	poedinok	Евгений Кузниченко	game	100	0	0	
+action	action/pogonya-v-lesu.txt	pogonya v lesu	Александр Михолап	game	100	0	0	
+action	action/pogonya.txt	pogonya	Сергей Шинкевич	game	100	0	0	
+action	action/policeman.txt	Policeman	Евгений Кузниченко	game	100	7	0	
 action	action/pursuit.txt	Pursuit	Сергей Чурсанов	game	96	0	0	
-action	action/rambo-i.txt	Rambo-I	Евгений Кузниченко	game	105	0	0	
+action	action/rambo-i.txt	Rambo-I	Евгений Кузниченко	game	100	0	0	
 action	action/rambo-ii.txt	Rambo-II	Евгений Кузниченко	game	100	0	0	
-action	action/rambo-iii.txt	Rambo-III	Евгений Кузниченко	game	105	0	0	
+action	action/rambo-iii.txt	Rambo-III	Евгений Кузниченко	game	100	0	0	
 action	action/robin-hood.txt	Robin Hood	С. Андрианов	game	100	0	0	
-action	action/roboteks.txt	roboteks	Владимир Трофимчук	game	105	0	0	
-action	action/rukopashnyy-boy.txt	rukopashnyy boy	Евгений Кузниченко	game	105	0	0	
-action	action/samurai-dolgushin-notebook.txt	Самурай	Александр Долгушин	game	105	0	0	manuscript
-action	action/sherif.txt	sherif	автор неизвестен	game	105	0	0	
-action	action/shturmovik.txt	shturmovik	Сергей Чурсанов	game	105	0	0	
+action	action/roboteks.txt	roboteks	Владимир Трофимчук	game	100	0	0	
+action	action/rukopashnyy-boy.txt	rukopashnyy boy	Евгений Кузниченко	game	100	0	0	
+action	action/samurai-dolgushin-notebook.txt	Самурай	Александр Долгушин	game	100	0	0	manuscript
+action	action/sherif.txt	sherif	автор неизвестен	game	100	0	0	
+action	action/shturmovik.txt	shturmovik	Сергей Чурсанов	game	100	0	0	
 action	action/skorpion.txt	skorpion	Олег Хажинский	game	96	0	0	
-action	action/smertelnaya-igra.txt	Смертельная игра	Сергей Тарасов	game	104	0	0	
-action	action/soldat-udachi-2.txt	soldat udachi-2	Дмитрий Родионов	game	104	0	0	
-action	action/soldier-of-fortune.txt	Soldier Of Fortune	Евгений Кузниченко	game	105	0	0	
-action	action/space-ranger-dolgushin-notebook.txt	SPACE RANGER	Александр Долгушин	game	105	1	0	manuscript
+action	action/smertelnaya-igra.txt	Смертельная игра	Сергей Тарасов	game	100	0	0	
+action	action/soldat-udachi-2.txt	soldat udachi-2	Дмитрий Родионов	game	100	0	0	
+action	action/soldier-of-fortune.txt	Soldier Of Fortune	Евгений Кузниченко	game	100	0	0	
+action	action/space-ranger-dolgushin-notebook.txt	SPACE RANGER	Александр Долгушин	game	100	0	0	manuscript
 action	action/stinger.txt	stinger	Сергей Чурсанов	game	91	0	0	
-action	action/super-pushka.txt	super-pushka	автор неизвестен	game	105	0	0	
-action	action/the-last-sapper-of-the-galaxy.txt	The Last Sapper Of The Galaxy	Евгений Кузниченко	game	105	0	0	
+action	action/super-pushka.txt	super-pushka	автор неизвестен	game	100	0	0	
+action	action/the-last-sapper-of-the-galaxy.txt	The Last Sapper Of The Galaxy	Евгений Кузниченко	game	100	0	0	
 action	action/tir-2.txt	tir-2	Сергей Тарасов, Александр Клишин	game	59	0	0	
 action	action/tir.txt	tir	Сергей Тарасов, Александр Клишин	game	64	0	0	
 action	action/tsel-begushchiy-kaban-gaishtut-1988.txt	Цель - "Бегущий кабан"		game	47	0	0	
 action	action/uchebnye-strelby-gaishtut-1988.txt	Учебные стрельбы		game	79	0	0	
 action	action/vozdushnyy-boy.txt	vozdushnyy boy	М. Семёнов	game	56	0	0	
-action	action/vozdushnyy-desant.txt	vozdushnyy desant	Сергей Шинкевич	game	105	1	0	
+action	action/vozdushnyy-desant.txt	vozdushnyy desant	Сергей Шинкевич	game	100	1	0	
 action	action/western.txt	Western	Константин Сергеев	game	98	0	0	
 action	action/zakhvat.txt	zakhvat	А. Пирожков	game	70	0	0	
-action	action/zvyozdnyy-boets-2.txt	zvyozdnyy boets-2	Сергей Чурсанов	game	103	0	0	
+action	action/zvyozdnyy-boets-2.txt	zvyozdnyy boets-2	Сергей Чурсанов	game	100	0	0	
 action	action/zvyozdnyy-boets-3.txt	zvyozdnyy boets-3	Сергей Устюгов	game	93	0	0	
-action	action/zvyozdnyy-boets-4.txt	zvyozdnyy boets-4	Сергей Устюгов	game	105	0	0	
-action	action/zvyozdnyy-boets.txt	zvyozdnyy boets	Сергей Чурсанов	game	103	0	0	
+action	action/zvyozdnyy-boets-4.txt	zvyozdnyy boets-4	Сергей Устюгов	game	100	0	0	
+action	action/zvyozdnyy-boets.txt	zvyozdnyy boets	Сергей Чурсанов	game	100	0	0	
 action	action/zvyozdnyy-pokhod.txt	zvyozdnyy pokhod	А. Лотохов	game	93	0	0	
 adventure	adventure/avantyurist.txt	avantyurist	автор неизвестен	game	70	0	0	
-adventure	adventure/beskonechnaya-istoriya-variant.txt	Бесконечная история		game	105	0	0	
-adventure	adventure/beskonechnaya-istoriya.txt	Beskonechnaya istoriya	Владимир Талалаев, Владимир Шило	game	106	1	0	
-adventure	adventure/black-lord.txt	Black Lord	Евгений Кузниченко	game	105	0	0	
+adventure	adventure/beskonechnaya-istoriya-variant.txt	Бесконечная история		game	100	0	0	
+adventure	adventure/beskonechnaya-istoriya.txt	Beskonechnaya istoriya	Владимир Талалаев, Владимир Шило	game	100	0	0	
+adventure	adventure/black-lord.txt	Black Lord	Евгений Кузниченко	game	100	0	0	
 adventure	adventure/brodyaga-vselennoy-2.txt	brodyaga vselennoy-2	А. Пирожков	game	99	0	0	
-adventure	adventure/brodyaga-vselennoy-3.txt	brodyaga vselennoy-3	А. Пирожков	game	105	2	0	
+adventure	adventure/brodyaga-vselennoy-3.txt	brodyaga vselennoy-3	А. Пирожков	game	100	2	0	
 adventure	adventure/brodyaga.txt	brodyaga	Михаил Храмов	game	90	0	0	
-adventure	adventure/cave.txt	Cave	illi4	game	105	1	0	
-adventure	adventure/colis-secret-base-dolgushin-notebook-2.txt	COLiS: SECRET BASE	Александр Долгушин	game	106	19	1	manuscript
-adventure	adventure/dolina.txt	dolina	А. Н. Гришин, Владимир Трофимчук	game	105	1	0	
-adventure	adventure/dracula-dolgushin-notebook.txt	DRACULA	Александр Долгушин	game	105	0	0	manuscript
-adventure	adventure/dungeon.txt	Dungeon	С. Андрианов	game	105	0	0	
-adventure	adventure/dzhoy.txt	dzhoy	Владимир Молоканов, Владимир Трофимчук	game	105	0	0	
+adventure	adventure/cave.txt	Cave	illi4	game	100	1	0	
+adventure	adventure/colis-secret-base-dolgushin-notebook-2.txt	COLiS: SECRET BASE	Александр Долгушин	game	99	4	1	manuscript
+adventure	adventure/dolina.txt	dolina	А. Н. Гришин, Владимир Трофимчук	game	100	1	0	
+adventure	adventure/dracula-dolgushin-notebook.txt	DRACULA	Александр Долгушин	game	100	0	0	manuscript
+adventure	adventure/dungeon.txt	Dungeon	С. Андрианов	game	100	0	0	
+adventure	adventure/dzhoy.txt	dzhoy	Владимир Молоканов, Владимир Трофимчук	game	100	0	0	
 adventure	adventure/dzhungli-2.txt	dzhungli-2	Сергей Чурсанов	game	59	1	0	
 adventure	adventure/dzhungli.txt	dzhungli	Сергей Чурсанов	game	52	0	0	
-adventure	adventure/elfy.txt	elfy	Владимир Трофимчук	game	104	0	0	
-adventure	adventure/encircled-with-fantoms.txt	Encircled With Fantoms	Сергей Устюгов	game	105	0	0	
-adventure	adventure/fantastika.txt	fantastika	Владимир Трофимчук	game	103	0	0	
-adventure	adventure/for-kicks-i.txt	For Kicks-I	Евгений Кузниченко	game	105	0	0	
-adventure	adventure/for-kicks-ii.txt	For Kicks-II	Евгений Кузниченко	game	105	0	0	
-adventure	adventure/for-kicks-iii.txt	For Kicks-III	Евгений Кузниченко	game	105	0	0	
-adventure	adventure/freddi-kryuger.txt	freddi kryuger	Владимир Трофимчук	game	105	0	0	
-adventure	adventure/giants-country.txt	Giants Country	Владимир Трофимчук	game	105	1	0	
-adventure	adventure/indiana-jones-i-dolgushin-notebook.txt	INDIANA JONES I	Александр Долгушин	game	105	0	0	manuscript
-adventure	adventure/klad-2.txt	Клад		game	105	0	0	
-adventure	adventure/kladoiskatel.txt	kladoiskatel	Сергей Чурсанов, Владимир Трофимчук	game	105	0	0	
+adventure	adventure/elfy.txt	elfy	Владимир Трофимчук	game	100	0	0	
+adventure	adventure/encircled-with-fantoms.txt	Encircled With Fantoms	Сергей Устюгов	game	100	0	0	
+adventure	adventure/fantastika.txt	fantastika	Владимир Трофимчук	game	100	0	0	
+adventure	adventure/for-kicks-i.txt	For Kicks-I	Евгений Кузниченко	game	100	0	0	
+adventure	adventure/for-kicks-ii.txt	For Kicks-II	Евгений Кузниченко	game	100	0	0	
+adventure	adventure/for-kicks-iii.txt	For Kicks-III	Евгений Кузниченко	game	100	0	0	
+adventure	adventure/freddi-kryuger.txt	freddi kryuger	Владимир Трофимчук	game	100	0	0	
+adventure	adventure/giants-country.txt	Giants Country	Владимир Трофимчук	game	100	0	0	
+adventure	adventure/indiana-jones-i-dolgushin-notebook.txt	INDIANA JONES I	Александр Долгушин	game	100	0	0	manuscript
+adventure	adventure/klad-2.txt	Клад		game	100	0	0	
+adventure	adventure/kladoiskatel.txt	kladoiskatel	Сергей Чурсанов, Владимир Трофимчук	game	100	0	0	
 adventure	adventure/korotkoe-zamykanie.txt	korotkoe zamykanie	Анатолий Кондратьев	game	94	0	0	
-adventure	adventure/kosmicheskaya-odisseya.txt	kosmicheskaya odisseya	Сергей Чурсанов	game	105	0	0	
+adventure	adventure/kosmicheskaya-odisseya.txt	kosmicheskaya odisseya	Сергей Чурсанов	game	100	0	0	
 adventure	adventure/kubok-klarensa.txt	kubok klarensa	Сергей Шкуратов	game	96	0	0	
 adventure	adventure/labirint-8-13.txt	labirint 8*13	А. Н. Гришин	game	80	0	0	
 adventure	adventure/labirint.txt	labirint	С. Гета	game	97	0	0	
-adventure	adventure/labyrinth777.txt	Лабиринт777		game	104	0	0	
-adventure	adventure/lamer-andrew-meets-america.txt	Lamer Andrew Meets America	illi4	game	103	1	0	
-adventure	adventure/m-skiy-treugolnik.txt	m-skiy treugolnik	Владимир Трофимчук	game	104	0	0	
-adventure	adventure/myortvaya-zona-i.txt	myortvaya zona-I	Сергей Устюгов	game	105	0	0	
-adventure	adventure/myortvaya-zona-ii.txt	myortvaya zona-II	Сергей Устюгов	game	105	0	0	
-adventure	adventure/myortvaya-zona-iii.txt	myortvaya zona-III	Сергей Устюгов	game	105	0	0	
-adventure	adventure/nekromant.txt	nekromant		game	105	0	0	
-adventure	adventure/oborotni.txt	oborotni	Сергей Устюгов	game	105	0	0	
-adventure	adventure/oregon-2.txt	oregon-2	Иван, Василий	game	105	0	0	
-adventure	adventure/oregon.txt	oregon	Сергей Чурсанов	game	104	0	0	
-adventure	adventure/oregonskaya-tropa-dolgushin-notebook.txt	Орегонская тропа	автор неизвестен; редакция Александра Долгушина	game	105	0	0	manuscript
+adventure	adventure/labyrinth777.txt	Лабиринт777		game	99	0	0	
+adventure	adventure/lamer-andrew-meets-america.txt	Lamer Andrew Meets America	illi4	game	100	1	0	
+adventure	adventure/m-skiy-treugolnik.txt	m-skiy treugolnik	Владимир Трофимчук	game	100	0	0	
+adventure	adventure/myortvaya-zona-i.txt	myortvaya zona-I	Сергей Устюгов	game	100	0	0	
+adventure	adventure/myortvaya-zona-ii.txt	myortvaya zona-II	Сергей Устюгов	game	100	0	0	
+adventure	adventure/myortvaya-zona-iii.txt	myortvaya zona-III	Сергей Устюгов	game	100	0	0	
+adventure	adventure/nekromant.txt	nekromant		game	100	0	0	
+adventure	adventure/oborotni.txt	oborotni	Сергей Устюгов	game	100	0	0	
+adventure	adventure/oregon-2.txt	oregon-2	Иван, Василий	game	100	0	0	
+adventure	adventure/oregon.txt	oregon	Сергей Чурсанов	game	100	0	0	
+adventure	adventure/oregonskaya-tropa-dolgushin-notebook.txt	Орегонская тропа	автор неизвестен; редакция Александра Долгушина	game	100	0	0	manuscript
 adventure	adventure/oregonskaya-tropa.txt	oregonskaya tropa	автор неизвестен	game	90	0	0	
 adventure	adventure/ostrov.txt	ostrov	Вадим Мазур	game	91	1	0	manuscript
-adventure	adventure/peshchera-dolgushin-notebook.txt	Пещера	автор неизвестен	game	105	0	0	manuscript
-adventure	adventure/peshchera-syurprizov.txt	peshchera syurprizov	Игорь Вершинин	game	105	0	0	
+adventure	adventure/peshchera-dolgushin-notebook.txt	Пещера	автор неизвестен	game	100	0	0	manuscript
+adventure	adventure/peshchera-syurprizov.txt	peshchera syurprizov	Игорь Вершинин	game	100	0	0	
 adventure	adventure/pobeg-iz-sistemy-x.txt	pobeg iz sistemy X	А. Лотохов	game	97	0	0	
-adventure	adventure/polet-shmelya.txt	Полёт шмеля	В. Рябенький	game	105	2	0	
-adventure	adventure/priton.txt	priton	Евгений Кузниченко	game	105	0	0	
-adventure	adventure/puteshestvie.txt	puteshestvie	Владимир Трофимчук	game	105	1	0	
-adventure	adventure/raby-obmena-razumov.txt	raby obmena razumov	Анатолий Кондратьев	game	105	0	0	
+adventure	adventure/polet-shmelya.txt	Полёт шмеля	В. Рябенький	game	100	2	0	
+adventure	adventure/priton.txt	priton	Евгений Кузниченко	game	100	0	0	
+adventure	adventure/puteshestvie.txt	puteshestvie	Владимир Трофимчук	game	100	1	0	
+adventure	adventure/raby-obmena-razumov.txt	raby obmena razumov	Анатолий Кондратьев	game	100	0	0	
 adventure	adventure/raja-yoga.txt	Раджа-йога		game	96	0	0	
-adventure	adventure/rising-from-hell.txt	Rising From Hell	Дмитрий Родионов	game	102	0	0	
-adventure	adventure/rytsar.txt	rytsar	Владимир Трофимчук	game	105	0	0	
-adventure	adventure/sex-mission.txt	Sex-Mission	Евгений Кузниченко	game	105	0	0	
-adventure	adventure/skazka-lordbss.txt	skazka	Владимир Трофимчук	game	105	1	0	
-adventure	adventure/skazka.txt	skazka	Владимир Сивицкий	game	105	0	0	
+adventure	adventure/rising-from-hell.txt	Rising From Hell	Дмитрий Родионов	game	100	0	0	
+adventure	adventure/rytsar.txt	rytsar	Владимир Трофимчук	game	100	0	0	
+adventure	adventure/sex-mission.txt	Sex-Mission	Евгений Кузниченко	game	100	0	0	
+adventure	adventure/skazka-lordbss.txt	skazka	Владимир Трофимчук	game	100	1	0	
+adventure	adventure/skazka.txt	skazka	Владимир Сивицкий	game	100	0	0	
 adventure	adventure/sokrovishche.txt	sokrovishche	Евгений Бредня	game	97	0	0	
 adventure	adventure/speleolog-dolgushin-notebook.txt	SPELEOLOG	Александр Долгушин	game	98	0	0	manuscript
 adventure	adventure/speleolog.txt	speleolog	Владимир Лазарев	game	89	0	0	
 adventure	adventure/sprut.txt	sprut	Владимир Сивицкий	game	92	0	0	
-adventure	adventure/stalker.txt	stalker	Владимир Трофимчук	game	105	0	0	
-adventure	adventure/strana-monstrov.txt	strana monstrov	Владимир Трофимчук	game	105	0	0	
-adventure	adventure/swamp.txt	Swamp	Александр Михолап	game	102	0	0	
+adventure	adventure/stalker.txt	stalker	Владимир Трофимчук	game	100	0	0	
+adventure	adventure/strana-monstrov.txt	strana monstrov	Владимир Трофимчук	game	100	0	0	
+adventure	adventure/swamp.txt	Swamp	Александр Михолап	game	100	0	0	
 adventure	adventure/tayny-okeana-3.txt	tayny okeana-3	Сергей Чурсанов	game	88	0	0	
 adventure	adventure/tayny-okeana-4.txt	tayny okeana-4	Евгений Кузниченко	game	86	0	0	
 adventure	adventure/tayny-okeana.txt	tayny okeana	Михаил Храмов	game	80	0	0	
-adventure	adventure/teleport.txt	teleport		game	105	0	0	
-adventure	adventure/terra-incognita-dolgushin-notebook.txt	TERRA INCOGNITA	Александр Долгушин	game	105	0	0	manuscript
-adventure	adventure/the-goonmaster.txt	The Goonmaster	К. Бокач, А. Грубин	game	105	0	0	
-adventure	adventure/the-land-of-psycho-lamers.txt	Страна психоламеров	illi4	game	80	0	0	
-adventure	adventure/treasure-cave-demo.txt	Treasure Cave Demo	Serge Anvarov	game	105	0	0	
-adventure	adventure/treasure-cave.txt	Treasure Cave	Vasiliy Zakharenko	game	105	0	0	
-adventure	adventure/treasure-hunter-2.txt	Кладоискатель-2		game	102	0	0	
-adventure	adventure/tropa.txt	tropa	Юрий Волков	game	105	0	0	
-adventure	adventure/tutankhamon.txt	tutankhamon	Сергей Чурсанов	game	105	0	0	
-adventure	adventure/twin-peaks.txt	Twin Peaks	Евгений Кузниченко	game	105	0	0	
-adventure	adventure/winner.txt	Winner	Mikhail Pukhov	game	101	1	0	
-adventure	adventure/wumpus.txt	Wumpus	Евгений Степанищев	game	105	0	0	
-adventure	adventure/xena-princess-warrior-dolgushin-notebook.txt	XENA-PRINCESS WARRIOR	Александр Долгушин	game	105	0	0	manuscript
+adventure	adventure/teleport.txt	teleport		game	100	0	0	
+adventure	adventure/terra-incognita-dolgushin-notebook.txt	TERRA INCOGNITA	Александр Долгушин	game	100	0	0	manuscript
+adventure	adventure/the-goonmaster.txt	The Goonmaster	К. Бокач, А. Грубин	game	100	0	0	
+adventure	adventure/the-land-of-psycho-lamers.txt	Страна психоламеров	illi4	game	75	0	0	
+adventure	adventure/treasure-cave-demo.txt	Treasure Cave Demo	Serge Anvarov	game	100	0	0	
+adventure	adventure/treasure-cave.txt	Treasure Cave	Vasiliy Zakharenko	game	100	0	0	
+adventure	adventure/treasure-hunter-2.txt	Кладоискатель-2		game	97	0	0	
+adventure	adventure/tropa.txt	tropa	Юрий Волков	game	100	0	0	
+adventure	adventure/tutankhamon.txt	tutankhamon	Сергей Чурсанов	game	100	0	0	
+adventure	adventure/twin-peaks.txt	Twin Peaks	Евгений Кузниченко	game	100	0	0	
+adventure	adventure/winner.txt	Winner	Mikhail Pukhov	game	100	1	0	
+adventure	adventure/wumpus.txt	Wumpus	Евгений Степанищев	game	100	0	0	
+adventure	adventure/xena-princess-warrior-dolgushin-notebook.txt	XENA-PRINCESS WARRIOR	Александр Долгушин	game	100	0	0	manuscript
 adventure	adventure/yantarnyy-gugon.txt	yantarnyy gugon	Владимир Трофимчук	game	80	0	0	
-adventure	adventure/zamok-s-prizrakami-4.txt	zamok s prizrakami-4	Игорь Вершинин, Сергей Чурсанов	game	105	0	0	manuscript
-adventure	adventure/zamok-s-prizrakami.txt	zamok s prizrakami	Сергей Чурсанов	game	105	0	0	
-adventure	adventure/zamok-satany.txt	zamok satany	Сергей Устюгов	game	105	0	0	
-adventure	adventure/zloveshchiy-chertog.txt	zloveshchiy chertog	Евгений Кузниченко	game	105	0	0	
+adventure	adventure/zamok-s-prizrakami-4.txt	zamok s prizrakami-4	Игорь Вершинин, Сергей Чурсанов	game	100	0	0	manuscript
+adventure	adventure/zamok-s-prizrakami.txt	zamok s prizrakami	Сергей Чурсанов	game	100	0	0	
+adventure	adventure/zamok-satany.txt	zamok satany	Сергей Устюгов	game	100	0	0	
+adventure	adventure/zloveshchiy-chertog.txt	zloveshchiy chertog	Евгений Кузниченко	game	100	0	0	
 adventure	adventure/zona.txt	zona	Сергей Чурсанов	game	83	0	0	
 arcade	arcade/asteroid.txt	asteroid	С. И. Пономарёв	game	80	0	0	
-arcade	arcade/block-out.txt	Block Out	С. Андрианов	game	105	0	0	
-arcade	arcade/bosconien.txt	Bosconien	Владимир Трофимчук	game	105	0	0	
+arcade	arcade/block-out.txt	Block Out	С. Андрианов	game	100	0	0	
+arcade	arcade/bosconien.txt	Bosconien	Владимир Трофимчук	game	100	0	0	
 arcade	arcade/crazy-fly-dolgushin-notebook.txt	CRAZY FLY	Александр Долгушин	game	92	0	0	manuscript
 arcade	arcade/duck-dolgushin-notebook.txt	DUCK	Александр Долгушин	game	86	0	0	manuscript
 arcade	arcade/electronic-fortune-teller.txt	Electronic Fortune-Teller		game	67	0	0	
-arcade	arcade/lovkach-video.txt	lovkach-video	Сергей Чурсанов	game	105	0	0	
-arcade	arcade/lovkach.txt	lovkach	Владимир Лазарев	game	105	0	0	
+arcade	arcade/lovkach-video.txt	lovkach-video	Сергей Чурсанов	game	100	0	0	
+arcade	arcade/lovkach.txt	lovkach	Владимир Лазарев	game	100	0	0	
 arcade	arcade/papago.txt	papago	Владимир Трофимчук	game	90	0	0	
-arcade	arcade/pi-cho-variant.txt	Пи-чо		game	105	1	0	
-arcade	arcade/pi-cho.txt	pi-cho	А. В. Раков	game	101	0	0	
+arcade	arcade/pi-cho-variant.txt	Пи-чо		game	100	1	0	
+arcade	arcade/pi-cho.txt	pi-cho	А. В. Раков	game	100	0	0	
 arcade	arcade/safari.txt	safari	Сергей Чурсанов	game	99	0	0	
 arcade	arcade/skala.txt	skala	С. И. Пономарёв	game	99	0	0	
-arcade	arcade/teenage-mutant-ninja-turtles-dolgushin-notebook-2.txt	TEENAGE-MUTANT NINJA TURTLES	Александр Долгушин	game	108	18	0	manuscript
+arcade	arcade/teenage-mutant-ninja-turtles-dolgushin-notebook-2.txt	TEENAGE-MUTANT NINJA TURTLES	Александр Долгушин	game	100	0	0	manuscript
 arcade	arcade/tetris-lordbss.txt	tetris	Дмитрий Моргунов	game	60	0	0	
 arcade	arcade/tetris.txt	tetris	Александр Михолап	game	60	0	0	
 arcade	arcade/tom-i-dzherri-2.txt	tom i dzherri-2	Евгений Кузниченко	game	100	0	0	
-arcade	arcade/tom-i-dzherri-3.txt	tom i dzherri 3		game	103	0	0	
+arcade	arcade/tom-i-dzherri-3.txt	tom i dzherri 3		game	98	0	0	
 arcade	arcade/tom-i-dzherri.txt	tom i dzherri	В. Бычков, Евгений Кузниченко	game	74	0	0	
 arcade	arcade/toti.txt	Toti	Александр Михолап	game	99	0	0	
-arcade	arcade/turtles.txt	Turtles	Андрей Ивушкин	game	105	0	0	
+arcade	arcade/turtles.txt	Turtles	Андрей Ивушкин	game	100	0	0	
 arcade	arcade/v-oblake-asteroidov.txt	v oblake asteroidov	А. Пирожков	game	98	0	0	
 arcade	arcade/vodnaya-zmeya.txt	vodnaya zmeya	Сергей Шинкевич	game	97	0	0	
-arcade	arcade/vorishka-video.txt	vorishka-video	Владимир Трофимчук	game	105	0	0	
+arcade	arcade/vorishka-video.txt	vorishka-video	Владимир Трофимчук	game	100	0	0	
 arcade	arcade/zhonglyor-i-sharik.txt	Жонглёр и шарик	М. Шарий, Н. Узденников	game	96	0	0	
 educational	educational/99-bottles.txt	99 бутылок	Евгений Степанищев	experiment	53	0	0	
-educational	educational/arithmetic.txt	Арифметика	Сергей Храмов	trainer	105	0	0	
+educational	educational/arithmetic.txt	Арифметика	Сергей Храмов	trainer	100	0	0	
 educational	educational/brounovskoe-dvizhenie-romanovsky-1989.txt	Броуновское движение	Т. Б. Романовский	experiment	41	0	0	
 educational	educational/kon-tiki-multfilm.txt	Kon-Tiki: Multfilm	Михаил Пухов	experiment	8	0	0	
 educational	educational/markov-machine.txt	Markov Machine	Русский	experiment	100	0	0	
-educational	educational/memory-training.txt	Тренировка памяти	Сергей Храмов; по книге «Микрокалькуляторы в играх и задачах»	trainer	105	0	0	
+educational	educational/memory-training.txt	Тренировка памяти	Сергей Храмов; по книге «Микрокалькуляторы в играх и задачах»	trainer	100	0	0	
 educational	educational/multfilm-dolgushin-bloknot.txt	Мультфильм	Кирилл Котин	experiment	56	0	0	manuscript
 educational	educational/multfilm-na-indikatore.txt	Мультфильм на индикаторе	Кирилл Котин	experiment	47	0	0	
-educational	educational/naberi-chet.txt	Набери чёт	Сергей Храмов	trainer	105	0	0	
+educational	educational/naberi-chet.txt	Набери чёт	Сергей Храмов	trainer	100	0	0	
 educational	educational/obshchitelny-li-vy-chelovek-gaishtut-1988.txt	Общительный ли вы человек?		experiment	51	0	0	
 educational	educational/operatsionnaya-sistema-es-1840.txt	Операционная система ЕС-1840	не установлен	experiment	85	0	0	
 educational	educational/oplata-scheta.txt	Оплата счета	И. Д. Данилов, Г. В. Славин	trainer	84	0	0	
@@ -218,9 +218,9 @@ educational	educational/programma-dlya-testirovaniya-romanovsky-1989.txt	Про�
 educational	educational/risovanie-romanovsky-1989.txt	Рисование	Т. Б. Романовский	experiment	37	0	0	
 educational	educational/schastlivye-bilety-brp4.txt	Счастливые билеты — БРП-4		experiment	98	0	0	brp4
 educational	educational/soschitay-v-ume.txt	Сосчитай в уме	И. Д. Данилов, Г. В. Славин	trainer	80	0	0	
-educational	educational/trenirovka-pamyati-anvarov.txt	Тренировка памяти		trainer	105	0	0	
+educational	educational/trenirovka-pamyati-anvarov.txt	Тренировка памяти		trainer	100	0	0	
 educational	educational/trenirovka-pamyati-kibernetika-1986.txt	Тренировка памяти	коллектив авторов	trainer	94	0	0	
-educational	educational/trenirovka-pamyati.txt	Тренировка памяти-1М	Сергей Храмов; по книге «Микрокалькуляторы в играх и задачах»	trainer	105	0	0	
+educational	educational/trenirovka-pamyati.txt	Тренировка памяти-1М	Сергей Храмов; по книге «Микрокалькуляторы в играх и задачах»	trainer	100	0	0	
 educational	educational/tsifra-kibernetika-1986.txt	Цифра	коллектив авторов	trainer	40	0	0	
 educational	educational/ugaday-chislo-po-ostatkam-brp4.txt	Угадывание числа по остаткам — БРП-4		experiment	35	0	0	brp4
 educational	educational/umeete-li-vy-slushat-gaishtut-1988.txt	Умеете ли вы слушать?		experiment	19	0	0	
@@ -228,19 +228,19 @@ educational	educational/ustnyy-schet-kibernetika-1986.txt	Устный счет	
 educational	educational/vosem-tsifr-v-ume.txt	Восемь цифр в уме	автор не указан	trainer	64	0	0	
 educational	educational/zhizn-brp4.txt	Жизнь на 11 клетках — БРП-4		experiment	98	0	0	brp4
 gambling	gambling/bezrukiy-bandit-trokhimenko-lyubich-1985.txt	Безрукий бандит	Я. К. Трохименко, Ф. Д. Любич	game	62	0	0	
-gambling	gambling/black-jack-dolgushin-notebook.txt	BLACK JACK	Александр Долгушин	game	105	0	0	manuscript
+gambling	gambling/black-jack-dolgushin-notebook.txt	BLACK JACK	Александр Долгушин	game	100	0	0	manuscript
 gambling	gambling/faraon.txt	faraon	Сергей Чурсанов	game	85	0	0	
-gambling	gambling/fortune-dolgushin-notebook.txt	FORTUNE	Александр Долгушин	game	105	1	0	manuscript
-gambling	gambling/game-100-pig.txt	Игра 100 (свинья) вдвоём с ПМК		game	101	0	0	
+gambling	gambling/fortune-dolgushin-notebook.txt	FORTUNE	Александр Долгушин	game	100	1	0	manuscript
+gambling	gambling/game-100-pig.txt	Игра 100 (свинья) вдвоём с ПМК		game	98	0	0	
 gambling	gambling/igra-100-svinya-serge4mk-v2.txt	igra 100 svinya serge4mk v2	serge4mk	game	96	0	0	
 gambling	gambling/igra-100-svinya-serge4mk.txt	igra 100 svinya igrok protiv pmk	serge4mk	game	94	0	0	
 gambling	gambling/igralnyy-avtomat.txt	igralnyy avtomat	автор неизвестен	game	96	0	0	
-gambling	gambling/jack-pot.txt	Jack Pot	Константин Сергеев	game	104	0	0	
+gambling	gambling/jack-pot.txt	Jack Pot	Константин Сергеев	game	100	0	0	
 gambling	gambling/karusel-loto-gaishtut-1988.txt	Карусель-лото		game	40	0	0	
-gambling	gambling/kazino.txt	kazino	Евгений Кузниченко	game	105	0	0	
-gambling	gambling/klondayk-dolgushin-notebook.txt	Клондайк	А. Щекалев	game	105	0	0	manuscript
-gambling	gambling/klondayk.txt	klondayk	А. Щекалев	game	105	0	0	
-gambling	gambling/loterei-kubik-orel-reshka-renat-notebook.txt	Лотереи: кубик, перебор, орёл-решка с заданной вероятностью	автор неизвестен	game	69	38	0	manuscript
+gambling	gambling/kazino.txt	kazino	Евгений Кузниченко	game	100	0	0	
+gambling	gambling/klondayk-dolgushin-notebook.txt	Клондайк	А. Щекалев	game	100	0	0	manuscript
+gambling	gambling/klondayk.txt	klondayk	А. Щекалев	game	100	0	0	
+gambling	gambling/loterei-kubik-orel-reshka-renat-notebook.txt	Лотереи: кубик, перебор, орёл-решка с заданной вероятностью	автор неизвестен	game	16	0	0	manuscript
 gambling	gambling/lotereya-2000-dolgushin-notebook.txt	Лотерея 2000	Александр Долгушин	game	98	0	0	manuscript
 gambling	gambling/lotereya-renat-notebook.txt	Лотерея	автор неизвестен	game	25	0	0	manuscript
 gambling	gambling/monte-karlo.txt	monte-karlo	Анатолий Кондратьев	game	81	1	0	
@@ -264,16 +264,16 @@ logic	logic/byki-i-korovy-geocities.txt	Быки и коровы (GeoCities)		ga
 logic	logic/byki-i-korovy-obratnye-shapiro-boyko-1989.txt	Быки и коровы — ПМК отгадывает		game	79	0	0	
 logic	logic/byki-i-korovy.txt	Быки и коровы-2 — редакция Храмова	редакция Сергея Храмова; «Наука и жизнь», 1989, №12	game	98	0	0	
 logic	logic/chempion.txt	chempion	КЭИ	game	98	0	0	
-logic	logic/chet-nechet-3.txt	Чёт-нечёт-3	Сергей Храмов	game	105	0	0	
+logic	logic/chet-nechet-3.txt	Чёт-нечёт-3	Сергей Храмов	game	100	0	0	
 logic	logic/chet-nechet-danilov-slavin.txt	Чет-нечет	И. Д. Данилов, Г. В. Славин	game	96	0	0	
 logic	logic/chet-nechet-dolgushin-notebook.txt	Чёт-нечёт	автор неизвестен	game	96	0	0	manuscript
 logic	logic/chet-nechet-kibernetika-1986.txt	Чет-нечет	коллектив авторов	game	96	0	0	
 logic	logic/chet-nechet-korrelyatsiya-c3000.txt	Чет — нечет с учетом корреляции ходов противника	Я. К. Трохименко	game	72	0	0	c3000;brp4
 logic	logic/chet-nechet-predydushchie-khody-c3000.txt	Чет — нечет с учетом предыдущих ходов	Я. К. Трохименко	game	46	0	0	c3000
 logic	logic/chisla-po-krugu.txt	Числа по кругу	И. Д. Данилов, Г. В. Славин	game	83	0	0	
-logic	logic/chyornyy-yashchik.txt	chyornyy yashchik	Михаил Лялин	game	105	0	0	
+logic	logic/chyornyy-yashchik.txt	chyornyy yashchik	Михаил Лялин	game	100	0	0	
 logic	logic/correspondence-chess.txt	Correspondence Chess	Николай Авдеев	game	98	0	0	
-logic	logic/domino-vunderkind.txt	domino-vunderkind	С. Беляев	game	106	1	0	
+logic	logic/domino-vunderkind.txt	domino-vunderkind	С. Беляев	game	100	0	0	
 logic	logic/dorozhka-modifikatsiya-shapiro-boyko-1989.txt	Дорожка — модификация		game	83	0	0	
 logic	logic/dorozhka-shapiro-boyko-1989.txt	Дорожка — 55 команд		game	55	0	0	
 logic	logic/duel-s-ezhikom-romanovskis-1987.txt	Дуэль с ёжиком	Т. Б. Романовский	game	45	0	0	
@@ -282,8 +282,8 @@ logic	logic/dvoynik-bashe-gaishtut-1988.txt	Игра "Двойник Баше"		
 logic	logic/elektronnyy-ring.txt	elektronnyy ring	Виктор Распопов	game	97	0	0	
 logic	logic/elektronnyy-sopernik.txt	elektronnyy sopernik	Сергей Кузнецов, Виктор Распопов	game	90	0	0	
 logic	logic/ferz-shapiro-boyko-1989.txt	Ферзь		game	67	0	0	
-logic	logic/fourteen-pawns.txt	Fourteen Pawns	st	game	105	0	0	
-logic	logic/fox-hunt-100.txt	Охота на лис 100		game	101	0	0	
+logic	logic/fourteen-pawns.txt	Fourteen Pawns	st	game	100	0	0	
+logic	logic/fox-hunt-100.txt	Охота на лис 100		game	96	0	0	
 logic	logic/fox-hunt-mk61.txt	Охота на лис (вариант для МК-61)	автор варианта неизвестен	game	92	0	0	
 logic	logic/gaskell-i-vanigan-gruzman-1989.txt	Игра Р. Гаскела и М. Ванигана		game	83	0	0	
 logic	logic/geks-gaishtut-1988.txt	Гекс		game	72	0	0	
@@ -301,15 +301,15 @@ logic	logic/igra-bashe-gruzman-1989.txt	Игра Баше		game	61	0	0
 logic	logic/igra-bashe-sistepskiy-1986.txt	Игра Баше — «Квант», 1986	Л. Н. Систепский	game	48	0	0	
 logic	logic/igra-na-dorozhke-kibernetika-1986.txt	Игра на дорожке	коллектив авторов	game	70	0	0	
 logic	logic/igra-so-spichkami-c3000.txt	Игра со спичками	Я. К. Трохименко	game	64	0	0	c3000
-logic	logic/ili-ili-csakany-1981.txt	Или — или, адаптация для МК-61	Csákány Antal	game	104	0	0	modernized
+logic	logic/ili-ili-csakany-1981.txt	Или — или, адаптация для МК-61	Csákány Antal	game	100	0	0	modernized
 logic	logic/kacheli-romanovskis-1987.txt	Качели	Т. Б. Романовский	game	51	0	0	
-logic	logic/kalah.txt	kalah	xvadim	game	105	0	0	
-logic	logic/kaufsten-heavy.txt	Кауфстен — тяжёлый	Сергей Храмов	game	105	0	0	
-logic	logic/kaufsten-light.txt	Кауфстен — лёгкий	Сергей Храмов	game	105	0	0	
-logic	logic/kchppp.txt	kchppp	С. Андрианов	game	105	0	0	
+logic	logic/kalah.txt	kalah	xvadim	game	100	0	0	
+logic	logic/kaufsten-heavy.txt	Кауфстен — тяжёлый	Сергей Храмов	game	100	0	0	
+logic	logic/kaufsten-light.txt	Кауфстен — лёгкий	Сергей Храмов	game	100	0	0	
+logic	logic/kchppp.txt	kchppp	С. Андрианов	game	100	0	0	
 logic	logic/khanoiskaya-bashnya-pomoshchnik-shapiro-boyko-1989.txt	Ханойская башня — помощник		utility	49	0	0	
 logic	logic/koltso-s-sekretom.txt	Кольцо с секретом	Г. Славин	game	98	0	0	
-logic	logic/kombinator.txt	Комбинатор	Станислав Чегодаев	game	106	1	0	
+logic	logic/kombinator.txt	Комбинатор	Станислав Чегодаев	game	100	0	0	
 logic	logic/krestiki-noliki-gaishtut-1988.txt	Крестики-нолики		game	52	0	0	
 logic	logic/krestiki-noliki-kabardcomp.txt	Крестики-нолики		game	53	0	0	
 logic	logic/krestiki-noliki-shapiro-boyko-1989.txt	Крестики-нолики		game	41	0	0	
@@ -324,10 +324,10 @@ logic	logic/magicheskiy-kvadrat.txt	Магический квадрат	М. Ва
 logic	logic/magiya-tsifr.txt	magiya tsifr	Владимир Хмелюк	game	63	0	0	
 logic	logic/mastermind.txt	Мастермайнд		game	86	0	0	
 logic	logic/minesweeper-9x9.txt	Сапёр 9x9		game	95	0	0	
-logic	logic/minesweeper.txt	Minesweeper	Олег Булычёв	game	104	1	0	
+logic	logic/minesweeper.txt	Minesweeper	Олег Булычёв	game	100	1	0	
 logic	logic/minipoddavki-trokhimenko-lyubich-1985.txt	Миниподдавки	Я. К. Трохименко, Ф. Д. Любич	game	64	0	0	
 logic	logic/missionery-i-lyudoedy-shapiro-boyko-1989.txt	Миссионеры и людоеды		game	55	0	0	
-logic	logic/monti.txt	monti	Евгений Кузниченко	game	105	0	0	
+logic	logic/monti.txt	monti	Евгений Кузниченко	game	100	0	0	
 logic	logic/mushketery-belymi-c3000.txt	Игра белыми в «Мушкетеры»	Я. К. Трохименко	game	57	0	0	c3000
 logic	logic/mustang-8x8-variant.txt	Охота на мустанга		game	98	0	0	
 logic	logic/mustang-8x8.txt	Mustang 8x8	Н. Ромашов	game	98	1	0	
@@ -335,7 +335,7 @@ logic	logic/nim-s-odnoy-kuchey.txt	Ним с одной кучей	Сергей 
 logic	logic/nim-tri-kuchi-brp4.txt	Ним с тремя кучами — БРП-4		game	98	0	0	brp4
 logic	logic/nim-tri-mnozhestva-c3000.txt	Ним с тремя множествами предметов	Я. К. Трохименко	game	98	0	0	c3000
 logic	logic/nim-uslozhnennyy-shapiro-boyko-1989.txt	Ним, усложнённый вариант		game	98	0	0	
-logic	logic/nim.txt	Ним		game	105	0	0	
+logic	logic/nim.txt	Ним		game	100	0	0	
 logic	logic/odd-even-1.txt	Чёт-нечёт-1	Сергей Храмов; по программе Л. М. Финка	game	72	0	0	
 logic	logic/odd-even-2.txt	Чёт-нечёт-2	И. Д. Данилов, Г. В. Славин; редакция Сергея Храмова	game	98	0	0	
 logic	logic/odd-even-who-can-outsmart-who.txt	Кто кого перехитрит — Чёт-нечёт	Л. М. Финк	game	54	0	0	
@@ -344,44 +344,44 @@ logic	logic/odinokiy-ferz-c3000.txt	Одинокий ферзь	Я. К. Трох
 logic	logic/odnomernyy-kubik-rubika.txt	Одномерный кубик Рубика	Г. Славин	game	98	0	0	
 logic	logic/ohota-na-lis-gaishtut-1988.txt	Охота на лис		game	85	0	0	
 logic	logic/okhota-na-lis-1-danilov-slavin.txt	Охота на лис-1	И. Д. Данилов, Г. В. Славин; публикация Сергея Храмова	game	91	0	0	
-logic	logic/okhota-na-lis-3-hramov.txt	Охота на лис-3	Сергей Храмов	game	105	0	0	
-logic	logic/okhota-na-lis-3-poli.txt	Охота на лис-3 — для Поли	Сергей Храмов	game	105	0	0	
-logic	logic/okhota-na-lis-38.txt	okhota na lis 38		game	105	0	0	
-logic	logic/okhota-na-lis-4-hramov.txt	Охота на лис-4	Сергей Храмов	game	104	0	0	
-logic	logic/okhota-na-lis-4-poli.txt	Охота на лис-4 — для Поли	Сергей Храмов	game	104	0	0	
+logic	logic/okhota-na-lis-3-hramov.txt	Охота на лис-3	Сергей Храмов	game	100	0	0	
+logic	logic/okhota-na-lis-3-poli.txt	Охота на лис-3 — для Поли	Сергей Храмов	game	100	0	0	
+logic	logic/okhota-na-lis-38.txt	okhota na lis 38		game	100	0	0	
+logic	logic/okhota-na-lis-4-hramov.txt	Охота на лис-4	Сергей Храмов	game	100	0	0	
+logic	logic/okhota-na-lis-4-poli.txt	Охота на лис-4 — для Поли	Сергей Храмов	game	100	0	0	
 logic	logic/okhota-na-lis-boyko.txt	Охота на лис	А. Несчетный, вариант В. Кононов	game	94	0	0	
 logic	logic/okhota-na-lis-lordbss.txt	Охота на лис-2	Юрий Иванов, Павел Иртюга	game	99	0	0	
-logic	logic/okhota-na-lis.txt	okhota na lis		game	103	0	0	
+logic	logic/okhota-na-lis.txt	okhota na lis		game	98	0	0	
 logic	logic/palochki-i-tsifry.txt	Палочки и цифры	И. Д. Данилов, Г. В. Славин	game	41	0	0	
-logic	logic/pelengatsiya-c3000.txt	Пеленгация	Н. А. Александров	game	104	0	0	c3000
+logic	logic/pelengatsiya-c3000.txt	Пеленгация	Н. А. Александров	game	100	0	0	c3000
 logic	logic/perekin-mostik.txt	Перекинь мостик	П. Шмуклер	game	98	0	0	
 logic	logic/pmk-otgadyvaet-tsifry-shapiro-boyko-1989.txt	ПМК отгадывает цифры		game	28	0	0	
-logic	logic/poymat-mustanga.txt	Поймать мустанга	А. Павлюк	game	105	0	0	
+logic	logic/poymat-mustanga.txt	Поймать мустанга	А. Павлюк	game	100	0	0	
 logic	logic/radiatsiya-kabardcomp.txt	Радиация		game	36	0	0	
 logic	logic/rasstanovka-ferzey.txt	rasstanovka ferzey		game	49	0	0	
-logic	logic/razdaem-karty-i-chisla-csakany-1981.txt	Раздаём карты и числа — вариант без возврата отбоя для МК-61	Csákány Antal	game	105	0	0	modernized
-logic	logic/rook-endgame-serge4mk.txt	Ladeynyy endshpil	serge4mk	game	105	0	0	
+logic	logic/razdaem-karty-i-chisla-csakany-1981.txt	Раздаём карты и числа — вариант без возврата отбоя для МК-61	Csákány Antal	game	100	0	0	modernized
+logic	logic/rook-endgame-serge4mk.txt	Ladeynyy endshpil	serge4mk	game	100	0	0	
 logic	logic/shakhmatnaya-igra-magaradzha-renat-notebook.txt	Шахматная игра "Магараджа"	автор неизвестен	game	43	0	0	brp4;manuscript
-logic	logic/shakhmaty-ferz-protiv-korolya-1.txt	Белый ферзь и король против черного короля - 1		game	105	0	0	
-logic	logic/shakhmaty-ferz-protiv-korolya-2.txt	Белый ферзь и король против черного короля - 2		game	105	2	0	
-logic	logic/shakhmaty-korol-kon-slon.txt	Король, конь и слон против короля		game	105	0	0	
-logic	logic/shakhmaty-ladya-protiv-korolya.txt	Белая ладья и король против черного короля		game	105	1	0	
-logic	logic/shakhmaty-mat-ladyoy.txt	shakhmaty. mat ladyoy	С. Белонос	game	103	0	0	
+logic	logic/shakhmaty-ferz-protiv-korolya-1.txt	Белый ферзь и король против черного короля - 1		game	100	0	0	
+logic	logic/shakhmaty-ferz-protiv-korolya-2.txt	Белый ферзь и король против черного короля - 2		game	100	2	0	
+logic	logic/shakhmaty-korol-kon-slon.txt	Король, конь и слон против короля		game	100	0	0	
+logic	logic/shakhmaty-ladya-protiv-korolya.txt	Белая ладья и король против черного короля		game	100	1	0	
+logic	logic/shakhmaty-mat-ladyoy.txt	shakhmaty. mat ladyoy	С. Белонос	game	98	0	0	
 logic	logic/shakhmaty.txt	shakhmaty	Станислав Чегодаев	game	86	0	0	
-logic	logic/shashki-12.txt	Шашки-12	Сергей Тарасов	game	105	0	0	
-logic	logic/shashki-13-new.txt	shashki-13-New	А. Н. Гришин	game	105	0	0	
-logic	logic/shashki-9-auto.txt	Шашки-9 авто	А. Н. Гришин	game	105	0	0	
-logic	logic/shashki-baran-c3000.txt	Шашки	Олег Баран	game	103	0	0	c3000
-logic	logic/shashki-chuvyrov-c3000.txt	Шашки	Алексей Чувыров	game	105	0	0	c3000
+logic	logic/shashki-12.txt	Шашки-12	Сергей Тарасов	game	100	0	0	
+logic	logic/shashki-13-new.txt	shashki-13-New	А. Н. Гришин	game	100	0	0	
+logic	logic/shashki-9-auto.txt	Шашки-9 авто	А. Н. Гришин	game	100	0	0	
+logic	logic/shashki-baran-c3000.txt	Шашки	Олег Баран	game	100	0	0	c3000
+logic	logic/shashki-chuvyrov-c3000.txt	Шашки	Алексей Чувыров	game	100	0	0	c3000
 logic	logic/sokoban.txt	sokoban	А. Н. Гришин, Владимир Трофимчук	game	100	0	0	
-logic	logic/solitaire-classen-1983.txt	Солитер — штырьковый пасьянс, адаптация для МК-61	Hans Josef Claßen	game	103	0	0	
+logic	logic/solitaire-classen-1983.txt	Солитер — штырьковый пасьянс, адаптация для МК-61	Hans Josef Claßen	game	100	0	0	
 logic	logic/soschitay-palochki.txt	Сосчитай палочки	И. Д. Данилов, Г. В. Славин	trainer	65	0	0	
-logic	logic/spichki-bergsona.txt	Спички Бергсона		game	105	1	0	
+logic	logic/spichki-bergsona.txt	Спички Бергсона		game	100	1	0	
 logic	logic/stones-dolgushin-notebook-2.txt	STONES	Александр Долгушин	game	63	0	0	manuscript
 logic	logic/syshchik-dolgushin-notebook.txt	Сыщик	автор неизвестен	game	92	0	0	manuscript
 logic	logic/syshchik.txt	syshchik	П. Гурин	game	92	0	0	
 logic	logic/taktika-na-shashechnoy-doske-gaishtut-1988.txt	Тактика на шашечной доске		game	55	0	0	
-logic	logic/tic-tac-toe-4x4.txt	Крестики-нолики 4x4		game	105	0	0	
+logic	logic/tic-tac-toe-4x4.txt	Крестики-нолики 4x4		game	100	0	0	
 logic	logic/tic-tac-toe.txt	Tic-Tac-Toe	L. M. Fink	game	98	0	0	
 logic	logic/tri-shashki.txt	Три шашки	В. Рыбинский	game	68	0	0	
 logic	logic/trigeks-c3000.txt	Тригекс	Я. К. Трохименко	game	98	0	0	c3000;brp4
@@ -400,41 +400,41 @@ logic	logic/volki-i-kozlik-9x9.txt	volki i kozlik 9x9	Дмитрий Кайко�
 logic	logic/vosem-ferzey-tarasov.txt	Восемь ферзей — поиск решения Тарасова	Сергей Тарасов	utility	67	0	0	
 logic	logic/vybiranie-kamney-c3000.txt	Выбирание камней	Я. К. Трохименко	game	89	0	0	c3000
 logic	logic/white-starts-and-loses.txt	White Starts... and Loses	Станислав Чегодаев	game	94	1	0	
-logic	logic/zagaday-tsifru-hs-on.txt	Загадай цифру	Hs On; исправленная редакция Сергея Анварова	game	105	0	0	
-logic	logic/zvezdolyot.txt	zvezdolyot	Владимир Сивицкий	game	104	0	0	
-simulation	simulation/aeroport.txt	aeroport	Владимир Трофимчук	game	105	0	0	
-simulation	simulation/aes.txt	aes	Ю. Пшенник, Владимир Трофимчук	game	105	0	0	
-simulation	simulation/apollo11-launch.txt	Apollo 11 Launch from Earth (Refined)	darth.righter	game	105	7	0	
+logic	logic/zagaday-tsifru-hs-on.txt	Загадай цифру	Hs On; исправленная редакция Сергея Анварова	game	100	0	0	
+logic	logic/zvezdolyot.txt	zvezdolyot	Владимир Сивицкий	game	100	0	0	
+simulation	simulation/aeroport.txt	aeroport	Владимир Трофимчук	game	100	0	0	
+simulation	simulation/aes.txt	aes	Ю. Пшенник, Владимир Трофимчук	game	100	0	0	
+simulation	simulation/apollo11-launch.txt	Apollo 11 Launch from Earth (Refined)	darth.righter	game	100	3	0	
 simulation	simulation/arkticheskiy-reys-c3000.txt	Арктический рейс	Я. К. Трохименко	game	49	0	0	c3000
 simulation	simulation/arkticheskiy-reys-dolgushin-notebook.txt	Арктический рейс	автор неизвестен	game	52	0	0	manuscript
-simulation	simulation/avariynaya-posadka.txt	Аварийная посадка (БП 86)	darth.righter	game	105	0	0	
+simulation	simulation/avariynaya-posadka.txt	Аварийная посадка (БП 86)	darth.righter	game	100	0	0	
 simulation	simulation/aviatsionnyy-perelet-c3000.txt	Авиационный перелет	Я. К. Трохименко	game	39	0	0	c3000
 simulation	simulation/avtomobil-erichware.txt	Автомобиль		game	98	0	0	
 simulation	simulation/bankir.txt	bankir	А. Камоедов	game	100	0	0	
 simulation	simulation/biocenoz.txt	biocenoz	Ю. Пшенник	game	90	0	0	
-simulation	simulation/birzha-lordbss.txt	birzha	Олег Хажинский	game	105	0	0	manuscript
+simulation	simulation/birzha-lordbss.txt	birzha	Олег Хажинский	game	100	0	0	manuscript
 simulation	simulation/birzha.txt	birzha	Игорь Вершинин	game	97	1	0	
-simulation	simulation/bort-69.txt	bort-69	Сергей Шинкевич	game	105	0	0	
+simulation	simulation/bort-69.txt	bort-69	Сергей Шинкевич	game	100	0	0	
 simulation	simulation/bussinesman-dolgushin-notebook.txt	BUSSINESMAN	Александр Долгушин	game	56	0	0	manuscript
 simulation	simulation/chellendzher.txt	chellendzher	Андрей Ивушкин	game	94	0	0	
 simulation	simulation/combat-maneuver-turn.txt	Combat Maneuvering: Unsteady Turn	В. Довбня, В. Теряев	game	57	0	0	
 simulation	simulation/combat-maneuver-vertical.txt	Combat Maneuvering: Vertical Flight	В. Довбня, В. Теряев	game	96	0	0	
-simulation	simulation/cooperative-2.txt	Cooperative 2	st	game	105	3	0	
-simulation	simulation/cooperative-cafe-variant.txt	Кооперативное кафе		game	105	0	0	
-simulation	simulation/cooperative-cafe.txt	Cooperative Cafe	illi4	game	105	2	0	
-simulation	simulation/course-of-voyage-caston-city-dolgushin-notebook-2.txt	COURSE OF <VOYAGE> - CASTON CITY	Александр Долгушин	game	108	17	0	manuscript
-simulation	simulation/dangerous-loading.txt	Опасная погрузка		game	101	0	0	
-simulation	simulation/dispetcher-2.txt	dispetcher-2	Александр Михолап	game	105	0	0	
-simulation	simulation/dispetcher.txt	dispetcher	П. Аронович	game	104	2	0	
-simulation	simulation/elita.txt	elita	Владимир Сивицкий	game	104	0	0	
-simulation	simulation/elite-2-dolgushin-notebook.txt	ELITE 2	Александр Долгушин	game	102	0	0	manuscript
-simulation	simulation/elite-dolgushin-notebook.txt	ELITE	Александр Долгушин	game	105	0	0	manuscript
-simulation	simulation/elite-iii-coriolis-dolgushin-notebook-2.txt	ELITE III (CORiOLiS)	Александр Долгушин	game	105	13	0	manuscript
-simulation	simulation/elite.txt	Elite	Владимир Трофимчук	game	105	0	0	
-simulation	simulation/fondovaya-birzha.txt	fondovaya birzha	Сергей Блищавенко	game	105	0	0	
-simulation	simulation/hamurabi-poloczek-1983.txt	Хаммурапи — компактная экономическая модель	Peter G. Poloczek	game	105	0	0	modernized
-simulation	simulation/harvest-extensive-model.txt	Harvest Extensive Model	illi4	game	105	1	0	
-simulation	simulation/harvest-intensive-model.txt	Harvest Intensive Model	illi4	game	105	1	0	
+simulation	simulation/cooperative-2.txt	Cooperative 2	st	game	100	3	0	
+simulation	simulation/cooperative-cafe-variant.txt	Кооперативное кафе		game	100	0	0	
+simulation	simulation/cooperative-cafe.txt	Cooperative Cafe	illi4	game	100	2	0	
+simulation	simulation/course-of-voyage-caston-city-dolgushin-notebook-2.txt	COURSE OF <VOYAGE> - CASTON CITY	Александр Долгушин	game	100	0	0	manuscript
+simulation	simulation/dangerous-loading.txt	Опасная погрузка		game	98	0	0	
+simulation	simulation/dispetcher-2.txt	dispetcher-2	Александр Михолап	game	100	0	0	
+simulation	simulation/dispetcher.txt	dispetcher	П. Аронович	game	100	2	0	
+simulation	simulation/elita.txt	elita	Владимир Сивицкий	game	100	0	0	
+simulation	simulation/elite-2-dolgushin-notebook.txt	ELITE 2	Александр Долгушин	game	100	0	0	manuscript
+simulation	simulation/elite-dolgushin-notebook.txt	ELITE	Александр Долгушин	game	100	0	0	manuscript
+simulation	simulation/elite-iii-coriolis-dolgushin-notebook-2.txt	ELITE III (CORiOLiS)	Александр Долгушин	game	100	0	0	manuscript
+simulation	simulation/elite.txt	Elite	Владимир Трофимчук	game	100	0	0	
+simulation	simulation/fondovaya-birzha.txt	fondovaya birzha	Сергей Блищавенко	game	100	0	0	
+simulation	simulation/hamurabi-poloczek-1983.txt	Хаммурапи — компактная экономическая модель	Peter G. Poloczek	game	100	0	0	modernized
+simulation	simulation/harvest-extensive-model.txt	Harvest Extensive Model	illi4	game	100	1	0	
+simulation	simulation/harvest-intensive-model.txt	Harvest Intensive Model	illi4	game	100	1	0	
 simulation	simulation/ispytateli-vertoletov-c3000.txt	Испытатели вертолетов	Я. К. Трохименко	game	62	0	0	c3000
 simulation	simulation/kafe-geocities.txt	Кафе (GeoCities)	В. Алексеев	game	98	0	0	
 simulation	simulation/kapitan.txt	kapitan	А. Тимошкин	game	60	0	0	
@@ -466,35 +466,35 @@ simulation	simulation/kooperativnoe-kafe-2.txt	kooperativnoe kafe 2		game	93	0	0
 simulation	simulation/kooperativnoe-kafe.txt	kooperativnoe kafe		game	81	0	0	
 simulation	simulation/kosmicheskaya-posadka-brp4.txt	Космическая посадка — БРП-4		game	98	0	0	brp4
 simulation	simulation/kosmicheskaya-posadka-c3000.txt	Космическая посадка		game	98	0	0	c3000;brp4
-simulation	simulation/kosmicheskaya-stantsiya.txt	kosmicheskaya stantsiya	Сергей Чурсанов	game	105	0	0	
+simulation	simulation/kosmicheskaya-stantsiya.txt	kosmicheskaya stantsiya	Сергей Чурсанов	game	100	0	0	
 simulation	simulation/kosmicheskiy-kurer.txt	kosmicheskiy kurer	В. Масенков, Михаил Лялин	game	63	0	0	
 simulation	simulation/kosmicheskiy-perelet-dolgushin-notebook.txt	Космический перелёт	Александр Долгушин	game	98	0	0	manuscript
 simulation	simulation/lunar-landing.txt	Lunar Landing	Ярослав Садовский	game	58	0	0	
 simulation	simulation/lunolet-1.txt	Lunolet-1	illi4	game	98	0	0	
 simulation	simulation/lunolet-3.txt	Lunolet-3	illi4	game	97	0	0	
-simulation	simulation/lunolet-d.txt	Lunolet-D	illi4	game	105	0	0	
+simulation	simulation/lunolet-d.txt	Lunolet-D	illi4	game	100	0	0	
 simulation	simulation/lunolyot-1.txt	lunolyot-1		game	77	0	0	
 simulation	simulation/lunolyot-2.txt	lunolyot 2		game	98	0	0	
 simulation	simulation/lunolyot-d.txt	lunolyot-d	Dariy Akselrod	game	80	0	0	
-simulation	simulation/manager-dolgushin-notebook.txt	MANAGER	автор неизвестен; редакция Александра Долгушина	game	101	0	0	manuscript
+simulation	simulation/manager-dolgushin-notebook.txt	MANAGER	автор неизвестен; редакция Александра Долгушина	game	100	0	0	manuscript
 simulation	simulation/menedzher-lordbss.txt	menedzher	Олег Хажинский	game	68	0	0	
 simulation	simulation/menedzher-renat-notebook-2.txt	МЕНЕДЖЕР	автор неизвестен	game	66	0	0	manuscript
 simulation	simulation/menedzher.txt	menedzher	А. Цященко, Александер Крючков	game	86	0	0	
 simulation	simulation/morskoe-puteshestvie-dolgushin-notebook.txt	Морское путешествие	Александр Долгушин	game	77	0	0	manuscript
-simulation	simulation/myagkaya-posadka-romanovskis-1987.txt	Мягкая посадка на Луну	Т. Б. Романовский	game	105	0	0	modernized
-simulation	simulation/na-gorizonte-kit.txt	Whale on the Horizon	Boris Labutin	game	105	0	0	
+simulation	simulation/myagkaya-posadka-romanovskis-1987.txt	Мягкая посадка на Луну	Т. Б. Романовский	game	100	0	0	modernized
+simulation	simulation/na-gorizonte-kit.txt	Whale on the Horizon	Boris Labutin	game	100	0	0	
 simulation	simulation/neboskryob.txt	neboskryob	Владимир Трофимчук	game	100	0	0	
 simulation	simulation/opasnyy-reys.txt	Опасный рейс	автор неизвестен	game	98	0	0	brp4
 simulation	simulation/ostrov-kolkhoz.txt	Остров (Колхоз)	Владимир Алексеев	game	98	0	0	
 simulation	simulation/perelet-na-termodirizhable-brp4.txt	Перелёт на термодирижабле — БРП-4		game	98	0	0	brp4
-simulation	simulation/playboy.txt	Playboy	Евгений Кузниченко	game	105	0	0	
-simulation	simulation/podvodnaya-lodka-lazarev.txt	Подводная лодка (реконструкция)	Феликс Лазарев	game	105	0	0	modernized
+simulation	simulation/playboy.txt	Playboy	Евгений Кузниченко	game	100	0	0	
+simulation	simulation/podvodnaya-lodka-lazarev.txt	Подводная лодка (реконструкция)	Феликс Лазарев	game	100	0	0	modernized
 simulation	simulation/podvodnoe-puteshestvie-brp4.txt	Подводное путешествие — БРП-4		game	98	0	0	brp4
 simulation	simulation/podvodnoe-puteshestvie-c3000.txt	Подводное путешествие	Я. К. Трохименко	game	70	0	0	c3000
 simulation	simulation/podvodnye-apparaty.txt	Подводные аппараты	Юрий Пшенник	game	94	1	0	
 simulation	simulation/poezdka-po-gorodu.txt	Поездка по городу	Г. Славин	game	90	0	0	
 simulation	simulation/polet-na-avialaynere-c3000.txt	Полет на авиалайнере	Я. К. Трохименко	game	58	0	0	c3000
-simulation	simulation/poligon.txt	poligon	А. Астафьев	game	105	0	0	
+simulation	simulation/poligon.txt	poligon	А. Астафьев	game	100	0	0	
 simulation	simulation/pomoshch-polyarnikam-gaishtut-1988.txt	Помощь полярникам		game	55	0	0	
 simulation	simulation/posadka-gravileta.txt	posadka gravileta	К. Филатов	game	30	0	0	
 simulation	simulation/posadka-na-lunu-1.txt	Посадка на Луну-1	И. Д. Данилов, Г. В. Славин; публикация Сергея Храмова	game	70	0	0	
@@ -502,45 +502,45 @@ simulation	simulation/posadka-na-lunu-2.txt	Посадка на Луну-2	И. �
 simulation	simulation/posadka-na-lunu-c3000.txt	Посадка на Луну	Я. К. Трохименко	game	60	0	0	c3000
 simulation	simulation/posadka-na-lunu-kibernetika-1986.txt	Посадка на Луну	коллектив авторов	game	81	0	0	
 simulation	simulation/prostitutka.txt	prostitutka	С. Андрианов	game	98	0	0	
-simulation	simulation/publichnyy-dom.txt	publichnyy dom	С. Андрианов	game	102	0	0	
+simulation	simulation/publichnyy-dom.txt	publichnyy dom	С. Андрианов	game	100	0	0	
 simulation	simulation/raketa-erichware.txt	Ракета		game	98	0	0	
-simulation	simulation/rock-star-ate-my-hamster-dolgushin-notebook.txt	ROCK STAR ATE MY HAMSTER	Александр Долгушин	game	105	0	0	manuscript
-simulation	simulation/sadist.txt	sadist	Евгений Кузниченко	game	105	0	0	
+simulation	simulation/rock-star-ate-my-hamster-dolgushin-notebook.txt	ROCK STAR ATE MY HAMSTER	Александр Долгушин	game	100	0	0	manuscript
+simulation	simulation/sadist.txt	sadist	Евгений Кузниченко	game	100	0	0	
 simulation	simulation/samolet-erichware.txt	Самолет		game	98	0	0	
 simulation	simulation/samolet-tm-1986.txt	samolet	Владимир Лозовой	game	97	0	0	
-simulation	simulation/saturn5-first-stage.txt	Saturn V First Stage (MK61)	darth.righter	game	105	3	0	
+simulation	simulation/saturn5-first-stage.txt	Saturn V First Stage (MK61)	darth.righter	game	100	3	0	
 simulation	simulation/shkola-kapitanov-na-podvodnykh-krylyakh-c3000.txt	Школа капитанов для судов на подводных крыльях	Я. К. Трохименко	game	34	0	0	c3000
 simulation	simulation/shkola-vysshego-pilotazha-c3000.txt	Школа высшего пилотажа	Я. К. Трохименко	game	87	0	0	c3000
 simulation	simulation/shlyukha.txt	shlyukha	А. Беликов	game	97	0	0	
-simulation	simulation/sim-city-dolgushin-notebook.txt	SIM CITY	Александр Долгушин	game	105	0	0	manuscript
-simulation	simulation/space-travel-dolgushin-notebook.txt	SPACE TRAVEL	Александр Долгушин	game	105	0	0	manuscript
-simulation	simulation/star-trek-classen-1983.txt	Star Trek — бой с клингонами, адаптация для МК-61	Hans Josef Claßen	game	105	0	0	modernized
-simulation	simulation/submarina.txt	submarina	Сергей Шинкевич	game	105	0	0	
-simulation	simulation/tamagotchi.txt	Tamagotchi	illi4	game	93	2	0	
+simulation	simulation/sim-city-dolgushin-notebook.txt	SIM CITY	Александр Долгушин	game	100	0	0	manuscript
+simulation	simulation/space-travel-dolgushin-notebook.txt	SPACE TRAVEL	Александр Долгушин	game	100	0	0	manuscript
+simulation	simulation/star-trek-classen-1983.txt	Star Trek — бой с клингонами, адаптация для МК-61	Hans Josef Claßen	game	100	0	0	modernized
+simulation	simulation/submarina.txt	submarina	Сергей Шинкевич	game	100	0	0	
+simulation	simulation/tamagotchi.txt	Tamagotchi	illi4	game	51	0	0	
 simulation	simulation/termodirizhabl.txt	termodirizhabl	Ю. Пшенник	game	92	0	0	
 simulation	simulation/trenazher-dlya-letchikov-gaishtut-1988.txt	Тренажер для летчиков		trainer	35	0	0	
 simulation	simulation/trenazher-dlya-letchikov-renat-notebook-2.txt	ТРЕНАЖЁР ДЛЯ ЛЁТЧИКОВ	автор неизвестен	trainer	35	0	0	manuscript
-simulation	simulation/uchebnyy-polyot-bez-ucheta-topliva.txt	Учебный полет — Вариант без учета топлива		game	104	0	0	
-simulation	simulation/uchebnyy-polyot-modernized.txt	Учебный полёт — редакция Храмова	Сергей Чуприн; редакция Сергея Храмова	game	105	0	0	modernized
-simulation	simulation/uchebnyy-polyot-s-uchetom-topliva.txt	Учебный полет — Вариант с учетом топлива		game	105	0	0	
+simulation	simulation/uchebnyy-polyot-bez-ucheta-topliva.txt	Учебный полет — Вариант без учета топлива		game	100	0	0	
+simulation	simulation/uchebnyy-polyot-modernized.txt	Учебный полёт — редакция Храмова	Сергей Чуприн; редакция Сергея Храмова	game	100	0	0	modernized
+simulation	simulation/uchebnyy-polyot-s-uchetom-topliva.txt	Учебный полет — Вариант с учетом топлива		game	100	0	0	
 simulation	simulation/uchebnyy-polyot.txt	uchebnyy polyot	Сергей Чуприн	game	100	0	0	manuscript
 simulation	simulation/upravlenie-raketoy-c3000.txt	Управление ракетой	Я. К. Трохименко	game	77	0	0	c3000
-simulation	simulation/urozhay-ekstensivnaya-model.txt	urozhay	В. Алексеев; Android conversion by А. Лаврик	game	105	0	0	
-simulation	simulation/urozhay-intensivnaya-model.txt	urozhay	В. Алексеев; Android conversion by А. Лаврик	game	105	0	0	
+simulation	simulation/urozhay-ekstensivnaya-model.txt	urozhay	В. Алексеев; Android conversion by А. Лаврик	game	100	0	0	
+simulation	simulation/urozhay-intensivnaya-model.txt	urozhay	В. Алексеев; Android conversion by А. Лаврик	game	100	0	0	
 simulation	simulation/vertol-2.txt	Vertol-2	Сергей Тарасов, Станислав Чегодаев	game	100	0	0	
-simulation	simulation/vertol-2d.txt	Vertol-2D	Сергей Тарасов	game	104	0	0	
-simulation	simulation/vertol-3.txt	Vertol-3	Сергей Тарасов	game	91	0	0	
-simulation	simulation/vertol.txt	Vertol	Сергей Тарасов	game	101	0	0	
-simulation	simulation/videosalon.txt	videosalon	С. Бекетов	game	105	0	0	
-simulation	simulation/virus-lordbss.txt	virus	Владимир Трофимчук	game	103	0	0	
-simulation	simulation/virus.txt	Virus	Александер Крючков	game	105	0	0	
-simulation	simulation/vostok-1-atmosphere.txt	Восток-1: Атмосфера	darth.righter	game	105	0	0	
-simulation	simulation/vostok-1-carrier.txt	Восток-1: Ракета-Носитель	darth.righter	game	105	0	0	
+simulation	simulation/vertol-2d.txt	Vertol-2D	Сергей Тарасов	game	100	0	0	
+simulation	simulation/vertol-3.txt	Vertol-3	Сергей Тарасов	game	90	0	0	
+simulation	simulation/vertol.txt	Vertol	Сергей Тарасов	game	100	0	0	
+simulation	simulation/videosalon.txt	videosalon	С. Бекетов	game	100	0	0	
+simulation	simulation/virus-lordbss.txt	virus	Владимир Трофимчук	game	100	0	0	
+simulation	simulation/virus.txt	Virus	Александер Крючков	game	100	0	0	
+simulation	simulation/vostok-1-atmosphere.txt	Восток-1: Атмосфера	darth.righter	game	100	0	0	
+simulation	simulation/vostok-1-carrier.txt	Восток-1: Ракета-Носитель	darth.righter	game	100	0	0	
 simulation	simulation/vozhdenie-avtomobilya-c3000.txt	Вождение автомобиля	Я. К. Трохименко	game	74	0	0	c3000
 simulation	simulation/vysshie-morekhodnye-kursy-c3000.txt	Высшие мореходные курсы	Я. К. Трохименко	game	46	0	0	c3000
 simulation	simulation/yadernyy-reaktor.txt	yadernyy reaktor	Андрей Ивушкин	game	92	0	0	
-simulation	simulation/zond-earth-moon.txt	Зонд: Земля — Луна	darth.righter	game	105	0	0	
-sports	sports/arctic-race-ii-dolgushin-notebook.txt	ARCTIC RACE II	Александр Долгушин	game	105	0	0	manuscript
+simulation	simulation/zond-earth-moon.txt	Зонд: Земля — Луна	darth.righter	game	100	0	0	
+sports	sports/arctic-race-ii-dolgushin-notebook.txt	ARCTIC RACE II	Александр Долгушин	game	100	0	0	manuscript
 sports	sports/avtogonki-po-pryamoy-c3000.txt	Автогонки по прямой	Я. К. Трохименко	game	44	0	0	c3000
 sports	sports/avtogonki-renat-notebook-2.txt	АВТОГОНКИ	автор неизвестен	game	55	0	0	manuscript
 sports	sports/avtogonki.txt	avtogonki	Михаил Храмов	game	60	0	0	
@@ -553,17 +553,17 @@ sports	sports/biatlon.txt	biatlon	Владимир Сивицкий	game	92	0	0
 sports	sports/billiard-gaishtut-1988.txt	Биллиард		game	70	1	0	
 sports	sports/boks-2.txt	boks-2	Евгений Кузниченко	game	88	0	0	
 sports	sports/boxing.txt	Boxing	Mikhail Karasev	game	67	0	0	manuscript
-sports	sports/camel-trophy.txt	Camel Trophy	Павел Меркулов	game	102	0	0	
+sports	sports/camel-trophy.txt	Camel Trophy	Павел Меркулов	game	100	0	0	
 sports	sports/detskiy-billiard-gaishtut-1988.txt	Детский бильярд		game	66	0	0	
 sports	sports/elektronnye-gorodki-gaishtut-1988.txt	Электронные городки		game	84	0	0	
 sports	sports/elektronnye-gorodki.txt	elektronnye gorodki	А. Зайцев	game	98	0	0	
-sports	sports/fifa-2001-taktic-game-dolgushin-notebook-2.txt	FIFA 2001 TAKTIC GAME	Александр Долгушин	game	107	40	0	manuscript
+sports	sports/fifa-2001-taktic-game-dolgushin-notebook-2.txt	FIFA 2001 TAKTIC GAME	Александр Долгушин	game	100	3	0	manuscript
 sports	sports/formula-1-dolgushin-notebook.txt	FORMULA-1	Александр Долгушин	game	98	0	0	manuscript
-sports	sports/futbol-vratar-dolgushin-notebook.txt	Футбол	автор неизвестен	game	102	0	0	manuscript
-sports	sports/futbol.txt	futbol	Александр Михолап	game	105	2	0	
+sports	sports/futbol-vratar-dolgushin-notebook.txt	Футбол	автор неизвестен	game	100	0	0	manuscript
+sports	sports/futbol.txt	futbol	Александр Михолап	game	100	2	0	
 sports	sports/futbolnyy-match.txt	Футбольный матч		game	62	0	0	
 sports	sports/gigantskiy-slalom-c3000.txt	Гигантский слалом	Я. К. Трохименко	game	66	0	0	c3000
-sports	sports/gonka-cherepakhi-ulitki-i-mnogonozhki-romanovskis-1987.txt	Гонка черепахи, улитки и многоножки	Т. Б. Романовский	game	103	0	0	
+sports	sports/gonka-cherepakhi-ulitki-i-mnogonozhki-romanovskis-1987.txt	Гонка черепахи, улитки и многоножки	Т. Б. Романовский	game	100	0	0	
 sports	sports/gonki-na-aerosanyakh-renat-notebook.txt	Гонки на аэросанях	автор неизвестен	game	82	0	0	manuscript
 sports	sports/gonki-na-zimnem-ozere-brp4.txt	Гонки на зимнем озере — БРП-4		game	91	0	0	brp4
 sports	sports/gonki-na-zimnem-ozere.txt	gonki na zimnem ozere	Игорь Данилов	game	94	0	0	
@@ -574,57 +574,57 @@ sports	sports/horses-race-dolgushin-notebook.txt	HORSES RACE	Александр 
 sports	sports/karate-2.txt	karate-2	Павел Меркулов	game	90	0	0	
 sports	sports/karate-m.txt	karate-m	Александр Михолап	game	80	0	0	
 sports	sports/karate-xm.txt	karate-XM	автор неизвестен	game	77	0	0	
-sports	sports/karate.txt	karate	Роман Шубочкин	game	105	0	0	
-sports	sports/kaskadyor.txt	kaskadyor	Владимир Лазарев	game	94	0	0	
+sports	sports/karate.txt	karate	Роман Шубочкин	game	100	0	0	
+sports	sports/kaskadyor.txt	kaskadyor	Владимир Лазарев	game	90	0	0	
 sports	sports/kendo.txt	kendo	С. Ефремов, Михаил Лялин	game	92	1	0	
 sports	sports/mikrovoleybol-1-gaishtut-1988.txt	Микроволейбол-1		game	91	0	0	
 sports	sports/mikrovoleybol-2-gaishtut-1988.txt	Микроволейбол-2		game	95	0	0	
 sports	sports/moto.txt	moto	Сергей Устюгов	game	80	0	0	
-sports	sports/new-rally.txt	New Rally	Сергей Чурсанов	game	105	0	0	
-sports	sports/nochnaya-trassa.txt	Ночная трасса	Сергей Тарасов	game	104	0	0	
-sports	sports/obgon.txt	obgon	Евгений Кузниченко	game	104	0	0	
+sports	sports/new-rally.txt	New Rally	Сергей Чурсанов	game	100	0	0	
+sports	sports/nochnaya-trassa.txt	Ночная трасса	Сергей Тарасов	game	99	0	0	
+sports	sports/obgon.txt	obgon	Евгений Кузниченко	game	100	0	0	
 sports	sports/parusnaya-regata-c3000.txt	Парусная регата	Я. К. Трохименко	game	28	0	0	c3000
 sports	sports/popast-v-tsel-gaishtut-1988.txt	Попасть в цель		game	41	0	0	
 sports	sports/professional-box.txt	Professional Box	автор неизвестен	game	98	0	0	
 sports	sports/ralli-na-regulyarnost-romanovskis-1987.txt	Ралли на регулярность	Т. Б. Романовский	game	100	0	0	
-sports	sports/ralli-novye-trassy-romanovskis-1987.txt	Ралли на регулярность — новые трассы	Т. Б. Романовский; OpenAI Codex	game	104	0	0	modernized
-sports	sports/rally.txt	Rally	illi4	game	105	0	0	
+sports	sports/ralli-novye-trassy-romanovskis-1987.txt	Ралли на регулярность — новые трассы	Т. Б. Романовский; OpenAI Codex	game	100	0	0	modernized
+sports	sports/rally.txt	Rally	illi4	game	100	0	0	
 sports	sports/regata.txt	Регата	Г. Гурьянов	game	91	0	0	
 sports	sports/rybalka.txt	rybalka	А. Лотохов	game	98	0	0	
 sports	sports/sailing-regatta.txt	Sailing Regatta	L. M. Fink	game	57	0	0	
-sports	sports/ski-98-dolgushin-notebook.txt	SKi-'98	Александр Долгушин	game	105	0	0	manuscript
+sports	sports/ski-98-dolgushin-notebook.txt	SKi-'98	Александр Долгушин	game	100	0	0	manuscript
 sports	sports/smeshannyy-marafon-dolgushin-notebook.txt	Смешанный марафон	автор неизвестен	game	36	0	0	manuscript
-sports	sports/soccer-manager-dolgushin-notebook.txt	SOCCER MANAGER	Александр Долгушин	game	105	0	0	manuscript
+sports	sports/soccer-manager-dolgushin-notebook.txt	SOCCER MANAGER	Александр Долгушин	game	100	0	0	manuscript
 sports	sports/sorevnovanie-yunykh-kartingistov-1-gaishtut-1988.txt	Соревнование юных картингистов-1		game	98	0	0	
 sports	sports/sorevnovanie-yunykh-kartingistov-2-gaishtut-1988.txt	Соревнование юных картингистов-2		game	95	0	0	
 sports	sports/strelba-v-tsel-iz-luka-gaishtut-1988.txt	Стрельба в цель из лука		game	63	2	0	
 sports	sports/supertrassa.txt	supertrassa	Сергей Устюгов	game	94	3	1	
 sports	sports/tolkanie-yadra-romanovsky-1989.txt	Толкание ядра	Т. Б. Романовский	game	40	0	0	
-sports	sports/trassa.txt	trassa	Сергей Чурсанов	game	102	0	0	
+sports	sports/trassa.txt	trassa	Сергей Чурсанов	game	100	0	0	
 sports	sports/turboslalom.txt	Turboslalom	Константин Сергеев	game	83	0	0	
-sports	sports/virtua-soccer-dolgushin-notebook.txt	VIRTUA SOCCER	Александр Долгушин	game	105	1	0	manuscript
-sports	sports/volvo.txt	volvo	Евгений Кузниченко	game	105	0	0	
-sports	sports/vratar.txt	vratar	Владимир Лазарев	game	102	0	0	
+sports	sports/virtua-soccer-dolgushin-notebook.txt	VIRTUA SOCCER	Александр Долгушин	game	100	1	0	manuscript
+sports	sports/volvo.txt	volvo	Евгений Кузниченко	game	100	0	0	
+sports	sports/vratar.txt	vratar	Владимир Лазарев	game	100	0	0	
 sports	sports/yakhta-erichware.txt	Яхта		game	50	0	0	
-sports	sports/zhokey.txt	zhokey	Владимир Трофимчук	game	105	0	0	
+sports	sports/zhokey.txt	zhokey	Владимир Трофимчук	game	100	0	0	
 strategy	strategy/agressiya.txt	agressiya	Вадим Куняев	game	97	0	0	
-strategy	strategy/armageddon-man-dolgushin-notebook.txt	ARMAGEDDON MAN	Александр Долгушин	game	105	0	0	manuscript
+strategy	strategy/armageddon-man-dolgushin-notebook.txt	ARMAGEDDON MAN	Александр Долгушин	game	100	0	0	manuscript
 strategy	strategy/ataka-erichware.txt	Атака		game	98	0	0	
 strategy	strategy/bastion.txt	Бастион	Владимир Сивицкий	game	65	0	0	manuscript
 strategy	strategy/beregovaya-oborona-gaishtut-1988.txt	Береговая оборона		game	63	1	0	
-strategy	strategy/bitva-3.txt	Bitva-3	Евгений Темежников	game	105	7	0	
-strategy	strategy/bitva-4.txt	bitva-4	Евгений Кузниченко	game	104	8	1	
+strategy	strategy/bitva-3.txt	Bitva-3	Евгений Темежников	game	100	7	0	
+strategy	strategy/bitva-4.txt	bitva-4	Евгений Кузниченко	game	99	7	1	
 strategy	strategy/bitva-kei-1988.txt	Bitva: KEI Variant	Вячеслав Алексеев	game	98	6	0	
 strategy	strategy/bitva-pshennik.txt	Bitva: Pshennik Variant	Юрий Пшенник	game	88	3	0	
-strategy	strategy/blokada.txt	blokada	Александер Крючков	game	104	0	0	
-strategy	strategy/dark-empire-dolgushin-notebook.txt	DARK EMPIRE	Александр Долгушин	game	105	0	0	manuscript
-strategy	strategy/dune-ii-3d-rus-dolgushin-notebook.txt	DUNE II 3D RUS	Александр Долгушин	game	105	0	0	manuscript
-strategy	strategy/dune-ii-dolgushin-notebook.txt	Dune II	Александр Долгушин	game	104	0	0	manuscript
-strategy	strategy/dune-iii-no-fate-dolgushin-notebook.txt	DUNE III: NO FATE	Александр Долгушин	game	105	1	0	manuscript
-strategy	strategy/i-c-p.txt	I.C.P.	Александр Михолап	game	104	0	0	
+strategy	strategy/blokada.txt	blokada	Александер Крючков	game	100	0	0	
+strategy	strategy/dark-empire-dolgushin-notebook.txt	DARK EMPIRE	Александр Долгушин	game	100	0	0	manuscript
+strategy	strategy/dune-ii-3d-rus-dolgushin-notebook.txt	DUNE II 3D RUS	Александр Долгушин	game	100	0	0	manuscript
+strategy	strategy/dune-ii-dolgushin-notebook.txt	Dune II	Александр Долгушин	game	100	0	0	manuscript
+strategy	strategy/dune-iii-no-fate-dolgushin-notebook.txt	DUNE III: NO FATE	Александр Долгушин	game	100	1	0	manuscript
+strategy	strategy/i-c-p.txt	I.C.P.	Александр Михолап	game	100	0	0	
 strategy	strategy/korolevstvo.txt	korolevstvo	Б. Воронкевич	game	98	0	0	
 strategy	strategy/matrichnaya-igra-gruzman-1989.txt	Матричная игра n×n		game	16	0	0	
-strategy	strategy/monopoliya.txt	monopoliya	Олег Хажинский	game	105	0	0	
+strategy	strategy/monopoliya.txt	monopoliya	Олег Хажинский	game	100	0	0	
 strategy	strategy/morskoe-srazhenie-c3000.txt	Морское сражение	Я. К. Трохименко	game	77	0	0	c3000
 strategy	strategy/morskoy-boy-1-kibernetika-1986.txt	Морской бой I	коллектив авторов	game	95	0	0	
 strategy	strategy/morskoy-boy-2-kibernetika-1986.txt	Морской бой II	коллектив авторов	game	65	0	0	
@@ -633,39 +633,39 @@ strategy	strategy/morskoy-boy-gaishtut-1988.txt	Морской бой		game	55	0
 strategy	strategy/morskoy-boy-igra-erichware.txt	Морской бой: игра		game	63	0	0	
 strategy	strategy/morskoy-boy-rasstanovka-erichware.txt	Морской бой: расстановка		game	84	0	0	
 strategy	strategy/morskoy-boy-srazhenie-erichware.txt	Сражение		game	98	0	0	
-strategy	strategy/morskoy-boy-xvadim.txt	morskoy boy	Г. Горовой; Android conversion by А. Лаврик	game	105	0	0	
-strategy	strategy/naval-battle.txt	Naval Battle	illi4	game	105	1	0	
+strategy	strategy/morskoy-boy-xvadim.txt	morskoy boy	Г. Горовой; Android conversion by А. Лаврик	game	100	0	0	
+strategy	strategy/naval-battle.txt	Naval Battle	illi4	game	100	1	0	
 strategy	strategy/neulovimaya-podvodnaya-lodka-gaishtut-1988.txt	Неуловимая подводная лодка		game	47	0	0	
-strategy	strategy/nochnoy-boy.txt	Ночной бой		game	105	0	0	
+strategy	strategy/nochnoy-boy.txt	Ночной бой		game	100	0	0	
 strategy	strategy/obnaruzhit-i-unichtozhit-lineynyy-korabl-gaishtut-1988.txt	Обнаружить и уничтожить линейный корабль		game	59	0	0	
 strategy	strategy/polyot-v-sozvezdie-chyornykh-dyr.txt	polyot v sozvezdie chyornykh dyr	А. Н. Гришин	game	68	0	0	
 strategy	strategy/potopi-korabl-dolgushin-notebook.txt	Потопи корабль	автор неизвестен	game	96	0	0	manuscript
 strategy	strategy/potopi-korabl-gruzman-1989.txt	Потопи корабль		game	83	0	0	
-strategy	strategy/sea-battle.txt	Морской бой	С. Р. Анваров	game	102	0	0	
-strategy	strategy/spartak.txt	spartak	Вадим Куняев, Владимир Трофимчук	game	103	0	0	
-strategy	strategy/strategicheskaya-bombardirovka.txt	strategicheskaya bombardirovka	Сергей Тарасов	game	102	0	0	
-strategy	strategy/tank-battle.txt	Бой с танком	Сергей Храмов	game	105	0	0	
+strategy	strategy/sea-battle.txt	Морской бой	С. Р. Анваров	game	100	0	0	
+strategy	strategy/spartak.txt	spartak	Вадим Куняев, Владимир Трофимчук	game	100	0	0	
+strategy	strategy/strategicheskaya-bombardirovka.txt	strategicheskaya bombardirovka	Сергей Тарасов	game	100	0	0	
+strategy	strategy/tank-battle.txt	Бой с танком	Сергей Храмов	game	100	0	0	
 strategy	strategy/tankovaya-ataka-c3000.txt	Танковая атака	Я. К. Трохименко	game	23	0	0	c3000
 strategy	strategy/tankovaya-ataka-gaishtut-1988.txt	Танковая атака		game	98	0	0	
 strategy	strategy/tankovaya-ataka-renat-notebook-2.txt	ТАНКОВАЯ АТАКА	автор неизвестен	game	98	3	0	manuscript
-strategy	strategy/tankovaya-bataliya-matematicheskiy-boy.txt	Танковая баталия — математический бой	Сергей Храмов	game	105	0	0	
-strategy	strategy/tankovaya-bataliya-realnyy-boy.txt	Танковая баталия — реальный бой	Сергей Храмов	game	105	0	0	
-strategy	strategy/torpednaya-ataka-brp4.txt	Торпедная атака — БРП-4, исправленная версия		game	105	0	0	brp4;modernized
+strategy	strategy/tankovaya-bataliya-matematicheskiy-boy.txt	Танковая баталия — математический бой	Сергей Храмов	game	100	0	0	
+strategy	strategy/tankovaya-bataliya-realnyy-boy.txt	Танковая баталия — реальный бой	Сергей Храмов	game	100	0	0	
+strategy	strategy/torpednaya-ataka-brp4.txt	Торпедная атака — БРП-4, исправленная версия		game	100	0	0	brp4;modernized
 strategy	strategy/torpednaya-ataka-dolgushin-notebook.txt	Торпедная атака	автор неизвестен	game	46	0	0	manuscript
 strategy	strategy/unichtozhit-lineynyy-korabl-dolgushin-notebook.txt	Уничтожить линейный корабль	Александр Долгушин	game	34	0	0	manuscript
-strategy	strategy/viking-intervent.txt	viking-intervent	Евгений Кузниченко	game	105	0	0	
-strategy	strategy/viking-korol.txt	viking-korol	Евгений Кузниченко	game	105	0	0	
-strategy	strategy/viking-zavoevatel.txt	viking-zavoevatel	Евгений Век, Сергей Устюгов	game	104	0	0	
+strategy	strategy/viking-intervent.txt	viking-intervent	Евгений Кузниченко	game	100	0	0	
+strategy	strategy/viking-korol.txt	viking-korol	Евгений Кузниченко	game	100	0	0	
+strategy	strategy/viking-zavoevatel.txt	viking-zavoevatel	Евгений Век, Сергей Устюгов	game	100	0	0	
 strategy	strategy/vpered-i-vverkh-gruzman-1989.txt	Вперёд и вверх		game	97	0	0	
 strategy	strategy/zashchita-ot-napadeniya.txt	zashchita ot napadeniya	Сергей Чурсанов	game	98	0	0	
-strategy	strategy/zashchitnik-2.txt	zashchitnik-2	Дмитрий Моргунов	game	104	0	0	
-strategy	strategy/zashchitnik-3.txt	zashchitnik-3	Дмитрий Моргунов	game	105	0	0	
-strategy	strategy/zashchitnik.txt	zashchitnik	Дмитрий Моргунов	game	105	0	0	
+strategy	strategy/zashchitnik-2.txt	zashchitnik-2	Дмитрий Моргунов	game	100	0	0	
+strategy	strategy/zashchitnik-3.txt	zashchitnik-3	Дмитрий Моргунов	game	100	0	0	
+strategy	strategy/zashchitnik.txt	zashchitnik	Дмитрий Моргунов	game	100	0	0	
 utilities	utilities/annuity-loan-serge4mk.txt	raschet annuitetnogo kredita	serge4mk	utility	67	0	0	
-utilities	utilities/balanced-ternary-converter.txt	Balanced Ternary Converter	RusCalc	utility	101	0	0	
-utilities	utilities/calendar-past-future.txt	Calendar for the Past and the Future	Вячеслав Алексеев	utility	104	0	1	
+utilities	utilities/balanced-ternary-converter.txt	Balanced Ternary Converter	RusCalc	utility	100	0	0	
+utilities	utilities/calendar-past-future.txt	Calendar for the Past and the Future	Вячеслав Алексеев	utility	99	0	1	
 utilities	utilities/clock.txt	Программа-часы	С. Конин, А. Шарапов	utility	63	0	0	
-utilities	utilities/data-i-ritmy-dolgushin-bloknot.txt	ДАТА и РИТМЫ	автор неизвестен	utility	101	0	0	manuscript
+utilities	utilities/data-i-ritmy-dolgushin-bloknot.txt	ДАТА и РИТМЫ	автор неизвестен	utility	100	0	0	manuscript
 utilities	utilities/e-94-digits.txt	94 цифры числа e		utility	61	0	0	
 utilities	utilities/easter-date-passover-alt.txt	Easter Date Helper (Ascension and Pentecost)	Русский	utility	44	0	0	
 utilities	utilities/easter-date-passover.txt	Easter Date (Orthodox, Primary)	Русский	utility	98	0	0	
@@ -679,7 +679,7 @@ utilities	utilities/raspisanie-vstrech-krugovogo-turnira-renat-notebook.txt	Со
 utilities	utilities/rasstoyanie-mezhdu-gorodami-romanovsky-1989.txt	Расстояние между городами	Т. Б. Романовский	utility	67	0	0	
 utilities	utilities/razorvannaya-kniga.txt	Задача о разорванной книге		utility	24	0	0	
 utilities	utilities/reshenie-kvadratnogo-uravneniya.txt	reshenie kvadratnogo uravneniya		utility	26	0	0	
-utilities	utilities/scetovod.txt	Счетовод		utility	105	0	0	
+utilities	utilities/scetovod.txt	Счетовод		utility	100	0	0	
 utilities	utilities/sekundomer-renat-notebook.txt	Секундомер	автор неизвестен	utility	8	0	0	manuscript
 utilities	utilities/srednyaya-ploshchad-krugov-kibernetika-1986.txt	Определение средней площади кругов	коллектив авторов	utility	17	0	0	
 utilities	utilities/sum-cubes-formula-gaishtut-1988.txt	Сумма кубов, 2-й способ		utility	7	0	0	
