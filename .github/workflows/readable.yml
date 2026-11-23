@@ -1,0 +1,64 @@
+name: Readable
+
+# Готовит читаемые TXT по ожиданиям эталона:
+# отдельный файл на программу + сборник на раздел.
+# Запускать ПОСЛЕ workflow Expectations.
+
+on:
+  workflow_dispatch:
+    inputs:
+      input:
+        description: 'JSON с ожиданиями'
+        required: false
+        default: 'tmp/imports/expectations.json'
+      out:
+        description: 'Папка для TXT'
+        required: false
+        default: 'tmp/imports/readable'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: readable
+  cancel-in-progress: true
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Export readable TXT
+        run: |
+          node scripts/export-readable.cjs \
+            --in "${{ inputs.input }}" \
+            --out "${{ inputs.out }}" \
+            --verbose
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: readable
+          path: ${{ inputs.out }}
+          if-no-files-found: warn
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "${{ inputs.out }}"
+          if git diff --staged --quiet; then
+            echo "Нет изменений"
+          else
+            git commit -m "chore: читаемые TXT программ МК-61"
+            git push
+          fi
