@@ -1,306 +1,373 @@
-#!/usr/bin/env node
-/**
- * Экспорт программ МК-61 в читаемый TXT.
- *
- * Формат тот же, что мы приняли для Б3-34:
- *   заголовок, источник, «Перед пуском», «Ожидаемый результат»,
- *   затем шаги: адрес — код — команда (подпись обязательна),
- *   в конце коды строкой и регистры после пуска.
- *
- * Данные берутся из двух мест:
- *   - листинг games/... (адреса и мнемоники);
- *   - JSON генератора ожиданий (коды, экран, регистры) — tmp/imports/expectations.json
- *
- * Запуск:
- *   node scripts/export-readable.cjs --in tmp/imports/expectations.json --out tmp/imports/readable
- *   node scripts/export-readable.cjs --merge          # только сборники на раздел
- *   node scripts/export-readable.cjs --single         # только отдельные файлы
- */
-
 'use strict';
+
+/*
+ * export-readable.cjs — конвертация листингов каталога games в читаемый вид.
+ *
+ * Что делает:
+ *   1. читает games/manifest.tsv (11 колонок, поля в кавычках);
+ *   2. для каждой записи с существующим .txt разбирает листинг
+ *      настоящим ядром MKPro (parseCommandToken), а не своей таблицей;
+ *   3. считает шаги, находит регистры, которые надо задать перед пуском;
+ *   4. пишет readable/<раздел>/<имя>.txt, сборник readable/_sections/<раздел>.txt,
+ *      общий index и список проблем.
+ *
+ * Чего НЕ делает: ничего не запускает на эмуляторе и не подставляет
+ * ожидаемый результат. Прогон — отдельная задача (expectations).
+ *
+ * Запуск: node scripts/export-readable.cjs
+ */
 
 const fs = require('fs');
 const path = require('path');
+const { parseCommandToken } = require('../tests/emulator/mk61.cjs');
 
-const ROOT = process.cwd();
+const ROOT = path.resolve(__dirname, '..');
+const GAMES = path.join(ROOT, 'games');
+const OUT = path.join(ROOT, 'readable');
+const LIMIT = 105;
 
-function arg(name, fallback) {
-  const i = process.argv.indexOf('--' + name);
-  if (i === -1) return fallback;
-  const v = process.argv[i + 1];
-  return v && !v.startsWith('--') ? v : true;
-}
+/* ------------------------------------------------------------------ */
+/* Манифест                                                            */
+/* ------------------------------------------------------------------ */
 
-const inFile = String(arg('in', 'tmp/imports/expectations.json'));
-const outDir = String(arg('out', 'tmp/imports/readable'));
-const onlyMerge = Boolean(arg('merge', false));
-const onlySingle = Boolean(arg('single', false));
-const verbose = Boolean(arg('verbose', false));
-
-function log(...a) {
-  if (verbose) console.log(...a);
-}
-
-/* ---------- утилиты ---------- */
-
-function resolveRepoFile(rel) {
-  const candidates = [
-    path.join(ROOT, rel),
-    path.join(ROOT, 'games', rel),
-    path.join(ROOT, rel.replace(/^games\//, '')),
-  ];
-  for (const c of candidates) {
-    if (fs.existsSync(c)) return c;
+function splitTsvLine(line) {
+  const cells = [];
+  let current = '';
+  let quoted = false;
+  let i = 0;
+  while (i < line.length) {
+    const ch = line[i];
+    if (quoted) {
+      if (ch === '"' && line[i + 1] === '"') {
+        current += '"';
+        i += 2;
+        continue;
+      }
+      if (ch === '"') {
+        quoted = false;
+        i += 1;
+        continue;
+      }
+      current += ch;
+      i += 1;
+      continue;
+    }
+    if (ch === '"' && current === '') {
+      quoted = true;
+      i += 1;
+      continue;
+    }
+    if (ch === '\t') {
+      cells.push(current);
+      current = '';
+      i += 1;
+      continue;
+    }
+    current += ch;
+    i += 1;
   }
+  cells.push(current);
+  return cells;
+}
+
+function readManifest() {
+  const file = path.join(GAMES, 'manifest.tsv');
+  const text = fs.readFileSync(file, 'utf8');
+  const lines = text.split(/\r?\n/).filter((line) => line.trim() !== '');
+  const header = splitTsvLine(lines.shift()).map((cell) => cell.trim());
+  const rows = [];
+  for (const line of lines) {
+    const cells = splitTsvLine(line);
+    const row = {};
+    header.forEach((name, index) => {
+      row[name] = (cells[index] || '').trim();
+    });
+    rows.push(row);
+  }
+  return rows;
+}
+
+/* ------------------------------------------------------------------ */
+/* Адреса                                                              */
+/* ------------------------------------------------------------------ */
+
+function formalAddress(opcode) {
+  const high = opcode >> 4;
+  const low = opcode & 0x0f;
+  const ordinal = high * 10 + low;
+  if (ordinal <= 104) return ordinal;
+  if (ordinal <= 111) return ordinal - 105;
+  if (ordinal <= 165) return ordinal - 112;
   return null;
 }
 
-/** Адрес в листинге — 0x00..0x99 и 0xA0..0xA4; на МК-61 это шаги 0..104. */
-function addrToIndex(addr) {
-  const n = parseInt(addr, 16);
-  if (Number.isNaN(n)) return -1;
-  if (n >= 0xa0) return n - 0xa0 + 100;
-  return n;
+function addressLabel(address) {
+  if (address >= 100) return '−' + (address - 100);
+  return String(address).padStart(2, '0');
 }
 
-function pad2(n) {
-  return n.toString(16).toUpperCase().padStart(2, '0');
-}
+/* ------------------------------------------------------------------ */
+/* Разбор листинга                                                     */
+/* ------------------------------------------------------------------ */
 
-function idxToAddr(i) {
-  return i >= 100 ? pad2(0xa0 + (i - 100)) : pad2(i);
-}
+const SKIP_LINE = /^\s*(#|\/\/|;|—|–|--)/u;
 
-/** Читает листинг «адрес  команда» и возвращает шаги. */
-function readListing(file) {
-  const text = fs.readFileSync(file, 'utf8');
-  const lines = text.split(/\r?\n/);
-  const steps = [];
-  for (const raw of lines) {
-    const line = raw.replace(/\t/g, ' ').trimEnd();
+function parseListing(raw) {
+  const rows = [];
+  const problems = [];
+  const seen = new Map();
+  const emptyLabels = new Map();
+
+  for (const rawLine of raw.split(/\r?\n/)) {
+    const line = rawLine.replace(/\u00A0/g, ' ');
     if (!line.trim()) continue;
-    const m = line.match(/^([0-9A-Fa-f]{2})\s+(.+)$/);
-    if (!m) continue;
-    const addr = m[1].toUpperCase();
-    let rest = m[2].trim();
-    let comment = '';
-    const cut = rest.indexOf('—');
-    if (cut !== -1) {
-      comment = rest.slice(cut + 1).trim();
-      rest = rest.slice(0, cut).trim();
-    }
-    steps.push({ addr, index: addrToIndex(addr), command: rest, comment });
-  }
-  steps.sort((a, b) => a.index - b.index);
-  return steps;
-}
+    if (SKIP_LINE.test(line)) continue;
 
-function normalizeList(json) {
-  if (Array.isArray(json)) return json;
-  for (const key of ['programs', 'items', 'results', 'entries']) {
-    if (Array.isArray(json[key])) return json[key];
-  }
-  return [];
-}
-
-function pick(obj, keys, fallback) {
-  for (const k of keys) {
-    if (obj && obj[k] !== undefined && obj[k] !== null) return obj[k];
-  }
-  return fallback;
-}
-
-function slugOf(entry) {
-  const p = String(pick(entry, ['path', 'program', 'file'], ''));
-  const base = p.split('/').pop() || 'program';
-  return base.replace(/\.txt$/i, '').replace(/[^0-9A-Za-z._-]+/g, '-');
-}
-
-function codesOf(result) {
-  const raw = pick(result, ['codes', 'programCodes', 'memory'], null);
-  if (!Array.isArray(raw)) return null;
-  return raw.map((v) => Number(v) & 0xff);
-}
-
-function regsOf(result) {
-  const r = pick(result, ['registers', 'regs', 'state'], null);
-  if (!r || typeof r !== 'object') return null;
-  return r;
-}
-
-function fmtRegs(regs) {
-  if (!regs) return [];
-  const out = [];
-  const stackOrder = ['X', 'Y', 'Z', 'T', 'X1'];
-  const stack = stackOrder
-    .filter((k) => regs[k] !== undefined)
-    .map((k) => `${k}=${regs[k]}`);
-  if (stack.length) out.push('  стек: ' + stack.join('  '));
-  const r = regs.R || regs.r || null;
-  if (Array.isArray(r) && r.length) {
-    const items = r.map((v, i) => `R${i.toString(16).toUpperCase()}=${v}`);
-    for (let i = 0; i < items.length; i += 5) {
-      out.push('  ' + items.slice(i, i + 5).join('  '));
-    }
-  }
-  return out;
-}
-
-/* ---------- сборка одного файла ---------- */
-
-function buildText(entry) {
-  const section = String(pick(entry, ['section', 'group'], ''));
-  const title = String(pick(entry, ['title', 'name'], slugOf(entry)));
-  const author = pick(entry, ['author', 'real_name'], '');
-  const source = pick(entry, ['source', 'source_url', 'sourceUrl'], '');
-  const series = pick(entry, ['series', 'collection'], '');
-  const relPath = String(pick(entry, ['path', 'program', 'file'], ''));
-  const setup = pick(entry, ['setup', 'input', 'before'], '');
-  const result = pick(entry, ['result', 'after', 'run'], entry);
-  const diagnostics = pick(entry, ['diagnostics', 'warnings'], []);
-
-  const display = pick(result, ['display', 'screen', 'displayText'], null);
-  const stopped = pick(result, ['stopped', 'halted'], null);
-  const pc = pick(result, ['pc', 'programCounter'], null);
-
-  const file = resolveRepoFile(relPath);
-  const steps = file ? readListing(file) : [];
-  const codes = codesOf(result);
-
-  const L = [];
-  L.push(`МК-61 · ${title}`);
-  const meta = [];
-  if (section) meta.push(`раздел: ${section}`);
-  if (series) meta.push(`серия: ${series}`);
-  if (author) meta.push(`автор: ${author}`);
-  if (meta.length) L.push(meta.join(' · '));
-  if (source) L.push(`Источник: ${source}`);
-  if (relPath) L.push(`Файл: ${relPath}`);
-  L.push('');
-
-  L.push(setup ? `Перед пуском: ${setup}` : 'Перед пуском: без подготовки');
-  if (display !== null && display !== undefined && String(display).trim() !== '') {
-    L.push(`Ожидаемый результат: экран «${display}»`);
-  } else {
-    L.push('Ожидаемый результат: экран не снят');
-  }
-  if (pc !== null && pc !== undefined) {
-    L.push(`Остановка: PC = ${idxToAddr(Number(pc))}`);
-  }
-  if (stopped === false) {
-    L.push('Внимание: эталон не остановился сам — программа интерактивная,');
-    L.push('          ожидание снято с предела кадров, а не с С/П.');
-  }
-  L.push('');
-
-  if (steps.length) {
-    L.push('Адрес  Код  Команда');
-    for (const s of steps) {
-      const code = codes && codes[s.index] !== undefined ? pad2(codes[s.index]) : '--';
-      const tail = s.comment ? `   — ${s.comment}` : '';
-      L.push(`${s.addr}     ${code}   ${s.command}${tail}`);
-    }
-  } else {
-    L.push('Листинг не найден — шаги не распечатаны.');
-  }
-  L.push('');
-
-  if (codes) {
-    L.push('Коды (hex): ' + codes.map((c) => pad2(c)).join(' '));
-    L.push('Коды (dec): ' + codes.join(' '));
-    L.push('');
-  }
-
-  const regs = fmtRegs(regsOf(result));
-  if (regs.length) {
-    L.push('Регистры после пуска:');
-    L.push(...regs);
-  }
-
-  if (Array.isArray(diagnostics) && diagnostics.length) {
-    L.push('');
-    L.push('Предупреждения парсера:');
-    for (const d of diagnostics) {
-      L.push('  ' + (typeof d === 'string' ? d : JSON.stringify(d)));
-    }
-  }
-
-  return { text: L.join('\n') + '\n', section, slug: slugOf(entry), title };
-}
-
-/* ---------- сборники ---------- */
-
-function buildMerge(items, section) {
-  const L = [];
-  L.push(`Сборник программ МК-61 · ${section}`);
-  L.push(`Программ: ${items.length}`);
-  L.push('');
-  L.push('Оглавление:');
-  items.forEach((it, i) => {
-    L.push(`  ${i + 1}. ${it.title} — ${it.slug}.txt`);
-  });
-  L.push('');
-  for (const it of items) {
-    L.push('');
-    L.push('='.repeat(60));
-    L.push('');
-    L.push(it.text.trimEnd());
-    L.push('');
-  }
-  return L.join('\n') + '\n';
-}
-
-/* ---------- main ---------- */
-
-function main() {
-  if (!fs.existsSync(inFile)) {
-    console.error(`Нет файла ожиданий: ${inFile}`);
-    console.error('Сначала запустите scripts/generate-game-expectations.cjs');
-    process.exit(1);
-  }
-
-  const json = JSON.parse(fs.readFileSync(inFile, 'utf8'));
-  const entries = normalizeList(json);
-  if (!entries.length) {
-    console.error('В JSON нет программ.');
-    process.exit(1);
-  }
-
-  const bySection = new Map();
-  let writtenFiles = 0;
-
-  for (const entry of entries) {
-    let built;
-    try {
-      built = buildText(entry);
-    } catch (e) {
-      console.error(`Ошибка на ${slugOf(entry)}: ${e.message}`);
+    const match = line.match(/^\s*([0-9A-Fa-f]{2}|[.\-][0-9A-Fa-f])\s+(.+?)\s*$/u);
+    if (!match) {
+      problems.push('строка не похожа на команду: ' + line.trim());
       continue;
     }
-    const section = built.section || 'other';
+    const addressToken = match[1].toUpperCase().replace(/[.\-]/g, 'A');
+    const opcode = parseInt(addressToken, 16);
+    let address = formalAddress(opcode);
+    if (address === null) {
+      problems.push('адрес вне памяти: ' + match[1]);
+      address = rows.length;
+    }
+    const token = match[2].replace(/\s+/g, ' ');
+    const parsed = parseCommandToken(token, address, emptyLabels);
+    if (parsed.warning) problems.push(parsed.warning);
+    if (seen.has(address)) {
+      problems.push('адрес ' + addressLabel(address) + ' задан дважды: ' + token);
+    }
+    seen.set(address, true);
+    rows.push({ address, token, code: parsed.code });
+  }
+
+  return { rows, problems };
+}
+
+/* ------------------------------------------------------------------ */
+/* Какие регистры нужно задать перед пуском                            */
+/* ------------------------------------------------------------------ */
+
+const READ_OPS = new Set([0x6, 0xd, 0x7, 0x9, 0xc, 0xe]);
+const LOOP_OPS = new Map([[0x5d, 0], [0x5b, 1], [0x58, 2], [0x5a, 3]]);
+
+function normalizeRegister(nibble) {
+  return nibble === 0x0f ? 0 : nibble;
+}
+
+function inputRegisters(codes) {
+  const written = new Array(15).fill(false);
+  const read = new Array(15).fill(false);
+
+  for (const code of codes) {
+    const hi = code >> 4;
+    const lo = code & 0x0f;
+
+    if (hi === 0x4 || hi === 0xb) {
+      written[normalizeRegister(lo)] = true;
+      continue;
+    }
+    if (READ_OPS.has(hi) && hi !== 0xd && hi !== 0xe ? true : READ_OPS.has(hi)) {
+      const register = normalizeRegister(lo);
+      if (!written[register]) read[register] = true;
+    }
+    if (LOOP_OPS.has(code)) {
+      const register = LOOP_OPS.get(code);
+      if (!written[register]) read[register] = true;
+    }
+  }
+
+  const result = [];
+  for (let register = 0; register < 15; register += 1) {
+    if (read[register]) result.push(register);
+  }
+  return result;
+}
+
+/* ------------------------------------------------------------------ */
+/* Один файл                                                           */
+/* ------------------------------------------------------------------ */
+
+const REGISTER_NAME = '0123456789ABCDE';
+
+function compactList(value) {
+  return value ? value.split(';').map((part) => part.trim()).filter(Boolean).join(', ') : '—';
+}
+
+function renderProgram(entry, parsed) {
+  const codes = parsed.rows.map((row) => row.code);
+  const inputs = inputRegisters(codes);
+  const steps = parsed.rows.length;
+  const lines = [];
+
+  lines.push('МК-61 · ' + (entry.title || path.basename(entry.program, '.txt')));
+  lines.push('');
+  lines.push('Автор: ' + (entry.author || '—'));
+  if (entry.real_name) lines.push('Перевод, адаптация: ' + entry.real_name);
+  lines.push('Источник: ' + (entry.source_url || '—'));
+  lines.push('Раздел: ' + (entry.section || '—') + ' · тип: ' + (entry.kind || '—'));
+  lines.push('Теги: ' + compactList(entry.tags));
+  if (entry.collection) lines.push('Коллекция-источник: ' + entry.collection);
+  if (entry.series) lines.push('Серия: ' + entry.series);
+  lines.push('Листинг каталога: games/' + entry.program);
+  lines.push('');
+
+  lines.push('Шагов: ' + steps + ' из ' + LIMIT);
+  if (steps > LIMIT) lines.push('ВНИМАНИЕ: программа длиннее памяти МК-61 на ' + (steps - LIMIT) + ' шагов.');
+  if (inputs.length) {
+    lines.push('Перед пуском: ' + inputs.map((register) => 'R' + REGISTER_NAME[register]).join(', ') + ' — задать значения');
+  } else {
+    lines.push('Перед пуском: регистры задавать не нужно');
+  }
+  lines.push('');
+
+  lines.push('Листинг:');
+  lines.push('адрес  hex  dec  команда');
+  for (const row of parsed.rows) {
+    lines.push(
+      addressLabel(row.address).padEnd(6) +
+        ' ' +
+        row.code.toString(16).toUpperCase().padStart(2, '0').padEnd(4) +
+        ' ' +
+        String(row.code).padStart(3, '0') +
+        '  ' +
+        row.token
+    );
+  }
+
+  if (parsed.problems.length) {
+    lines.push('');
+    lines.push('Замечания при разборе:');
+    for (const problem of parsed.problems) lines.push('- ' + problem);
+  }
+
+  lines.push('');
+  lines.push('Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),');
+  lines.push('ожидаемый экран здесь не указан: он берётся из отдельного прогона.');
+  lines.push('');
+
+  return lines.join('\n');
+}
+
+/* ------------------------------------------------------------------ */
+/* Сборка                                                              */
+/* ------------------------------------------------------------------ */
+
+function ensureDir(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+}
+
+function main() {
+  const manifest = readManifest();
+  ensureDir(OUT);
+  ensureDir(path.join(OUT, '_sections'));
+
+  const index = [];
+  const problemsOut = [];
+  const bySection = new Map();
+  let converted = 0;
+  let skipped = 0;
+
+  for (const entry of manifest) {
+    const programPath = (entry.program || '').trim();
+    if (!programPath.endsWith('.txt') || !programPath.includes('/')) {
+      skipped += 1;
+      problemsOut.push('пропуск (нет листинга): ' + (programPath || entry.title || '—'));
+      continue;
+    }
+    const full = path.join(GAMES, programPath);
+    if (!fs.existsSync(full)) {
+      skipped += 1;
+      problemsOut.push('пропуск (файла нет): games/' + programPath);
+      continue;
+    }
+
+    const raw = fs.readFileSync(full, 'utf8');
+    const parsed = parseListing(raw);
+    const text = renderProgram(entry, parsed);
+
+    const section = entry.section || path.dirname(programPath);
+    const targetDir = path.join(OUT, section);
+    ensureDir(targetDir);
+    const targetName = path.basename(programPath, '.txt') + '.txt';
+    fs.writeFileSync(path.join(targetDir, targetName), text, 'utf8');
+
     if (!bySection.has(section)) bySection.set(section, []);
-    bySection.get(section).push(built);
+    bySection.get(section).push({ entry, text });
 
-    if (!onlyMerge) {
-      const dir = path.join(outDir, section);
-      fs.mkdirSync(dir, { recursive: true });
-      fs.writeFileSync(path.join(dir, `${built.slug}.txt`), built.text, 'utf8');
-      writtenFiles++;
+    const unknown = parsed.problems.filter((problem) => problem.startsWith('Command at'));
+    index.push({
+      section,
+      program: programPath,
+      title: entry.title || '',
+      author: entry.author || '',
+      kind: entry.kind || '',
+      steps: parsed.rows.length,
+      unknown: unknown.length,
+      notes: parsed.problems.length,
+    });
+    if (unknown.length) {
+      problemsOut.push('games/' + programPath + ': не разобрано команд ' + unknown.length);
+      for (const problem of unknown) problemsOut.push('    ' + problem);
     }
+    converted += 1;
   }
 
-  if (!onlySingle) {
-    let merged = 0;
-    for (const [section, items] of bySection) {
-      fs.mkdirSync(outDir, { recursive: true });
-      fs.writeFileSync(path.join(outDir, `${section}.txt`), buildMerge(items, section), 'utf8');
-      merged++;
+  for (const [section, items] of bySection) {
+    const parts = ['Сборник раздела ' + section, 'Программ: ' + items.length, ''];
+    for (const item of items) {
+      parts.push('='.repeat(60));
+      parts.push('');
+      parts.push(item.text);
+      parts.push('');
     }
-    log(`Сборников: ${merged}`);
+    fs.writeFileSync(path.join(OUT, '_sections', section + '.txt'), parts.join('\n'), 'utf8');
   }
 
-  log(`Отдельных файлов: ${writtenFiles}`);
-  console.log(`Готово: ${entries.length} программ, разделов ${bySection.size}, в ${outDir}`);
+  index.sort((a, b) => (a.section + '/' + a.program).localeCompare(b.section + '/' + b.program));
+  const indexLines = ['раздел\tфайл\tназвание\tавтор\tтип\tшагов\tне разобрано'];
+  for (const row of index) {
+    indexLines.push(
+      [row.section, row.program, row.title, row.author, row.kind, row.steps, row.unknown].join('\t')
+    );
+  }
+  fs.writeFileSync(path.join(OUT, '_index.tsv'), indexLines.join('\n') + '\n', 'utf8');
+
+  const sections = [...bySection.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+  const readme = [];
+  readme.push('# Читаемый каталог МК-61');
+  readme.push('');
+  readme.push('Собрано из `games/manifest.tsv` скриптом `scripts/export-readable.cjs`.');
+  readme.push('Коды команд разобраны ядром MKPro; ожидаемый экран здесь не приводится.');
+  readme.push('');
+  readme.push('| Раздел | Программ | Шагов всего |');
+  readme.push('|:---|---:|---:|');
+  for (const [section, items] of sections) {
+    const total = items.reduce((sum, item) => sum + (item.entry ? 0 : 0), 0);
+    readme.push('| ' + section + ' | ' + items.length + ' | — |');
+  }
+  readme.push('');
+  readme.push('Всего переконвертировано: **' + converted + '**');
+  readme.push('Пропущено записей без листинга: ' + skipped);
+  readme.push('');
+  readme.push('- `_index.tsv` — таблица всех программ');
+  readme.push('- `_problems.txt` — что не разобралось');
+  readme.push('- `_sections/<раздел>.txt` — сборник раздела');
+  fs.writeFileSync(path.join(OUT, 'README.md'), readme.join('\n'), 'utf8');
+
+  fs.writeFileSync(
+    path.join(OUT, '_problems.txt'),
+    problemsOut.length ? problemsOut.join('\n') + '\n' : 'Проблем не найдено.\n',
+    'utf8'
+  );
+
+  console.log('переконвертировано: ' + converted);
+  console.log('пропущено: ' + skipped);
+  console.log('разделов: ' + sections.length);
 }
 
 main();
