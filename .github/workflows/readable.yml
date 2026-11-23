@@ -6,6 +6,7 @@ on:
     paths:
       - 'games/manifest.tsv'
       - 'scripts/export-readable.cjs'
+      - 'scripts/readable-sections.cjs'
       - '.github/workflows/readable.yml'
 
 jobs:
