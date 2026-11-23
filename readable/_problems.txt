@@ -1,878 +1,749 @@
-games/action/alaram.txt: не разобрано команд 2
-    Command at 25 was not recognized: Ftg^-1
-    Command at 48 was not recognized: Ftg^-1
-games/action/chronos.txt: не разобрано команд 3
-    Command at 7 was not recognized: FLO
-    Command at 76 was not recognized: C/П
-    Command at 96 was not recognized: Fsin^-1
-games/action/chuzhie.txt: не разобрано команд 1
-    Command at 89 was not recognized: •
-games/action/cowboy.txt: не разобрано команд 1
-    Command at 22 was not recognized: C/П
-games/action/f-19.txt: не разобрано команд 2
-    Command at 0 was not recognized: Fsin^-1
-    Command at 35 was not recognized: N
-games/action/klingi.txt: не разобрано команд 1
-    Command at 84 was not recognized: C/П
-games/action/klingi-2m2.txt: не разобрано команд 3
-    Command at 22 was not recognized: смен-
-    Command at 23 was not recognized: ный
-    Command at 24 was not recognized: блок
-games/action/komandos.txt: не разобрано команд 1
-    Command at 34 was not recognized: Fcos^-1
-games/action/komandos-2.txt: не разобрано команд 1
-    Command at 73 was not recognized: •
-games/action/kosmicheskiy-desant.txt: не разобрано команд 2
-    Command at 1 was not recognized: C/П
-    Command at 26 was not recognized: •
-games/action/kung-fu.txt: не разобрано команд 1
-    Command at 37 was not recognized: C/П
-games/action/mafiozi.txt: не разобрано команд 1
-    Command at 104 was not recognized: B/O
-games/action/okhota-na-dinozavrov.txt: не разобрано команд 6
-    Command at 32 was not recognized: •
-    Command at 33 was not recognized: •
-    Command at 34 was not recognized: •
-    Command at 35 was not recognized: •
-    Command at 36 was not recognized: •
-    Command at 37 was not recognized: •
-games/action/okhota-na-skaloeda.txt: не разобрано команд 1
-    Command at 8 was not recognized: Ftg^-1
-games/action/peredovoy-otryad.txt: не разобрано команд 1
-    Command at 79 was not recognized: C/П
-games/action/pervoprokhodets.txt: не разобрано команд 1
-    Command at 50 was not recognized: C/П
-games/action/poedinok-na-orbite.txt: не разобрано команд 3
-    Command at 16 was not recognized: Ftg^-1
-    Command at 53 was not recognized: •
-    Command at 89 was not recognized: ШГ->
+# Проблемы разбора
+# файлов с замечаниями: 64
+# примечаний отделено: 6
+# подписей нормализовано: 453
+# файлов в формате десятичных кодов: 0
+
+games/action/chronos.txt: не разобрано команд 1
+    не разобрано на 07: FLO
+games/action/f-19.txt: не разобрано команд 1
+    не разобрано на 35: N
+games/action/klingi-2m2.txt: не разобрано команд 1
+    не разобрано на 23: ный
+games/action/poedinok-na-orbite.txt: не разобрано команд 1
+    не разобрано на 89: ШГ->
 games/action/policeman.txt: не разобрано команд 7
-    Command at 0 was not recognized: сво
-    Command at 1 was not recognized: бо
-    Command at 2 was not recognized: дн
-    Command at 3 was not recognized: ая
-    Command at 4 was not recognized: _
-    Command at 5 was not recognized: зо
-    Command at 6 was not recognized: на
-games/action/sherif.txt: не разобрано команд 1
-    Command at 6 was not recognized: Fsin^-1
+    не разобрано на 00: сво
+    не разобрано на 01: бо
+    не разобрано на 02: дн
+    не разобрано на 03: ая
+    не разобрано на 04: _
+    не разобрано на 05: зо
+    не разобрано на 06: на
 games/action/space-ranger-dolgushin-notebook.txt: не разобрано команд 1
-    Command at 104 was not recognized: K√
-games/action/uchebnye-strelby-gaishtut-1988.txt: не разобрано команд 1
-    Command at 25 was not recognized: К °<-′"
+    не разобрано на −4: K√
 games/action/vozdushnyy-desant.txt: не разобрано команд 1
-    Command at 89 was not recognized: ШГ->
-games/adventure/avantyurist.txt: не разобрано команд 1
-    Command at 69 was not recognized: •
-games/adventure/black-lord.txt: не разобрано команд 1
-    Command at 59 was not recognized: C/П
+    не разобрано на 89: ШГ->
+games/adventure/beskonechnaya-istoriya.txt: не разобрано команд 1
+    адрес 00 задан дважды: В/О
 games/adventure/brodyaga-vselennoy-3.txt: не разобрано команд 2
-    Command at 1 was not recognized: N
-    Command at 6 was not recognized: M
+    не разобрано на 01: N
+    не разобрано на 06: M
 games/adventure/cave.txt: не разобрано команд 23
-    Command at 7 was not recognized: 100
-    Command at 15 was not recognized: 101
-    Command at 16 was not recognized: 100
-    Command at 20 was not recognized: 100
-    Command at 25 was not recognized: 101
-    Command at 29 was not recognized: 102
-    Command at 34 was not recognized: 114
-    Command at 36 was not recognized: 135
-    Command at 39 was not recognized: 135
-    Command at 44 was not recognized: 104
-    Command at 48 was not recognized: 105
-    Command at 52 was not recognized: 104
-    Command at 55 was not recognized: 128
-    Command at 57 was not recognized: 105
-    Command at 60 was not recognized: 128
-    Command at 61 was not recognized: 102
-    Command at 65 was not recognized: 212
-    Command at 66 was not recognized: Fx>0
-    Command at 68 was not recognized: 102
-    Command at 73 was not recognized: 102
-    Command at 77 was not recognized: 213
-    Command at 80 was not recognized: 103
-    Command at 98 was not recognized: 135
-games/adventure/colis-secret-base-dolgushin-notebook-2.txt: не разобрано команд 42
-    Command at 1 was not recognized: П-х9
-    Command at 2 was not recognized: К↑
-    Command at 3 was not recognized: К{}
-    Command at 7 was not recognized: П-х8
-    Command at 8 was not recognized: К↑
-    Command at 11 was not recognized: х-П5
-    Command at 12 was not recognized: х-П7
-    Command at 13 was not recognized: П-х7
-    Command at 14 was not recognized: П-хA
-    Command at 15 was not recognized: К круг
-    Command at 19 was not recognized: П-х6
-    Command at 22 was not recognized: х-П6
-    Command at 27 was not recognized: х-П6
-    Command at 28 was not recognized: х-ПA
-    Command at 32 was not recognized: х-П0
-    Command at 33 was not recognized: х-П5
-    Command at 34 was not recognized: П-хE
-    Command at 38 was not recognized: П-х3
-    Command at 41 was not recognized: П-х4
-    Command at 42 was not recognized: К↑
-    Command at 43 was not recognized: х-П5
-    Command at 44 was not recognized: П-х5
-    Command at 51 was not recognized: П-х5
-    Command at 53 was not recognized: х-П5
-    Command at 54 was not recognized: К{}
-    Command at 59 was not recognized: П-хE
-    Command at 65 was not recognized: П-хВ
-    Command at 68 was not recognized: П-хС
-    Command at 71 was not recognized: К[]
-    Command at 75 was not recognized: П-х1
-    Command at 80 was not recognized: П-х2
-    Command at 82 was not recognized: П-х5
-    Command at 83 was not recognized: П-х7
-    Command at 85 was not recognized: х-П7
-    Command at 86 was not recognized: П-х6
-    Command at 93 was not recognized: х-ПA
-    Command at 94 was not recognized: П-х7
-    Command at 95 was not recognized: К^
-    Command at 96 was not recognized: К{}
-    Command at 100 was not recognized: П-хС
-    Command at 103 was not recognized: х-ПС
-    Command at 104 was not recognized: ВО
+    не разобрано на 07: 100
+    не разобрано на 15: 101
+    не разобрано на 16: 100
+    не разобрано на 20: 100
+    не разобрано на 25: 101
+    не разобрано на 29: 102
+    не разобрано на 34: 114
+    не разобрано на 36: 135
+    не разобрано на 39: 135
+    не разобрано на 44: 104
+    не разобрано на 48: 105
+    не разобрано на 52: 104
+    не разобрано на 55: 128
+    не разобрано на 57: 105
+    не разобрано на 60: 128
+    не разобрано на 61: 102
+    не разобрано на 65: 212
+    не разобрано на 66: Fx>0
+    не разобрано на 68: 102
+    не разобрано на 73: 102
+    не разобрано на 77: 213
+    не разобрано на 80: 103
+    не разобрано на 98: 135
+games/adventure/colis-secret-base-dolgushin-notebook-2.txt: не разобрано команд 72
+    строка не похожа на команду: COLiS: SECRET BASE
+    строка не похожа на команду: ==================
+    строка не похожа на команду: Источник: https://vk.com/wall-115251268_126; ручная перепечатка пользователя из второй тетради Александра Долгушина "Мои игры МК-61"
+    строка не похожа на команду: Номер в тетради: 61
+    строка не похожа на команду: Автор: Александр Долгушин
+    строка не похожа на команду: Дата: 30.11.2001
+    строка не похожа на команду: Листинг
+    строка не похожа на команду: Исходные данные
+    строка не похожа на команду: Ввести:
+    строка не похожа на команду: 7 хП0
+    строка не похожа на команду: 11111111 хП4
+    строка не похожа на команду: 8808 В↑ 840315 К∨ К{} ВП 5 хП2
+    строка не похожа на команду: 85000005 КИНВ К{} ВП 2 В↑ /-/ хП3
+    строка не похожа на команду: 83030303 хП8
+    строка не похожа на команду: 80404044 хП9
+    строка не похожа на команду: КСЧ хПС
+    строка не похожа на команду: 880808 В↑ 870202 К∨ ВП 6 хПВ
+    строка не похожа на команду: 88088888 В↑ 82042642 К∨ К{} ВП 6 хПE
+    строка не похожа на команду: Запуск: ВО, С/П.
+    строка не похожа на команду: Суть дела
+    строка не похожа на команду: 2273 год. Вы спецагент. Вас послали на секретную военную базу планеты Колис. База занимается разработкой секретного оружия.
+    строка не похожа на команду: Вы попали на базу незамеченным и находитесь в одном из подземных тоннелей базы. Но раздалась сирена: похоже, вас обнаружили. Миссия - найти секретное оружие и убрать с него защитное поле. Поторопитесь: бомба, которую вы положили к главному реактору базы, скоро взорвется.
+    строка не похожа на команду: Игра состоит из трех уровней.
+    строка не похожа на команду: 1 уровень
+    строка не похожа на команду: На экране коридор с прессами, которые периодически опускаются и поднимаются. В левом краю экрана символ "8" - это проем, в котором стоите вы. Вы тоже обозначены символом "8".
+    строка не похожа на команду: Управление:
+    строка не похожа на команду: 1 С/П - идти прямо.
+    строка не похожа на команду: /-/ 1 С/П - идти назад.
+    строка не похожа на команду: 0 С/П - стоять на месте.
+    строка не похожа на команду: Совет: постойте на месте, посмотрите как опускаются прессы, а затем проходите через них.
+    строка не похожа на команду: "--.  -" - вы попали под пресс, конец игры.
+    строка не похожа на команду: "-0С-ЕС.-" - первый уровень успешно пройден, переход ко второму уровню. Нажать С/П.
+    строка не похожа на команду: 2 уровень
+    строка не похожа на команду: Вы вышли в центральный коридор, который ведет к секретному оружию базы. Перед вами толпа солдат. На экране "8.EEEE  ". У вас есть скорострельный бластер. Выберите место обстрела от 1 до 7 и нажмите С/П.
+    строка не похожа на команду: Экран обстрела:
+    строка не похожа на команду: ┌────┬────┬────┬────┬────┬────┬────┬────┐
+    строка не похожа на команду: │ 8. │    │ E  │ E  │ E  │ E  │    │    │
+    строка не похожа на команду: ├────┼────┼────┼────┼────┼────┼────┼────┤
+    строка не похожа на команду: │ 0  │ 1  │ 2  │ 3  │ 4  │ 5  │ 6  │ 7  │
+    строка не похожа на команду: └────┴────┴────┴────┴────┴────┴────┴────┘
+    строка не похожа на команду: После того как перестреляете всех солдат, появятся новые.
+    строка не похожа на команду: "--.  -" - взорвалась бомба, вы не успели, конец игры.
+    строка не похожа на команду: "-0С-EC.-" - солдаты на некоторое время перестали атаковать; вы добегаете до конца коридора.
+    строка не похожа на команду: 3 уровень
+    строка не похожа на команду: Перед вами замок снятия защиты секретного оружия: "8. 0-0-0.".
+    строка не похожа на команду: Замок имеет тройную систему кодов. Противокодовая карточка открыла одну часть кода, поэтому нужно разгадать еще две части.
+    строка не похожа на команду: Ввод кода:
+    строка не похожа на команду: ┌────────────────────┬────┬────────────────────┬─────┐
+    строка не похожа на команду: │ первая часть кода  │ В↑ │ вторая часть кода   │ С/П │
+    строка не похожа на команду: └────────────────────┴────┴────────────────────┴─────┘
+    строка не похожа на команду: Возможные коды:
+    строка не похожа на команду: ┌───────┬───────┐
+    строка не похожа на команду: │ 1 и 0 │ 1 и 2 │
+    строка не похожа на команду: │ 1 и 3 │ 2 и 3 │
+    строка не похожа на команду: │ 3 и 0 │ 2 и 0 │
+    строка не похожа на команду: │ 0 и 0 │       │
+    строка не похожа на команду: └───────┴───────┘
+    строка не похожа на команду: Нюанс: если ввод кода оказался неверным, система заново кодирует замок.
+    строка не похожа на команду: "--. -" - взорвалась ваша бомба, вы не успели снять защиту, конец игры.
+    строка не похожа на команду: "ЕГГОГ" - вы сняли защиту с оружия, но не успели покинуть базу. Миссия выполнена, но какой ценой.
+    строка не похожа на команду: "COLiS" - база и секретное оружие уничтожены, вы успели покинуть базу. ↔ - заработанные очки.
+    строка не похожа на команду: Рекорд очков: 5,6.
+    строка не похожа на команду: Примечания к записи
+    строка не похожа на команду: Команда "К⊕" соответствует записи пользователя "К плюс в круге" / "К плюс в кружке".
+    строка не похожа на команду: Команда "К^" оставлена буквально по перепечатке пользователя.
+    строка не похожа на команду: Адреса после 99 нормализованы как A0-A4.
+    не разобрано на 02: К↑
+    не разобрано на 08: К↑
+    не разобрано на 42: К↑
+    не разобрано на 95: К^
+    адрес 30 задан дважды: хП1
+    адрес 38 задан дважды: хПd
 games/adventure/dolina.txt: не разобрано команд 1
-    Command at 93 was not recognized: А1
-games/adventure/dracula-dolgushin-notebook.txt: не разобрано команд 7
-    Command at 33 was not recognized: K{}
-    Command at 43 was not recognized: Ftg^-1
-    Command at 55 was not recognized: Ftg^-1
-    Command at 62 was not recognized: K{}
-    Command at 67 was not recognized: K{}
-    Command at 77 was not recognized: K{}
-    Command at 85 was not recognized: K{}
+    не разобрано на 93: А1
 games/adventure/dzhungli-2.txt: не разобрано команд 1
-    Command at 42 was not recognized: FLO
-games/adventure/for-kicks-ii.txt: не разобрано команд 1
-    Command at 62 was not recognized: C/П
-games/adventure/for-kicks-iii.txt: не разобрано команд 1
-    Command at 79 was not recognized: •
+    не разобрано на 42: FLO
 games/adventure/giants-country.txt: не разобрано команд 1
-    Command at 102 was not recognized: 0Е
-games/adventure/kladoiskatel.txt: не разобрано команд 1
-    Command at 74 was not recognized: •
-games/adventure/labirint-8-13.txt: не разобрано команд 2
-    Command at 11 was not recognized: Fsin^-1
-    Command at 63 was not recognized: Ftg^-1
-games/adventure/lamer-andrew-meets-america.txt: не разобрано команд 19
-    Command at 2 was not recognized: СП
-    Command at 7 was not recognized: Fx>0
-    Command at 16 was not recognized: СП
-    Command at 21 was not recognized: СП
-    Command at 28 was not recognized: СП
-    Command at 33 was not recognized: СП
-    Command at 39 was not recognized: СП
-    Command at 46 was not recognized: СП
-    Command at 50 was not recognized: СП
-    Command at 55 was not recognized: СП
-    Command at 68 was not recognized: СП
-    Command at 72 was not recognized: СП
-    Command at 81 was not recognized: СП
-    Command at 87 was not recognized: СП
-    Command at 89 was not recognized: СП
-    Command at 93 was not recognized: СП
-    Command at 95 was not recognized: СП
-    Command at 100 was not recognized: СП
-    Command at 102 was not recognized: СП
-games/adventure/myortvaya-zona-i.txt: не разобрано команд 1
-    Command at 36 was not recognized: C/П
-games/adventure/myortvaya-zona-iii.txt: не разобрано команд 1
-    Command at 52 was not recognized: Ftg^-1
-games/adventure/oborotni.txt: не разобрано команд 1
-    Command at 51 was not recognized: •
-games/adventure/oregon-2.txt: не разобрано команд 4
-    Command at 44 was not recognized: Ftg^-1
-    Command at 58 was not recognized: Ftg^-1
-    Command at 59 was not recognized: C/П
-    Command at 62 was not recognized: Ftg^-1
+    не разобрано на −2: 0Е
+games/adventure/lamer-andrew-meets-america.txt: не разобрано команд 1
+    не разобрано на 07: Fx>0
 games/adventure/ostrov.txt: не разобрано команд 1
-    Command at 57 was not recognized: K√
-games/adventure/peshchera-syurprizov.txt: не разобрано команд 2
-    Command at 74 was not recognized: •
-    Command at 80 was not recognized: C/П
+    не разобрано на 57: K√
 games/adventure/polet-shmelya.txt: не разобрано команд 2
-    Command at 71 was not recognized: КЛ
-    Command at 86 was not recognized: КЛ
-games/adventure/priton.txt: не разобрано команд 1
-    Command at 92 was not recognized: •
-games/adventure/puteshestvie.txt: не разобрано команд 2
-    Command at 34 was not recognized: Ftg^-1
-    Command at 52 was not recognized: K^<-oi
-games/adventure/rising-from-hell.txt: не разобрано команд 1
-    Command at 57 was not recognized: C/П
-games/adventure/sex-mission.txt: не разобрано команд 1
-    Command at 94 was not recognized: C/П
+    не разобрано на 71: КЛ
+    не разобрано на 86: КЛ
+games/adventure/puteshestvie.txt: не разобрано команд 1
+    не разобрано на 52: K^<-oi
 games/adventure/skazka-lordbss.txt: не разобрано команд 1
-    Command at 90 was not recognized: А1
-games/adventure/speleolog.txt: не разобрано команд 2
-    Command at 46 was not recognized: •
-    Command at 77 was not recognized: Ftg^-1
-games/adventure/sprut.txt: не разобрано команд 1
-    Command at 56 was not recognized: •
-games/adventure/strana-monstrov.txt: не разобрано команд 1
-    Command at 101 was not recognized: •
-games/adventure/tayny-okeana.txt: не разобрано команд 1
-    Command at 61 was not recognized: •
-games/adventure/tayny-okeana-3.txt: не разобрано команд 1
-    Command at 54 was not recognized: •
-games/adventure/tayny-okeana-4.txt: не разобрано команд 1
-    Command at 64 was not recognized: •
-games/adventure/the-goonmaster.txt: не разобрано команд 2
-    Command at 32 was not recognized: C/П
-    Command at 46 was not recognized: C/П
-games/adventure/treasure-cave.txt: не разобрано команд 1
-    Command at 102 was not recognized: F sqrt
+    не разобрано на 90: А1
 games/adventure/winner.txt: не разобрано команд 1
-    Command at 11 was not recognized: КПП
-games/adventure/yantarnyy-gugon.txt: не разобрано команд 1
-    Command at 25 was not recognized: C/П
-games/adventure/zamok-satany.txt: не разобрано команд 1
-    Command at 19 was not recognized: C/П
-games/adventure/zloveshchiy-chertog.txt: не разобрано команд 1
-    Command at 17 was not recognized: C/П
-games/arcade/lovkach.txt: не разобрано команд 1
-    Command at 62 was not recognized: Ftg^-1
-games/arcade/lovkach-video.txt: не разобрано команд 1
-    Command at 27 was not recognized: C/П
+    не разобрано на 11: КПП
 games/arcade/pi-cho-variant.txt: не разобрано команд 1
-    Command at 51 was not recognized: К2
-games/arcade/teenage-mutant-ninja-turtles-dolgushin-notebook-2.txt: не разобрано команд 42
-    Command at 1 was not recognized: х-Пd
-    Command at 2 was not recognized: П-х6
-    Command at 4 was not recognized: х-П6
-    Command at 7 was not recognized: х-П5
-    Command at 9 was not recognized: х-П1
-    Command at 20 was not recognized: х-П0
-    Command at 23 was not recognized: х-П5
-    Command at 28 was not recognized: х-П1
-    Command at 30 was not recognized: х-П5
-    Command at 34 was not recognized: х-П5
-    Command at 35 was not recognized: П-хd
-    Command at 38 was not recognized: П-х5
-    Command at 45 was not recognized: П-х5
-    Command at 56 was not recognized: П-х5
-    Command at 65 was not recognized: П-х6
-    Command at 69 was not recognized: П-х2
-    Command at 75 was not recognized: П-х3
-    Command at 80 was not recognized: х-П3
-    Command at 82 was not recognized: х-П6
-    Command at 83 was not recognized: П-хВ
-    Command at 86 was not recognized: х-ПE
-    Command at 87 was not recognized: П-х2
-    Command at 88 was not recognized: П-х2
-    Command at 89 was not recognized: П-х3
-    Command at 90 was not recognized: П-х3
-    Command at 91 was not recognized: П-х9
-    Command at 92 was not recognized: П-х9
-    Command at 93 was not recognized: П-х9
-    Command at 94 was not recognized: П-х9
-    Command at 95 was not recognized: П-х9
-    Command at 96 was not recognized: П-х9
-    Command at 98 was not recognized: П-х9
-    Command at 99 was not recognized: П-х9
-    Command at 100 was not recognized: П-х9
-    Command at 101 was not recognized: П-х9
-    Command at 102 was not recognized: П-хС
-    Command at 16 was not recognized: + изменит тактику ведения боя мутанта
-    Command at 19 was not recognized: 4 изменит тактику ведения боя мутанта
-    Command at 68 was not recognized: Пх2 бессмертие
-    Command at 78 was not recognized: 0 Шреддер будет слабее
-    Command at 31 was not recognized: FL0 мутант и Шреддер будут сильнее
-    Command at 24 was not recognized: 2 мутант и Шреддер будут сильнее
-games/arcade/toti.txt: не разобрано команд 1
-    Command at 81 was not recognized: C/П
-games/arcade/turtles.txt: не разобрано команд 2
-    Command at 22 was not recognized: FF√
-    Command at 44 was not recognized: FF√
-games/arcade/v-oblake-asteroidov.txt: не разобрано команд 1
-    Command at 3 was not recognized: Ftg^-1
-games/arcade/vorishka-video.txt: не разобрано команд 1
-    Command at 87 was not recognized: C/П
-games/educational/obshchitelny-li-vy-chelovek-gaishtut-1988.txt: не разобрано команд 3
-    Command at 17 was not recognized: К °->′
-    Command at 23 was not recognized: К °->′
-    Command at 25 was not recognized: К °<-′"
+    не разобрано на 51: К2
+games/arcade/teenage-mutant-ninja-turtles-dolgushin-notebook-2.txt: не разобрано команд 70
+    строка не похожа на команду: TEENAGE-MUTANT NINJA TURTLES
+    строка не похожа на команду: ============================
+    строка не похожа на команду: Источник: https://vk.com/wall-115251268_126; ручная перепечатка пользователя из второй тетради Александра Долгушина "Мои игры МК-61", Рисунок (20).jpg; Рисунок (21).jpg; Рисунок (22).jpg; Рисунок (23).jpg; Рисунок (24).jpg
+    строка не похожа на команду: Номер в тетради: 59
+    строка не похожа на команду: Автор: Александр Долгушин
+    строка не похожа на команду: Дата: 22.07.2001
+    строка не похожа на команду: Листинг
+    строка не похожа на команду: Исходные данные
+    строка не похожа на команду: В режиме F АВТ ввести:
+    строка не похожа на команду: 4 хП0
+    строка не похожа на команду: 3 хП1
+    строка не похожа на команду: 100 хПС
+    строка не похожа на команду: КПх2
+    строка не похожа на команду: КПх3
+    строка не похожа на команду: 800257 КИНВ хП4
+    строка не похожа на команду: 800027 КИНВ хП7
+    строка не похожа на команду: 80027 КИНВ хП8
+    строка не похожа на команду: 800207 КИНВ хП9
+    строка не похожа на команду: 88808 В↑ 8360286 К∨ К{} ВП 6 хПВ
+    строка не похожа на команду: 0 хП6
+    строка не похожа на команду: Запуск: 1, ВО, С/П.
+    строка не похожа на команду: История
+    строка не похожа на команду: Четыре ниндзя-черепахи: Леонардо, Рафаэль, Микеланжело, Донателло и их сэнсей Силинтер сидели вечером у телевизора и смотрели фильм. Вдруг экран погас, а затем появилось изображение Шреддера.
+    строка не похожа на команду: "Слушайте сюда, никчемные черепахи, - сказал из телевизора Шреддер, - ваша Эйприл О'Нил у меня. Попробуйте ее освободить. Если, конечно же, вам не страшно будет познакомиться с моим новым мутантом Гориеном. Если решитесь, приходите на заброшенный завод. Я вас жду. Ха-ха-ха-ха!"
+    строка не похожа на команду: Телевизор отключился.
+    строка не похожа на команду: "Надо что-то делать. У него Эйприл!" - воскликнул Рафаэль.
+    строка не похожа на команду: "Да, мы принимаем вызов Шреддера", - сказал Майк, вытаскивая нунчаки.
+    строка не похожа на команду: "Поехали", - крикнул Лео и побежал к выходу.
+    строка не похожа на команду: Через несколько минут машина Черепашек уже подъезжала к заброшенному заводу. Черепахи вылезли из машины. Кругом была тишина. На небе ярко светила луна.
+    строка не похожа на команду: "Что-то здесь слишком тихо", - произнес Майк.
+    строка не похожа на команду: Черепашки вошли во внутренний двор. Кругом было темно и тихо. Вдруг из-за всех углов и укрытий на черепашек накинулись люди Шреддера. Черепашки встали друг к другу спинами и приготовились отражать атаку.
+    строка не похожа на команду: Двор был наполнен криками, глухими ударами и воплями. Черепахи успешно отбивались, но казалось, этому конца не будет.
+    строка не похожа на команду: "Лео, - задыхаясь сказал Донателло, - ты должен найти Эйприл. Иди, мы их задержим!"
+    строка не похожа на команду: Лео выскользнул из толпы и побежал в здание фабрики. Он шел по незнакомым заброшенным коридорам, как вдруг на пути оказался чей-то силуэт. Мгновенно включился свет, и Лео увидел стоящего впереди монстра. Он был чем-то похож на гориллу.
+    строка не похожа на команду: Монстр долго себя ждать не заставил и кинулся на Леонардо.
+    строка не похожа на команду: Игра
+    строка не похожа на команду: После запуска и вычисления на экране промелькнет количество ваших жизней: "00000013", затем количество жизней мутанта: "00000018", а затем игровое поле с последующим показом действий.
+    строка не похожа на команду: После показа удара сразу переключить переключатель в нужное положение:
+    строка не похожа на команду: Р - блок. В этом положении противник вам не страшен.
+    строка не похожа на команду: ГРД - удар рукой. Противник может отбить удар.
+    строка не похожа на команду: Г - удар ногой. Блок противника не пробивает.
+    строка не похожа на команду: Символы
+    строка не похожа на команду: Г - Леонардо.
+    строка не похожа на команду: 8 - мутант.
+    строка не похожа на команду: ЕГГОГ - Леонардо побежден, конец игры.
+    строка не похожа на команду: LEO 86 - победа, мутант уничтожен.
+    строка не похожа на команду: "-" - столкновение ударов, бывает редко.
+    строка не похожа на команду: Если фигурка мутанта перескочит к вам, это значит, что он нанес удар. Если вы держали переключатель в положении Р, то вам ничего не будет.
+    строка не похожа на команду: Чередуйте удары и ставьте блоки. Когда вы стоите в блоке, вы немного набираете силы. Если при ударе у мутанта не потратилась жизнь, значит он был в блоке.
+    строка не похожа на команду: Если вы и мутант нанесете удар одинаковой силы, то удар отобьется: на экране "8.  Г-8".
+    строка не похожа на команду: После того как убьете мутанта, на экране появится символ "LEO 86". Теперь вам придется сразиться с самим Шреддером: нажать С/П.
+    строка не похожа на команду: Шреддер изображен так же, как и мутант. У Шреддера меньше жизней, чем у мутанта, но он дерется гораздо лучше.
+    строка не похожа на команду: Спасите Эйприл О'Нил. Она верит в вас.
+    строка не похожа на команду: Коды
+    строка не похожа на команду: Адрес	Код	Что станет
+    строка не похожа на команду: P.S.
+    строка не похожа на команду: "Игра запрограммирована так, что у врага более 5 тактик ведения боя. Это главный цинус игры. A-LEX"
+    строка не похожа на команду: Примечания к записи
+    строка не похожа на команду: Слово "цинус" в P.S. почти наверняка означает "цимес": разговорное "самая соль", "главная изюминка". Оригинальная запись сохранена буквально.
+    строка не похожа на команду: Последняя строка исходных данных в перепечатке была "0 кп6"; по смыслу и по скану это ввод "0 хП6".
+    строка не похожа на команду: Адреса после 99 нормализованы как A0-A4.
+    адрес 14 задан дважды: хП2
+    адрес 19 задан дважды: хП3
+    адрес 61 задан дважды: хПA
+    не разобрано на 16: + изменит тактику ведения боя мутанта
+    не разобрано на 19: 4 изменит тактику ведения боя мутанта
+    не разобрано на 68: Пх2 бессмертие
+    не разобрано на 78: 0 Шреддер будет слабее
+    не разобрано на 31: FL0 мутант и Шреддер будут сильнее
+    не разобрано на 24: 2 мутант и Шреддер будут сильнее
 games/gambling/fortune-dolgushin-notebook.txt: не разобрано команд 1
-    Command at 69 was not recognized: K√
-games/gambling/monte-karlo.txt: не разобрано команд 2
-    Command at 20 was not recognized: C/А
-    Command at 36 was not recognized: C/П
-games/gambling/ruletka.txt: не разобрано команд 1
-    Command at 0 was not recognized: C/П
-games/gambling/the-dice.txt: не разобрано команд 3
-    Command at 21 was not recognized: C/П
-    Command at 38 was not recognized: K1
-    Command at 39 was not recognized: K1
-games/logic/bolshe-menshe-gaishtut-1988.txt: не разобрано команд 2
-    Command at 41 was not recognized: К °<-′"
-    Command at 45 was not recognized: К °<-′"
-games/logic/chet-nechet-kibernetika-1986.txt: не разобрано команд 1
-    Command at 76 was not recognized: F cos^-1
-games/logic/elektronnyy-ring.txt: не разобрано команд 1
-    Command at 92 was not recognized: Fcos^-1
-games/logic/logika-gaishtut-1988.txt: не разобрано команд 1
-    Command at 21 was not recognized: К °->′
-games/logic/minesweeper.txt: не разобрано команд 2
-    Command at 19 was not recognized: ПхО
-    Command at 101 was not recognized: •
+    не разобрано на 69: K√
+games/gambling/loterei-kubik-orel-reshka-renat-notebook.txt: не разобрано команд 39
+    строка не похожа на команду: Кубик:
+    строка не похожа на команду: Переборный вариант:
+    строка не похожа на команду: Орёл-решка с заданной вероятностью:
+    адрес 00 задан дважды: 1
+    адрес 01 задан дважды: Сх
+    адрес 02 задан дважды: 1
+    адрес 03 задан дважды: Сх
+    адрес 04 задан дважды: 3
+    адрес 05 задан дважды: Сх
+    адрес 06 задан дважды: 1
+    адрес 07 задан дважды: Сх
+    адрес 08 задан дважды: 1
+    адрес 09 задан дважды: Сх
+    адрес 10 задан дважды: 3
+    адрес 11 задан дважды: Сх
+    адрес 12 задан дважды: 1
+    адрес 13 задан дважды: Сх
+    адрес 14 задан дважды: 5
+    адрес 15 задан дважды: Сх
+    адрес 00 задан дважды: Пх9
+    адрес 01 задан дважды: Fπ
+    адрес 02 задан дважды: +
+    адрес 03 задан дважды: Fe^x
+    адрес 04 задан дважды: хП9
+    адрес 05 задан дважды: КПх9
+    адрес 06 задан дважды: F↻
+    адрес 07 задан дважды: Пх9
+    адрес 08 задан дважды: -
+    адрес 09 задан дважды: хП9
+    адрес 10 задан дважды: Пх7
+    адрес 11 задан дважды: -
+    адрес 12 задан дважды: Fx<0
+    адрес 13 задан дважды: 17
+    адрес 14 задан дважды: Сх
+    адрес 15 задан дважды: БП
+    адрес 16 задан дважды: 18
+    адрес 17 задан дважды: 1
+    адрес 18 задан дважды: С/П
+    адрес 19 задан дважды: БП
+games/gambling/monte-karlo.txt: не разобрано команд 1
+    не разобрано на 20: C/А
+games/gambling/the-dice.txt: не разобрано команд 2
+    не разобрано на 38: K1
+    не разобрано на 39: K1
+games/logic/domino-vunderkind.txt: не разобрано команд 1
+    адрес 00 задан дважды: В/О
+games/logic/kombinator.txt: не разобрано команд 1
+    адрес 00 задан дважды: В/О
+games/logic/minesweeper.txt: не разобрано команд 1
+    не разобрано на 19: ПхО
 games/logic/mustang-8x8.txt: не разобрано команд 26
-    Command at 5 was not recognized: 123
-    Command at 9 was not recognized: 123
-    Command at 10 was not recognized: 108
-    Command at 11 was not recognized: 220
-    Command at 21 was not recognized: 155
-    Command at 25 was not recognized: 155
-    Command at 28 was not recognized: 203
-    Command at 51 was not recognized: 235
-    Command at 54 was not recognized: 105
-    Command at 58 was not recognized: 153
-    Command at 62 was not recognized: 188
-    Command at 63 was not recognized: 105
-    Command at 65 was not recognized: 160
-    Command at 69 was not recognized: 188
-    Command at 70 was not recognized: 106
-    Command at 73 was not recognized: 173
-    Command at 75 was not recognized: 173
-    Command at 77 was not recognized: 173
-    Command at 79 was not recognized: 173
-    Command at 80 was not recognized: 106
-    Command at 81 was not recognized: Б/К
-    Command at 82 was not recognized: 133
-    Command at 83 was not recognized: 109
-    Command at 88 was not recognized: 107
-    Command at 90 was not recognized: 105
-    Command at 97 was not recognized: 138
+    не разобрано на 05: 123
+    не разобрано на 09: 123
+    не разобрано на 10: 108
+    не разобрано на 11: 220
+    не разобрано на 21: 155
+    не разобрано на 25: 155
+    не разобрано на 28: 203
+    не разобрано на 51: 235
+    не разобрано на 54: 105
+    не разобрано на 58: 153
+    не разобрано на 62: 188
+    не разобрано на 63: 105
+    не разобрано на 65: 160
+    не разобрано на 69: 188
+    не разобрано на 70: 106
+    не разобрано на 73: 173
+    не разобрано на 75: 173
+    не разобрано на 77: 173
+    не разобрано на 79: 173
+    не разобрано на 80: 106
+    не разобрано на 81: Б/К
+    не разобрано на 82: 133
+    не разобрано на 83: 109
+    не разобрано на 88: 107
+    не разобрано на 90: 105
+    не разобрано на 97: 138
 games/logic/shakhmaty-ferz-protiv-korolya-2.txt: не разобрано команд 2
-    Command at 41 was not recognized: К1
-    Command at 47 was not recognized: К2
+    не разобрано на 41: К1
+    не разобрано на 47: К2
 games/logic/shakhmaty-ladya-protiv-korolya.txt: не разобрано команд 1
-    Command at 78 was not recognized: К2
-games/logic/sokoban.txt: не разобрано команд 1
-    Command at 26 was not recognized: Fcos^-1
+    не разобрано на 78: К2
 games/logic/spichki-bergsona.txt: не разобрано команд 1
-    Command at 44 was not recognized: К2
-games/logic/syshchik.txt: не разобрано команд 2
-    Command at 36 was not recognized: •
-    Command at 90 was not recognized: Ftg^-1
-games/logic/syshchik-dolgushin-notebook.txt: не разобрано команд 1
-    Command at 90 was not recognized: Ftg^-1
-games/logic/ugaday-chislo-kibernetika-1986.txt: не разобрано команд 1
-    Command at 13 was not recognized: F cos^-1
+    не разобрано на 44: К2
 games/logic/volki-i-kozlik-8x8.txt: не разобрано команд 7
-    Command at 39 was not recognized: П5(6)
-    Command at 42 was not recognized: 4(5)
-    Command at 56 was not recognized: 5(6)
-    Command at 63 was not recognized: ИП5(6)
-    Command at 64 was not recognized: П4(5)
-    Command at 80 was not recognized: Fo
-    Command at 92 was not recognized: 4(5)
+    не разобрано на 39: П5(6)
+    не разобрано на 42: 4(5)
+    не разобрано на 56: 5(6)
+    не разобрано на 63: ИП5(6)
+    не разобрано на 64: П4(5)
+    не разобрано на 80: Fo
+    не разобрано на 92: 4(5)
 games/logic/white-starts-and-loses.txt: не разобрано команд 1
-    Command at 91 was not recognized: Fo
-games/simulation/aeroport.txt: не разобрано команд 1
-    Command at 64 was not recognized: C/П
-games/simulation/apollo11-launch.txt: не разобрано команд 4
-    Command at 14 was not recognized: Ftgᐨ¹
-    Command at 37 was not recognized: F10ˣ
-    Command at 53 was not recognized: Fѻ
-    Command at 75 was not recognized: Fѻ
-games/simulation/bankir.txt: не разобрано команд 1
-    Command at 44 was not recognized: •
+    не разобрано на 91: Fo
+games/simulation/apollo11-launch.txt: не разобрано команд 7
+    не разобрано на 14: Ftgᐨ¹
+    не разобрано на 53: Fѻ
+    не разобрано на 75: Fѻ
+    адрес −0 задан дважды: ÷
+    адрес −0 задан дважды: Пx2
+    адрес −0 задан дважды: ×
+    адрес −0 задан дважды: В/О
 games/simulation/birzha.txt: не разобрано команд 1
-    Command at 80 was not recognized: K
+    не разобрано на 80: K
 games/simulation/cooperative-2.txt: не разобрано команд 3
-    Command at 10 was not recognized: А1
-    Command at 27 was not recognized: А0
-    Command at 63 was not recognized: А0
+    не разобрано на 10: А1
+    не разобрано на 27: А0
+    не разобрано на 63: А0
 games/simulation/cooperative-cafe.txt: не разобрано команд 22
-    Command at 0 was not recognized: 103
-    Command at 2 was not recognized: 168
-    Command at 13 was not recognized: 208
-    Command at 17 was not recognized: 168
-    Command at 18 was not recognized: 101
-    Command at 24 was not recognized: 109
-    Command at 27 was not recognized: Б/К
-    Command at 39 was not recognized: 108
-    Command at 40 was not recognized: 107
-    Command at 44 was not recognized: Б/К
-    Command at 47 was not recognized: 102
-    Command at 55 was not recognized: 104
-    Command at 65 was not recognized: 106
-    Command at 68 was not recognized: 105
-    Command at 72 was not recognized: 137
-    Command at 73 was not recognized: 106
-    Command at 76 was not recognized: 152
-    Command at 77 was not recognized: 106
-    Command at 80 was not recognized: 152
-    Command at 99 was not recognized: 100
-    Command at 101 was not recognized: 208
-    Command at 104 was not recognized: 168
-games/simulation/course-of-voyage-caston-city-dolgushin-notebook-2.txt: не разобрано команд 43
-    Command at 0 was not recognized: П-хE
-    Command at 3 was not recognized: П-хB
-    Command at 4 was not recognized: П-хC
-    Command at 6 was not recognized: х-ПB
-    Command at 9 was not recognized: П-хC
-    Command at 11 was not recognized: х-ПC
-    Command at 20 was not recognized: П-хA
-    Command at 29 was not recognized: П-хA
-    Command at 31 was not recognized: х-ПA
-    Command at 34 was not recognized: П-хC
-    Command at 36 was not recognized: П-хB
-    Command at 40 was not recognized: П-хC
-    Command at 42 was not recognized: х-ПC
-    Command at 46 was not recognized: П-хA
-    Command at 48 was not recognized: П-хC
-    Command at 50 was not recognized: П-х3
-    Command at 52 was not recognized: П-х1
-    Command at 55 was not recognized: П-хE
-    Command at 58 was not recognized: П-хA
-    Command at 60 was not recognized: П-хC
-    Command at 62 was not recognized: П-х3
-    Command at 64 was not recognized: П-хd
-    Command at 66 was not recognized: х-Пd
-    Command at 68 was not recognized: К[]
-    Command at 69 was not recognized: П-х6
-    Command at 71 was not recognized: К[]
-    Command at 74 was not recognized: х-П9
-    Command at 76 was not recognized: П-хA
-    Command at 80 was not recognized: П-х2
-    Command at 82 was not recognized: П-хC
-    Command at 87 was not recognized: П-х4
-    Command at 91 was not recognized: х-ПE
-    Command at 94 was not recognized: П-х6
-    Command at 96 was not recognized: х-ПB
-    Command at 97 was not recognized: П-х8
-    Command at 99 was not recognized: х-Пd
-    Command at 100 was not recognized: КП-х9
-    Command at 102 was not recognized: х-П3
-    Command at 3 was not recognized: 04 БП 12 - вечное топливо
-    Command at 24 was not recognized: Пх6 разворот руля 49 градусов, а не 5
-    Command at 83 was not recognized: 5 максимальная скорость при посадке не более 50 м/с
-    Command at 101 was not recognized: F√ во втором уровне груз будет ужасно тяжелым
-    Command at 103 was not recognized: Fe^x; A4 хПE во втором уровне начнете играть с высоты 8103 м
+    не разобрано на 00: 103
+    не разобрано на 02: 168
+    не разобрано на 13: 208
+    не разобрано на 17: 168
+    не разобрано на 18: 101
+    не разобрано на 24: 109
+    не разобрано на 27: Б/К
+    не разобрано на 39: 108
+    не разобрано на 40: 107
+    не разобрано на 44: Б/К
+    не разобрано на 47: 102
+    не разобрано на 55: 104
+    не разобрано на 65: 106
+    не разобрано на 68: 105
+    не разобрано на 72: 137
+    не разобрано на 73: 106
+    не разобрано на 76: 152
+    не разобрано на 77: 106
+    не разобрано на 80: 152
+    не разобрано на 99: 100
+    не разобрано на −1: 208
+    не разобрано на −4: 168
+games/simulation/course-of-voyage-caston-city-dolgushin-notebook-2.txt: не разобрано команд 63
+    строка не похожа на команду: COURSE OF <VOYAGE> - CASTON CITY
+    строка не похожа на команду: =================================
+    строка не похожа на команду: Источник: https://vk.com/wall-115251268_126; вторая тетрадь Александра Долгушина "Мои игры МК-61", Рисунок (17).jpg; Рисунок (18).jpg; Рисунок (19).jpg; Рисунок (20).jpg
+    строка не похожа на команду: Номер в тетради: 58
+    строка не похожа на команду: Автор: Александр Долгушин
+    строка не похожа на команду: Дата: 19.07.2001
+    строка не похожа на команду: Режим: переключатель Р-ГРД-Г поставить в положение "Г".
+    строка не похожа на команду: Листинг
+    строка не похожа на команду: Исходные данные
+    строка не похожа на команду: Ввести в регистры памяти:
+    строка не похожа на команду: 1 хП0
+    строка не похожа на команду: 9,81 хП1
+    строка не похожа на команду: 5 хП3
+    строка не похожа на команду: 2100 хП8
+    строка не похожа на команду: 8 хП9
+    строка не похожа на команду: 1000 хПB
+    строка не похожа на команду: /-/ 8 00 хПd
+    строка не похожа на команду: 100 хПE
+    строка не похожа на команду: 88008 В↑ 85154 К∨ К{} ВП 4 хП2
+    строка не похожа на команду: 800008 В↑ 820015 К∨ К{} ВП 4 хП5
+    строка не похожа на команду: Описание
+    строка не похожа на команду: Вы летите на космическом корабле. В первом уровне задача - долететь до города и благополучно приземлиться. Топливо ограничено.
+    строка не похожа на команду: Регистры:
+    строка не похожа на команду: РA - угол направления; отрицательное число - вниз.
+    строка не похожа на команду: РB - топливо.
+    строка не похожа на команду: РC - мощность работы двигателя.
+    строка не похожа на команду: Рd - расстояние до города.
+    строка не похожа на команду: РE - высота полета над землей, м.
+    строка не похожа на команду: Р4 - вертикальная скорость; отрицательное число - вниз.
+    строка не похожа на команду: Управление:
+    строка не похожа на команду: 0 С/П - машинный отсек, изменение мощности двигателя.
+    строка не похожа на команду: /-/ 1 С/П - навигационная рубка, изменение угла руля.
+    строка не похожа на команду: N > 0 С/П - автопилот на N секунд.
+    строка не похожа на команду: После ввода курса корабля, при отклонении не более 5 градусов, включайте автопилот. Минимальное время - 1 секунда. На экране появится локальная карта местности.
+    строка не похожа на команду: Начальная скорость корабля - 80 м/с.
+    строка не похожа на команду: Если вы упали на землю, на экране символ аварии "riSC", конец игры.
+    строка не похожа на команду: Условия посадки:
+    строка не похожа на команду: 1. Максимальная скорость при посадке должна быть не более 20 м/с.
+    строка не похожа на команду: 2. Максимальная вертикальная скорость должна быть не более 6 м/с.
+    строка не похожа на команду: 3. Максимальный разворот руля - 5 градусов.
+    строка не похожа на команду: Если вы удачно приземлились, на экране символ "2001.г". Нажать С/П и перейти ко второму уровню.
+    строка не похожа на команду: Во втором уровне корабль будет почти в два раза тяжелее, потому что он перевозит опасный груз. Груз нужно доставить в другой город. Если доставка успешна, на экране "2001.г"; миссия выполнена.
+    строка не похожа на команду: Машинный отсек: на экране текущая скорость корабля. Ввести изменение скорости N или -N и С/П. На экране результат; после этого можно включать автопилот или перейти к навигационной рубке.
+    строка не похожа на команду: Навигационная рубка: на экране угол курса. 0 градусов - прямо, 90 градусов - вверх, -90 градусов - вниз. Ввести изменение курса не более 5 градусов или не менее -5 градусов и С/П. На экране результат; после этого можно включать автопилот.
+    строка не похожа на команду: Если после очередного останова на экране "8.8L-ГL-", это здания города, то есть корабль уже в городе.
+    строка не похожа на команду: Если кончится топливо, корабль начнет падать.
+    строка не похожа на команду: Карта города
+    строка не похожа на команду: -50        0        50        100        150        200
+    строка не похожа на команду: |--------| 88L-ГL | 8L766L6- | 8ГСС-6-8 | 868-9
+    строка не похожа на команду: Коды
+    строка не похожа на команду: Адрес	Код	Что станет
+    строка не похожа на команду: Примечания
+    строка не похожа на команду: В тетради адреса после 99 записаны как "-0", "-1", "-2", "-3"; здесь они нормализованы как A0-A3.
+    строка не похожа на команду: Последний код в тетради записан как "-3 F e^x ХПE"; по смыслу это замена хвоста программы для записи высоты во втором уровне.
+    адрес 50 задан дважды: хП6
+    адрес 80 задан дважды: хП7
+    адрес 15 задан дважды: хПA
+    адрес 80 задан дважды: хПC
+    не разобрано на 03: 04 БП 12 - вечное топливо
+    не разобрано на 24: Пх6 разворот руля 49 градусов, а не 5
+    не разобрано на 83: 5 максимальная скорость при посадке не более 50 м/с
+    не разобрано на −1: F√ во втором уровне груз будет ужасно тяжелым
+    не разобрано на −3: Fe^x; A4 хПE во втором уровне начнете играть с высоты 8103 м
 games/simulation/dispetcher.txt: не разобрано команд 2
-    Command at 1 was not recognized: К
-    Command at 3 was not recognized: Н
-games/simulation/elite-iii-coriolis-dolgushin-notebook-2.txt: не разобрано команд 37
-    Command at 1 was not recognized: П-хd
-    Command at 2 was not recognized: П-х9
-    Command at 7 was not recognized: х-ПA
-    Command at 9 was not recognized: КП-хA
-    Command at 10 was not recognized: К{}
-    Command at 12 was not recognized: Кx-ПA
-    Command at 14 was not recognized: П-хC
-    Command at 17 was not recognized: П-хE
-    Command at 23 was not recognized: х-ПA
-    Command at 24 was not recognized: П-хA
-    Command at 27 was not recognized: х-ПA
-    Command at 29 was not recognized: КП-хA
-    Command at 32 was not recognized: П-хE
-    Command at 37 was not recognized: КП-хA
-    Command at 38 was not recognized: К{}
-    Command at 41 was not recognized: КП-хA
-    Command at 44 was not recognized: Кx-ПA
-    Command at 46 was not recognized: П-хB
-    Command at 48 was not recognized: х-П5
-    Command at 50 was not recognized: П-хd
-    Command at 52 was not recognized: х-Пd
-    Command at 54 was not recognized: х-ПC
-    Command at 55 was not recognized: х-ПE
-    Command at 62 was not recognized: К[]
-    Command at 63 was not recognized: х-ПA
-    Command at 64 was not recognized: П-х0
-    Command at 69 was not recognized: КП-хA
-    Command at 71 was not recognized: П-хd
-    Command at 75 was not recognized: х-Пd
-    Command at 76 was not recognized: КП-хA
-    Command at 77 was not recognized: П-х6
-    Command at 79 was not recognized: Кx-ПA
-    Command at 83 was not recognized: П-хC
-    Command at 87 was not recognized: П-хC
-    Command at 99 was not recognized: х-ПE
-    Command at 101 was not recognized: К[]
-    Command at 103 was not recognized: х-ПC
+    не разобрано на 01: К
+    не разобрано на 03: Н
+games/simulation/elite-iii-coriolis-dolgushin-notebook-2.txt: не разобрано команд 71
+    строка не похожа на команду: ELITE III (CORiOLiS)
+    строка не похожа на команду: Автор: Александр Долгушин
+    строка не похожа на команду: Дата: март 2001 г.
+    строка не похожа на команду: Номер в тетради: 57
+    строка не похожа на команду: Источник: https://vk.com/wall-115251268_126; вторая тетрадь Александра Долгушина "Мои игры МК-61", Рисунок (15).jpg; Рисунок (16).jpg; Рисунок (17).jpg
+    строка не похожа на команду: Начальная загрузка:
+    строка не похожа на команду: - 80888 В↑ 85633 К∨ К{} ВП 4 В↑ х-П0
+    строка не похожа на команду: - 25 х-П4
+    строка не похожа на команду: - 0,09 х-П6
+    строка не похожа на команду: - 82 х-П7
+    строка не похожа на команду: - 14 х-П8
+    строка не похожа на команду: - 100 х-ПB
+    строка не похожа на команду: - 880808 В↑ 84051287 К∨ К{} ВП 7 х-П9
+    строка не похожа на команду: - 500 х-Пd
+    строка не похожа на команду: - 0,1 х-П1
+    строка не похожа на команду: - 0,1 х-П2
+    строка не похожа на команду: - 0,1 х-П3
+    строка не похожа на команду: Описание:
+    строка не похожа на команду: Вы управляете торговыми операциями орбитальной станции CORiOLiS и отвечаете за обслуживание и приём кораблей.
+    строка не похожа на команду: Одновременно могут обслуживаться до десяти кораблей.
+    строка не похожа на команду: Станция имеет три вида товаров:
+    строка не похожа на команду: - 1 - пищевые
+    строка не похожа на команду: - 2 - промышленные
+    строка не похожа на команду: - 3 - драгоценности
+    строка не похожа на команду: BEGIN:
+    строка не похожа на команду: 1. Ввести начальную загрузку регистров.
+    строка не похожа на команду: 2. Нажать В/О С/П.
+    строка не похожа на команду: 3. На экране появляется "COГi" - главное меню.
+    строка не похожа на команду: Главное меню:
+    строка не похожа на команду: - ↔ - ваши деньги.
+    строка не похожа на команду: - П-хC - идентификация корабля:
+    строка не похожа на команду: - 1 - Fer De Lance
+    строка не похожа на команду: - 2 - Cobra MK-3
+    строка не похожа на команду: - 0 - никого нет на станции
+    строка не похожа на команду: Р1, Р2, Р3:
+    строка не похожа на команду: - целая часть - стоимость товара;
+    строка не похожа на команду: - десятичная часть - количество тонн товара на станции.
+    строка не похожа на команду: Перед торговлей надо назначить цены товарам:
+    строка не похожа на команду: - Нажать -N С/П, где N - номер товара.
+    строка не похожа на команду: - На экране появится номер выбранного товара.
+    строка не похожа на команду: - Ввести цену до 90 cr и нажать С/П.
+    строка не похожа на команду: - Повторить для остальных товаров.
+    строка не похожа на команду: Чтобы узнать, что хочет сделать торговец:
+    строка не похожа на команду: - Нажать 1 С/П.
+    строка не похожа на команду: - На экране 5 - торговец хочет купить товар.
+    строка не похожа на команду: - На экране "-SELL" - торговец хочет продать товар.
+    строка не похожа на команду: Если торговец хочет купить товар:
+    строка не похожа на команду: - Нажать С/П, чтобы торговец выбрал товар или улетел.
+    строка не похожа на команду: - Если вы не хотите продавать товар, нажать ВП С/П и изменить цены товаров.
+    строка не похожа на команду: Если торговец хочет продать товар:
+    строка не похожа на команду: - Нажать ↔, чтобы посмотреть, какой товар он хочет вам продать.
+    строка не похожа на команду: - Если согласны, нажать 1 С/П.
+    строка не похожа на команду: - Если не согласны, нажать 0 С/П.
+    строка не похожа на команду: После сделки:
+    строка не похожа на команду: - Если торговец у вас купил товар: П-хA - какой товар он купил, П-х5 - сколько тонн он купил.
+    строка не похожа на команду: - Когда вам продают товар, за раз даётся 9 тонн товара.
+    строка не похожа на команду: - Рd - ваши деньги.
+    строка не похожа на команду: Важно:
+    строка не похожа на команду: - Корабль не улетит со станции, пока вы его не обслужите.
+    строка не похожа на команду: - Если на станции никого нет, включить режим ожидания: 0 С/П в главном меню.
+    строка не похожа на команду: - Покупка и продажа производится по той цене, которую вы выберете.
+    строка не похожа на команду: - Когда вы покупаете товар, надо заранее посчитать, хватит ли денег.
+    строка не похожа на команду: Коды:
+    строка не похожа на команду: - Адрес 68, код 1: будете покупать 9 тонн товара по цене 1-го товара.
+    строка не похожа на команду: - Адрес 97, код П-х7: торговцы станут снисходительны к вашим ценам.
+    строка не похожа на команду: Совет:
+    строка не похожа на команду: - Cobra MK-3 лучше в торговле, чем Fer De Lance.
+    строка не похожа на команду: Примечания:
+    строка не похожа на команду: - В тетради у адреса 57 синей ручкой записано "В↑", рядом красная поправка "F круг"; в листинг внесено F↻.
+    строка не похожа на команду: - В тетради у адреса 90 синей ручкой записано "П-хd", рядом красная поправка "F круг"; в листинг внесено F↻.
+    строка не похожа на команду: - В тетради адрес перехода после 88 Fx=0 записан как "-4"; здесь нормализовано как A4.
 games/simulation/harvest-extensive-model.txt: не разобрано команд 32
-    Command at 0 was not recognized: 103
-    Command at 5 was not recognized: 137
-    Command at 10 was not recognized: 151
-    Command at 14 was not recognized: 151
-    Command at 17 was not recognized: 100
-    Command at 21 was not recognized: 160
-    Command at 23 was not recognized: 134
-    Command at 29 was not recognized: 101
-    Command at 32 was not recognized: 108
-    Command at 37 was not recognized: 208
-    Command at 39 was not recognized: 137
-    Command at 40 was not recognized: 109
-    Command at 45 was not recognized: 109
-    Command at 47 was not recognized: 208
-    Command at 51 was not recognized: 137
-    Command at 57 was not recognized: 108
-    Command at 60 was not recognized: 208
-    Command at 64 was not recognized: 160
-    Command at 66 was not recognized: 107
-    Command at 69 was not recognized: 134
-    Command at 70 was not recognized: 208
-    Command at 71 was not recognized: Б/К
-    Command at 72 was not recognized: 130
-    Command at 73 was not recognized: 102
-    Command at 75 was not recognized: 108
-    Command at 78 was not recognized: 193
-    Command at 82 was not recognized: 106
-    Command at 86 was not recognized: 134
-    Command at 88 was not recognized: 160
-    Command at 90 was not recognized: 134
-    Command at 93 was not recognized: 106
-    Command at 99 was not recognized: 109
+    не разобрано на 00: 103
+    не разобрано на 05: 137
+    не разобрано на 10: 151
+    не разобрано на 14: 151
+    не разобрано на 17: 100
+    не разобрано на 21: 160
+    не разобрано на 23: 134
+    не разобрано на 29: 101
+    не разобрано на 32: 108
+    не разобрано на 37: 208
+    не разобрано на 39: 137
+    не разобрано на 40: 109
+    не разобрано на 45: 109
+    не разобрано на 47: 208
+    не разобрано на 51: 137
+    не разобрано на 57: 108
+    не разобрано на 60: 208
+    не разобрано на 64: 160
+    не разобрано на 66: 107
+    не разобрано на 69: 134
+    не разобрано на 70: 208
+    не разобрано на 71: Б/К
+    не разобрано на 72: 130
+    не разобрано на 73: 102
+    не разобрано на 75: 108
+    не разобрано на 78: 193
+    не разобрано на 82: 106
+    не разобрано на 86: 134
+    не разобрано на 88: 160
+    не разобрано на 90: 134
+    не разобрано на 93: 106
+    не разобрано на 99: 109
 games/simulation/harvest-intensive-model.txt: не разобрано команд 33
-    Command at 0 was not recognized: 103
-    Command at 3 was not recognized: 137
-    Command at 10 was not recognized: 151
-    Command at 14 was not recognized: 151
-    Command at 17 was not recognized: 100
-    Command at 21 was not recognized: 160
-    Command at 23 was not recognized: 134
-    Command at 29 was not recognized: 101
-    Command at 32 was not recognized: 108
-    Command at 37 was not recognized: 208
-    Command at 39 was not recognized: 137
-    Command at 40 was not recognized: 109
-    Command at 45 was not recognized: 109
-    Command at 47 was not recognized: 208
-    Command at 51 was not recognized: 137
-    Command at 57 was not recognized: 108
-    Command at 60 was not recognized: 208
-    Command at 64 was not recognized: 160
-    Command at 66 was not recognized: 107
-    Command at 69 was not recognized: 134
-    Command at 70 was not recognized: 208
-    Command at 71 was not recognized: Б/К
-    Command at 72 was not recognized: 130
-    Command at 73 was not recognized: 102
-    Command at 75 was not recognized: 108
-    Command at 78 was not recognized: 193
-    Command at 82 was not recognized: 106
-    Command at 86 was not recognized: 134
-    Command at 88 was not recognized: 160
-    Command at 90 was not recognized: 134
-    Command at 93 was not recognized: 106
-    Command at 98 was not recognized: 101
-    Command at 101 was not recognized: 109
-games/simulation/kazanova.txt: не разобрано команд 1
-    Command at 42 was not recognized: Fx^10
-games/simulation/kombinat.txt: не разобрано команд 1
-    Command at 52 was not recognized: Ftg^-1
-games/simulation/menedzher.txt: не разобрано команд 1
-    Command at 36 was not recognized: •
-games/simulation/menedzher-lordbss.txt: не разобрано команд 1
-    Command at 67 was not recognized: •
-games/simulation/menedzher-renat-notebook-2.txt: не разобрано команд 16
-    Command at 0 was not recognized: П-хd
-    Command at 1 was not recognized: П-хE
-    Command at 4 was not recognized: х-Пd
-    Command at 6 was not recognized: х-ПA
-    Command at 18 was not recognized: х-ПВ
-    Command at 22 was not recognized: х-ПС
-    Command at 23 was not recognized: П-хВ
-    Command at 34 was not recognized: П-хd
-    Command at 35 was not recognized: П-хС
-    Command at 37 was not recognized: х-Пd
-    Command at 48 was not recognized: П-хd
-    Command at 49 was not recognized: П-хС
-    Command at 51 was not recognized: х-Пd
-    Command at 58 was not recognized: П-хd
-    Command at 59 was not recognized: П-хВ
-    Command at 61 was not recognized: х-Пd
-games/simulation/playboy.txt: не разобрано команд 1
-    Command at 15 was not recognized: C/П
+    не разобрано на 00: 103
+    не разобрано на 03: 137
+    не разобрано на 10: 151
+    не разобрано на 14: 151
+    не разобрано на 17: 100
+    не разобрано на 21: 160
+    не разобрано на 23: 134
+    не разобрано на 29: 101
+    не разобрано на 32: 108
+    не разобрано на 37: 208
+    не разобрано на 39: 137
+    не разобрано на 40: 109
+    не разобрано на 45: 109
+    не разобрано на 47: 208
+    не разобрано на 51: 137
+    не разобрано на 57: 108
+    не разобрано на 60: 208
+    не разобрано на 64: 160
+    не разобрано на 66: 107
+    не разобрано на 69: 134
+    не разобрано на 70: 208
+    не разобрано на 71: Б/К
+    не разобрано на 72: 130
+    не разобрано на 73: 102
+    не разобрано на 75: 108
+    не разобрано на 78: 193
+    не разобрано на 82: 106
+    не разобрано на 86: 134
+    не разобрано на 88: 160
+    не разобрано на 90: 134
+    не разобрано на 93: 106
+    не разобрано на 98: 101
+    не разобрано на −1: 109
 games/simulation/podvodnye-apparaty.txt: не разобрано команд 1
-    Command at 64 was not recognized: Fx>0
-games/simulation/publichnyy-dom.txt: не разобрано команд 1
-    Command at 24 was not recognized: Ftg^-1
-games/simulation/rock-star-ate-my-hamster-dolgushin-notebook.txt: не разобрано команд 1
-    Command at 13 was not recognized: K{}
-games/simulation/saturn5-first-stage.txt: не разобрано команд 4
-    Command at 9 was not recognized: Ftgᐨ¹
-    Command at 24 was not recognized: F10ˣ
-    Command at 56 was not recognized: Fѻ
-    Command at 79 was not recognized: Fѻ
-games/simulation/tamagotchi.txt: не разобрано команд 21
-    Command at 5 was not recognized: С\П
-    Command at 11 was not recognized: Fx>/=0
-    Command at 19 was not recognized: С\П
-    Command at 25 was not recognized: С\П
-    Command at 32 was not recognized: Fx>/=0
-    Command at 35 was not recognized: С\П
-    Command at 41 was not recognized: Fx>/=0
-    Command at 44 was not recognized: С\П
-    Command at 50 was not recognized: Fx>/=0
-    Command at 54 was not recognized: СП
-    Command at 55 was not recognized: ВО
-    Command at 61 was not recognized: C/П
-    Command at 65 was not recognized: ВО
-    Command at 71 was not recognized: О
-    Command at 72 was not recognized: СП
-    Command at 75 was not recognized: ВО
-    Command at 81 was not recognized: С\П
-    Command at 83 was not recognized: С\П
-    Command at 84 was not recognized: ВО
-    Command at 89 was not recognized: Fx>/=0
-    Command at 93 was not recognized: ВО
-games/simulation/trenazher-dlya-letchikov-renat-notebook-2.txt: не разобрано команд 13
-    Command at 0 was not recognized: П-х9
-    Command at 1 was not recognized: х-П2
-    Command at 2 was not recognized: х-П7
-    Command at 7 was not recognized: х-П3
-    Command at 8 was not recognized: х-П6
-    Command at 11 was not recognized: х-П1
-    Command at 13 was not recognized: П-хA
-    Command at 15 was not recognized: х-ПA
-    Command at 16 was not recognized: х-П9
-    Command at 20 was not recognized: х-П0
-    Command at 23 was not recognized: х-П6
-    Command at 29 was not recognized: П-х6
-    Command at 31 was not recognized: х-П5
-games/simulation/vertol-2.txt: не разобрано команд 1
-    Command at 97 was not recognized: •
-games/simulation/virus.txt: не разобрано команд 1
-    Command at 36 was not recognized: •
-games/simulation/virus-lordbss.txt: не разобрано команд 1
-    Command at 33 was not recognized: Fcos^-1
-games/simulation/yadernyy-reaktor.txt: не разобрано команд 1
-    Command at 64 was not recognized: Fsin^-1
-games/sports/avtogonki.txt: не разобрано команд 1
-    Command at 46 was not recognized: •
-games/sports/avtogonki-renat-notebook-2.txt: не разобрано команд 13
-    Command at 0 was not recognized: х-Пd
-    Command at 5 was not recognized: х-ПВ
-    Command at 8 was not recognized: х-ПА
-    Command at 11 was not recognized: х-ПС
-    Command at 12 was not recognized: П-хА
-    Command at 16 was not recognized: П-хС
-    Command at 21 was not recognized: П-хВ
-    Command at 29 was not recognized: П-хА
-    Command at 31 was not recognized: х-ПА
-    Command at 32 was not recognized: П-хС
-    Command at 44 was not recognized: П-хВ
-    Command at 47 was not recognized: П-хd
-    Command at 50 was not recognized: х-Пd
+    не разобрано на 64: Fx>0
+games/simulation/saturn5-first-stage.txt: не разобрано команд 3
+    не разобрано на 09: Ftgᐨ¹
+    не разобрано на 56: Fѻ
+    не разобрано на 79: Fѻ
+games/simulation/tamagotchi.txt: не разобрано команд 2
+    строка не похожа на команду: 51
+    не разобрано на 71: О
 games/sports/avtoralli-2-gaishtut-1988.txt: не разобрано команд 1
-    Command at 52 was not recognized: К 2
-games/sports/billiard-gaishtut-1988.txt: не разобрано команд 3
-    Command at 26 was not recognized: К °->′
-    Command at 31 was not recognized: К °<-′
-    Command at 51 was not recognized: К 2
-games/sports/fifa-2001-taktic-game-dolgushin-notebook-2.txt: не разобрано команд 38
-    Command at 3 was not recognized: К[]
-    Command at 6 was not recognized: П-х0
-    Command at 7 was not recognized: х-П2
-    Command at 14 was not recognized: х-П6
-    Command at 17 was not recognized: К[]
-    Command at 20 was not recognized: П-хE
-    Command at 27 was not recognized: К[]
-    Command at 31 was not recognized: П-х6
-    Command at 39 was not recognized: К[]
-    Command at 42 was not recognized: П-хВ
-    Command at 49 was not recognized: К[]
-    Command at 50 was not recognized: х-П6
-    Command at 55 was not recognized: К[]
-    Command at 58 was not recognized: П-х6
-    Command at 61 was not recognized: х-П6
-    Command at 63 was not recognized: КПЧ5
-    Command at 64 was not recognized: П-х5
-    Command at 68 was not recognized: П-х2
-    Command at 69 was not recognized: П-х3
-    Command at 70 was not recognized: К^
-    Command at 71 was not recognized: К{}
-    Command at 73 was not recognized: П-х6
-    Command at 76 was not recognized: х-П6
-    Command at 79 was not recognized: П-хA
-    Command at 81 was not recognized: П-х6
-    Command at 83 was not recognized: К[]
-    Command at 87 was not recognized: КПЧ4
-    Command at 88 was not recognized: П-х4
-    Command at 94 was not recognized: П-х9
-    Command at 96 was not recognized: П-хС
-    Command at 99 was not recognized: х-ПС
-    Command at 100 was not recognized: ВО
-    Command at 101 was not recognized: П-х7
-    Command at 26 was not recognized: 3 противник слабее
-    Command at 54 was not recognized: 2 противник слабее
-    Command at 34 was not recognized: 4 противник сильнее
-    Command at 80 was not recognized: 0 вратарь противника слабее
-    Command at 70 was not recognized: 0 у вас супер-футболисты
+    не разобрано на 52: К 2
+games/sports/billiard-gaishtut-1988.txt: не разобрано команд 1
+    не разобрано на 51: К 2
+games/sports/fifa-2001-taktic-game-dolgushin-notebook-2.txt: не разобрано команд 108
+    строка не похожа на команду: FIFA 2001 TAKTIC GAME
+    строка не похожа на команду: =====================
+    строка не похожа на команду: Источник: https://vk.com/wall-115251268_126; ручная перепечатка пользователя из второй тетради Александра Долгушина "Мои игры МК-61", страница 27
+    строка не похожа на команду: Номер в тетради: 60
+    строка не похожа на команду: Автор: Александр Долгушин
+    строка не похожа на команду: Дата: 12.10.2001
+    строка не похожа на команду: Листинг
+    строка не похожа на команду: Исходные данные
+    строка не похожа на команду: В режиме F АВТ ввести:
+    строка не похожа на команду: 33333333 хП0
+    строка не похожа на команду: 800111 хП3
+    строка не похожа на команду: 0 хП4
+    строка не похожа на команду: 0 хП5
+    строка не похожа на команду: 6 хП6
+    строка не похожа на команду: 88880888 В↑ 87720277 К∨ хП7
+    строка не похожа на команду: 8808 В↑ 840505 К∨ К{} ВП 5 хП9
+    строка не похожа на команду: 0,07 хПA
+    строка не похожа на команду: 85557555 КИНВ хПВ
+    строка не похожа на команду: КСЧ хПС
+    строка не похожа на команду: 800058 КИНВ хПE
+    строка не похожа на команду: Запуск: ВО, С/П.
+    строка не похожа на команду: Возможные ситуации после запуска
+    строка не похожа на команду: 1. Противник развел мяч: на экране "8  -1".
+    строка не похожа на команду: 2. Вы развели мяч: на экране поле, например "8.  Г ЕСГ".
+    строка не похожа на команду: Поле PLAYER/CPU со страницы 27
+    строка не похожа на команду: PLAYER
+    строка не похожа на команду: ┌───────────────────┐ 12
+    строка не похожа на команду: │      ┌─────┐      │ 11
+    строка не похожа на команду: │      │░░░░░│      │ 10
+    строка не похожа на команду: │      └─────┘      │  9
+    строка не похожа на команду: │                   │  8
+    строка не похожа на команду: │                   │  7
+    строка не похожа на команду: ├─────────○─────────┤  6
+    строка не похожа на команду: │                   │  5
+    строка не похожа на команду: │                   │  4
+    строка не похожа на команду: │                   │  3
+    строка не похожа на команду: │                   │  2
+    строка не похожа на команду: │      ┌─────┐      │  1
+    строка не похожа на команду: │      │░░░░░│      │  0
+    строка не похожа на команду: └───────────────────┘
+    строка не похожа на команду: CPU
+    строка не похожа на команду: Сектора считаются снизу вверх: 0 - возле ворот CPU, 12 - возле ворот PLAYER, 6 - центр поля.
+    строка не похожа на команду: Пример экрана: "8.  Г ЕСГ".
+    строка не похожа на команду: Г - ваши футболисты.
+    строка не похожа на команду: Е - футболисты противника.
+    строка не похожа на команду: С - ваши футболисты, накрытые футболистами противника.
+    строка не похожа на команду: Вид из глаз со страницы 27
+    строка не похожа на команду: На странице отдельно зарисован вид от первого лица: сверху пример индикатора, снизу перспективный вид поля.
+    строка не похожа на команду: Индикатор:
+    строка не похожа на команду: ┌────────────────────────────┐
+    строка не похожа на команду: │ 8        ГГ          E     │
+    строка не похожа на команду: └────────────────────────────┘
+    строка не похожа на команду: Вид из глаз:
+    строка не похожа на команду: ┌════════════════════════════┐
+    строка не похожа на команду: │░░╲                      ╱░░│
+    строка не похожа на команду: │░░░╲                    ╱░░░│
+    строка не похожа на команду: │    ╲      🧍🧍     🏃   ╱    │
+    строка не похожа на команду: │     ╲________________╱     │
+    строка не похожа на команду: └────────────────────────────┘
+    строка не похожа на команду: 🧍🧍 - ваши игроки, стоят вместе слева.
+    строка не похожа на команду: 🏃 - игрок противника справа.
+    строка не похожа на команду: Ваше владение мячом
+    строка не похожа на команду: Если вы развели мяч, можно:
+    строка не похожа на команду: 0 С/П - побежать прямо, к воротам противника.
+    строка не похожа на команду: /-/ 1 С/П - дать пас.
+    строка не похожа на команду: 1 С/П - ударить по воротам противника.
+    строка не похожа на команду: Если на пути нет противника, можно бежать прямо. Если кто-то есть на пути, можно дать пас; мяч останется в том же секторе. Можно также ударить по воротам противника из любого сектора. Если вы далеко от ворот, мяч может попасть к футболисту противника, и на экране будет "8  -1".
+    строка не похожа на команду: Если вы забили гол, на экране ваши очки. Нажать С/П, и вратарь противника выбьет мяч.
+    строка не похожа на команду: Владение противника
+    строка не похожа на команду: Если противник ведет мяч, на экране "8  -1". Можно:
+    строка не похожа на команду: 1 С/П - обвести противника.
+    строка не похожа на команду: 0 С/П - выбить у противника мяч.
+    строка не похожа на команду: Выбить мяч немного легче, но он может снова попасть к противнику.
+    строка не похожа на команду: Пасовать можно сколько угодно раз, но нужно следить за временем тайма.
+    строка не похожа на команду: Символы
+    строка не похожа на команду: "8.  -0-" - вратарь противника взял мяч.
+    строка не похожа на команду: "COГОС" - конец тайма.
+    строка не похожа на команду: "8.---8---" - вратарь поймал мяч.
+    строка не похожа на команду: "8.   -7   " - противник ведет мяч.
+    строка не похожа на команду: "ЕГГОГ" - мяч ушел за пределы поля. Для продолжения: 0 х-П6, ВО, С/П.
+    строка не похожа на команду: Регистры
+    строка не похожа на команду: П-х4 - ваши очки.
+    строка не похожа на команду: П-х5 - очки противника.
+    строка не похожа на команду: П-х6 - сектор, в котором находится мяч.
+    строка не похожа на команду: П-х1 - время до конца тайма.
+    строка не похожа на команду: После таймаута
+    строка не похожа на команду: Ввести:
+    строка не похожа на команду: 6 хП6
+    строка не похожа на команду: ВО, С/П
+    строка не похожа на команду: Это запускает следующий тайм.
+    строка не похожа на команду: Коды
+    строка не похожа на команду: Адрес	Код	Что станет
+    строка не похожа на команду: Примечания к записи
+    строка не похожа на команду: В исходной перепечатке переход по адресу 85 записан как "-2"; здесь он нормализован как A2.
+    строка не похожа на команду: Команды "КПЧ5" и "КПЧ4" оставлены буквально по перепечатке пользователя.
+    строка не похожа на команду: Адреса после 99 нормализованы как A0-A3.
+    не разобрано на 63: КПЧ5
+    не разобрано на 70: К^
+    не разобрано на 87: КПЧ4
+    адрес 80 задан дважды: хП1
+    адрес 21 задан дважды: хП8
+    адрес 93 задан дважды: хПd
+    адрес 80 задан дважды: хП1
+    не разобрано на 26: 3 противник слабее
+    не разобрано на 54: 2 противник слабее
+    не разобрано на 34: 4 противник сильнее
+    не разобрано на 80: 0 вратарь противника слабее
+    не разобрано на 70: 0 у вас супер-футболисты
 games/sports/futbol.txt: не разобрано команд 2
-    Command at 40 was not recognized: Z
-    Command at 72 was not recognized: Y
-games/sports/karate-xm.txt: не разобрано команд 2
-    Command at 11 was not recognized: Ftg^-1
-    Command at 12 was not recognized: C/П
+    не разобрано на 40: Z
+    не разобрано на 72: Y
 games/sports/kendo.txt: не разобрано команд 1
-    Command at 14 was not recognized: А
-games/sports/mikrovoleybol-2-gaishtut-1988.txt: не разобрано команд 1
-    Command at 54 was not recognized: К °<-′"
-games/sports/new-rally.txt: не разобрано команд 1
-    Command at 90 was not recognized: •
-games/sports/professional-box.txt: не разобрано команд 2
-    Command at 84 was not recognized: Fsin^-1
-    Command at 85 was not recognized: C/П
-games/sports/soccer-manager-dolgushin-notebook.txt: не разобрано команд 36
-    Command at 0 was not recognized: П-Х9
-    Command at 6 was not recognized: П-Х3
-    Command at 7 was not recognized: П-Х1
-    Command at 9 was not recognized: Х-П0
-    Command at 11 was not recognized: П-Хd
-    Command at 14 was not recognized: Х-Пd
-    Command at 22 was not recognized: П-Х3
-    Command at 29 was not recognized: Х-П5
-    Command at 30 was not recognized: П-ХE
-    Command at 33 was not recognized: Х-П5
-    Command at 34 was not recognized: П-Х7
-    Command at 40 was not recognized: Х-П2
-    Command at 41 was not recognized: П-Х3
-    Command at 47 was not recognized: Х-П5
-    Command at 48 was not recognized: П-Х2
-    Command at 50 was not recognized: П-Х2
-    Command at 53 was not recognized: П-Х2
-    Command at 57 was not recognized: Х-П2
-    Command at 59 was not recognized: П-Хd
-    Command at 61 was not recognized: КП-Х4
-    Command at 63 was not recognized: П-Х2
-    Command at 64 was not recognized: П-Х1
-    Command at 67 was not recognized: П-Х1
-    Command at 69 was not recognized: Х-П1
-    Command at 73 was not recognized: П-Х3
-    Command at 75 was not recognized: Х-П3
-    Command at 76 was not recognized: П-Х5
-    Command at 82 was not recognized: Х-Пd
-    Command at 83 was not recognized: КП-Х3
-    Command at 84 was not recognized: П-Х1
-    Command at 90 was not recognized: П-Х1
-    Command at 94 was not recognized: П-Х6
-    Command at 96 was not recognized: Х-П1
-    Command at 98 was not recognized: КП-Х0
-    Command at 99 was not recognized: П-Х0
-    Command at 103 was not recognized: П-ХC
-games/sports/strelba-v-tsel-iz-luka-gaishtut-1988.txt: не разобрано команд 3
-    Command at 21 was not recognized: К °->′
-    Command at 41 was not recognized: К 2
-    Command at 44 was not recognized: К 2
-games/sports/supertrassa.txt: не разобрано команд 4
-    Command at 58 was not recognized: смен
-    Command at 59 was not recognized: ный
-    Command at 60 was not recognized: бл
-    Command at 61 was not recognized: ок
+    не разобрано на 14: А
+games/sports/strelba-v-tsel-iz-luka-gaishtut-1988.txt: не разобрано команд 2
+    не разобрано на 41: К 2
+    не разобрано на 44: К 2
+games/sports/supertrassa.txt: не разобрано команд 3
+    не разобрано на 59: ный
+    не разобрано на 60: бл
+    не разобрано на 61: ок
 games/sports/virtua-soccer-dolgushin-notebook.txt: не разобрано команд 1
-    Command at 3 was not recognized: K√
-games/sports/volvo.txt: не разобрано команд 2
-    Command at 71 was not recognized: C/П
-    Command at 73 was not recognized: •
+    не разобрано на 03: K√
 games/strategy/beregovaya-oborona-gaishtut-1988.txt: не разобрано команд 1
-    Command at 54 was not recognized: К 2
+    не разобрано на 54: К 2
 games/strategy/bitva-3.txt: не разобрано команд 7
-    Command at 10 was not recognized: Fx>0
-    Command at 29 was not recognized: Fx>0
-    Command at 32 was not recognized: 3ВП
-    Command at 46 was not recognized: N
-    Command at 78 was not recognized: Fx>0
-    Command at 83 was not recognized: Fx>0
-    Command at 99 was not recognized: И
-games/strategy/bitva-4.txt: не разобрано команд 9
-    Command at 9 was not recognized: смен-
-    Command at 10 was not recognized: ный
-    Command at 11 was not recognized: Б
-    Command at 12 was not recognized: Л
-    Command at 13 was not recognized: О
-    Command at 14 was not recognized: К
-    Command at 26 was not recognized: H
-    Command at 48 was not recognized: П
-    Command at 100 was not recognized: И
+    не разобрано на 10: Fx>0
+    не разобрано на 29: Fx>0
+    не разобрано на 32: 3ВП
+    не разобрано на 46: N
+    не разобрано на 78: Fx>0
+    не разобрано на 83: Fx>0
+    не разобрано на 99: И
+games/strategy/bitva-4.txt: не разобрано команд 8
+    не разобрано на 10: ный
+    не разобрано на 11: Б
+    не разобрано на 12: Л
+    не разобрано на 13: О
+    не разобрано на 14: К
+    не разобрано на 26: H
+    не разобрано на 48: П
+    не разобрано на −0: И
 games/strategy/bitva-kei-1988.txt: не разобрано команд 6
-    Command at 12 was not recognized: Fx>0
-    Command at 42 was not recognized: 3ВП
-    Command at 85 was not recognized: Кx>00
-    Command at 90 was not recognized: Fx>0
-    Command at 94 was not recognized: Fo
-    Command at 95 was not recognized: Fo
+    не разобрано на 12: Fx>0
+    не разобрано на 42: 3ВП
+    не разобрано на 85: Кx>00
+    не разобрано на 90: Fx>0
+    не разобрано на 94: Fo
+    не разобрано на 95: Fo
 games/strategy/bitva-pshennik.txt: не разобрано команд 3
-    Command at 21 was not recognized: Fx>0
-    Command at 47 was not recognized: Fx>0
-    Command at 53 was not recognized: Fx>0
+    не разобрано на 21: Fx>0
+    не разобрано на 47: Fx>0
+    не разобрано на 53: Fx>0
 games/strategy/dune-iii-no-fate-dolgushin-notebook.txt: не разобрано команд 1
-    Command at 47 was not recognized: K√
-games/strategy/i-c-p.txt: не разобрано команд 3
-    Command at 44 was not recognized: C/П
-    Command at 89 was not recognized: Ftg^-1
-    Command at 90 was not recognized: C/П
-games/strategy/korolevstvo.txt: не разобрано команд 3
-    Command at 41 was not recognized: Ftg^-1
-    Command at 46 was not recognized: Ftg^-1
-    Command at 68 was not recognized: Ftg^-1
-games/strategy/morskoy-boy-1-kibernetika-1986.txt: не разобрано команд 1
-    Command at 67 was not recognized: F cos^-1
+    не разобрано на 47: K√
 games/strategy/naval-battle.txt: не разобрано команд 13
-    Command at 8 was not recognized: 108
-    Command at 11 was not recognized: 108
-    Command at 17 was not recognized: 218
-    Command at 22 was not recognized: 108
-    Command at 28 was not recognized: 220
-    Command at 29 was not recognized: 186
-    Command at 31 was not recognized: 188
-    Command at 35 was not recognized: 106
-    Command at 42 was not recognized: Б/К
-    Command at 44 was not recognized: 107
-    Command at 51 was not recognized: 109
-    Command at 101 was not recognized: 186
-    Command at 102 was not recognized: 106
-games/strategy/obnaruzhit-i-unichtozhit-lineynyy-korabl-gaishtut-1988.txt: не разобрано команд 1
-    Command at 23 was not recognized: К °->′
-games/strategy/polyot-v-sozvezdie-chyornykh-dyr.txt: не разобрано команд 1
-    Command at 67 was not recognized: •
-games/strategy/strategicheskaya-bombardirovka.txt: не разобрано команд 1
-    Command at 96 was not recognized: •
-games/strategy/tankovaya-ataka-renat-notebook-2.txt: не разобрано команд 33
-    Command at 2 was not recognized: х-П9
-    Command at 6 was not recognized: П-х3
-    Command at 8 was not recognized: П-х7
-    Command at 10 was not recognized: х-П8
-    Command at 11 was not recognized: П-х2
-    Command at 13 was not recognized: П-х4
-    Command at 15 was not recognized: П-х1
-    Command at 18 was not recognized: х-П1
-    Command at 19 was not recognized: П-х3
-    Command at 20 was not recognized: П-х8
-    Command at 22 was not recognized: П-х9
-    Command at 28 was not recognized: П-х5
-    Command at 30 was not recognized: П-х6
-    Command at 31 was not recognized: П-х9
-    Command at 37 was not recognized: П-хd
-    Command at 45 was not recognized: П-хС
-    Command at 47 was not recognized: П-х1
-    Command at 48 was not recognized: П-х2
-    Command at 49 was not recognized: П-х4
-    Command at 52 was not recognized: х-П1
-    Command at 53 was not recognized: П-х1
-    Command at 58 was not recognized: П-хВ
-    Command at 62 was not recognized: П-х9
-    Command at 66 was not recognized: П-хА
-    Command at 70 was not recognized: х-П9
-    Command at 71 was not recognized: КПЧ9
-    Command at 72 was not recognized: F круг
-    Command at 73 was not recognized: F круг
-    Command at 74 was not recognized: П-х9
-    Command at 77 was not recognized: П-хА
-    Command at 91 was not recognized: П-х2
-    Command at 94 was not recognized: х-П2
-    Command at 95 was not recognized: П-хВ
-games/strategy/zashchita-ot-napadeniya.txt: не разобрано команд 1
-    Command at 96 was not recognized: Ftg^-1
-games/utilities/calendar-past-future.txt: не разобрано команд 1
-    Command at 56 was not recognized: КИПБ
+    не разобрано на 08: 108
+    не разобрано на 11: 108
+    не разобрано на 17: 218
+    не разобрано на 22: 108
+    не разобрано на 28: 220
+    не разобрано на 29: 186
+    не разобрано на 31: 188
+    не разобрано на 35: 106
+    не разобрано на 42: Б/К
+    не разобрано на 44: 107
+    не разобрано на 51: 109
+    не разобрано на −1: 186
+    не разобрано на −2: 106
+games/strategy/tankovaya-ataka-renat-notebook-2.txt: не разобрано команд 3
+    не разобрано на 71: КПЧ9
+    не разобрано на 72: F круг
+    не разобрано на 73: F круг
 games/utilities/kvur-quadratic-no-register.txt: не разобрано команд 2
-    Command at 8 was not recognized: FѺ
-    Command at 9 was not recognized: FѺ
+    не разобрано на 08: FѺ
+    не разобрано на 09: FѺ

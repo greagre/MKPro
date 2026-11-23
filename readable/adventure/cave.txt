@@ -118,29 +118,29 @@
 −4     12   018  ×
 
 Замечания при разборе:
-- Command at 7 was not recognized: 100
-- Command at 15 was not recognized: 101
-- Command at 16 was not recognized: 100
-- Command at 20 was not recognized: 100
-- Command at 25 was not recognized: 101
-- Command at 29 was not recognized: 102
-- Command at 34 was not recognized: 114
-- Command at 36 was not recognized: 135
-- Command at 39 was not recognized: 135
-- Command at 44 was not recognized: 104
-- Command at 48 was not recognized: 105
-- Command at 52 was not recognized: 104
-- Command at 55 was not recognized: 128
-- Command at 57 was not recognized: 105
-- Command at 60 was not recognized: 128
-- Command at 61 was not recognized: 102
-- Command at 65 was not recognized: 212
-- Command at 66 was not recognized: Fx>0
-- Command at 68 was not recognized: 102
-- Command at 73 was not recognized: 102
-- Command at 77 was not recognized: 213
-- Command at 80 was not recognized: 103
-- Command at 98 was not recognized: 135
+- не разобрано на 07: 100
+- не разобрано на 15: 101
+- не разобрано на 16: 100
+- не разобрано на 20: 100
+- не разобрано на 25: 101
+- не разобрано на 29: 102
+- не разобрано на 34: 114
+- не разобрано на 36: 135
+- не разобрано на 39: 135
+- не разобрано на 44: 104
+- не разобрано на 48: 105
+- не разобрано на 52: 104
+- не разобрано на 55: 128
+- не разобрано на 57: 105
+- не разобрано на 60: 128
+- не разобрано на 61: 102
+- не разобрано на 65: 212
+- не разобрано на 66: Fx>0
+- не разобрано на 68: 102
+- не разобрано на 73: 102
+- не разобрано на 77: 213
+- не разобрано на 80: 103
+- не разобрано на 98: 135
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.

@@ -6,6 +6,9 @@
 Теги: aviation, book, classic
 Листинг каталога: games/simulation/ispytateli-vertoletov-c3000.txt
 
+Осторожно:
+- другой калькулятор (C3000), не МК-61
+
 Шагов: 62 из 105
 Перед пуском: R0, R2, R3, R4, R5, R6, R8, R9, RA, RB, RC, RD — задать значения
 

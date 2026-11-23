@@ -8,6 +8,9 @@
 Серия: kosmicheskaya-posadka
 Листинг каталога: games/simulation/kosmicheskaya-posadka-brp4.txt
 
+Осторожно:
+- модуль расширения БРП-4, коды из PDF и бинарника
+
 Шагов: 98 из 105
 Перед пуском: R6, R7, R9, RA, RB, RC, RD — задать значения
 

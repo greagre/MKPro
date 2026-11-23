@@ -7,18 +7,21 @@
 Коллекция-источник: renat-menkov-notebook
 Листинг каталога: games/simulation/menedzher-renat-notebook-2.txt
 
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
+
 Шагов: 66 из 105
-Перед пуском: R1, RA, RD — задать значения
+Перед пуском: R1, RD, RE — задать значения
 
 Листинг:
 адрес  hex  dec  команда
-00     00   000  П-хd
-01     00   000  П-хE
+00     6D   109  П-хd
+01     6E   110  П-хE
 02     0A   010  .
 03     34   052  К[x]
-04     00   000  х-Пd
+04     4D   077  х-Пd
 05     50   080  С/П
-06     00   000  х-ПA
+06     4A   074  х-ПA
 07     3B   059  КСЧ
 08     0E   014  В↑
 09     3B   059  КСЧ
@@ -30,12 +33,12 @@
 15     0A   010  .
 16     0A   010  .
 17     34   052  К[x]
-18     00   000  х-ПВ
+18     4B   075  х-ПВ
 19     DA   218  КПхA
 20     10   016  +
 21     34   052  К[x]
-22     00   000  х-ПС
-23     00   000  П-хВ
+22     4C   076  х-ПС
+23     6B   107  П-хВ
 24     50   080  С/П
 25     57   087  Fx≠0
 26     56   086  56
@@ -46,10 +49,10 @@
 31     57   087  Fx≠0
 32     23   035  23
 33     DA   218  КПхA
-34     00   000  П-хd
-35     00   000  П-хС
+34     6D   109  П-хd
+35     6C   108  П-хС
 36     10   016  +
-37     00   000  х-Пd
+37     4D   077  х-Пd
 38     51   081  БП
 39     00   000  00
 40     DA   218  КПхA
@@ -60,42 +63,42 @@
 45     20   032  Fπ
 46     10   016  +
 47     BA   186  КхПA
-48     00   000  П-хd
-49     00   000  П-хС
+48     6D   109  П-хd
+49     6C   108  П-хС
 50     11   017  -
-51     00   000  х-Пd
+51     4D   077  х-Пd
 52     51   081  БП
 53     61   097  61
 54     DA   218  КПхA
 55     35   053  К{x}
 56     57   087  Fx≠0
 57     00   000  00
-58     00   000  П-хd
-59     00   000  П-хВ
+58     6D   109  П-хd
+59     6B   107  П-хВ
 60     10   016  +
-61     00   000  х-Пd
+61     4D   077  х-Пd
 62     5C   092  Fx<0
 63     00   000  00
 64     0C   012  ВП
 65     0A   010  ,
 
-Замечания при разборе:
-- Command at 0 was not recognized: П-хd
-- Command at 1 was not recognized: П-хE
-- Command at 4 was not recognized: х-Пd
-- Command at 6 was not recognized: х-ПA
-- Command at 18 was not recognized: х-ПВ
-- Command at 22 was not recognized: х-ПС
-- Command at 23 was not recognized: П-хВ
-- Command at 34 was not recognized: П-хd
-- Command at 35 was not recognized: П-хС
-- Command at 37 was not recognized: х-Пd
-- Command at 48 was not recognized: П-хd
-- Command at 49 was not recognized: П-хС
-- Command at 51 was not recognized: х-Пd
-- Command at 58 was not recognized: П-хd
-- Command at 59 was not recognized: П-хВ
-- Command at 61 was not recognized: х-Пd
+Подписи, приведённые к формату ядра:
+- П-хd → ПXd
+- П-хE → ПXE
+- х-Пd → XПd
+- х-ПA → XПA
+- х-ПВ → XПВ
+- х-ПС → XПС
+- П-хВ → ПXВ
+- П-хd → ПXd
+- П-хС → ПXС
+- х-Пd → XПd
+- П-хd → ПXd
+- П-хС → ПXС
+- х-Пd → XПd
+- П-хd → ПXd
+- П-хВ → ПXВ
+- х-Пd → XПd
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.

@@ -8,7 +8,7 @@
 Коллекция-источник: tekhnika-molodezhi
 Листинг каталога: games/strategy/bitva-4.txt
 
-Шагов: 105 из 105
+Шагов: 104 из 105
 Перед пуском: R0, R3, R4, R7, R9, RB, RC, RD — задать значения
 
 Листинг:
@@ -22,7 +22,6 @@
 06     5D   093  FL0
 07     00   000  00
 08     50   080  С/П
-09     00   000  смен-
 10     00   000  ный
 11     00   000  Б
 12     00   000  Л
@@ -119,16 +118,18 @@
 −3     11   017  -
 −4     52   082  В/О
 
+Примечания из листинга:
+- 09: смен-
+
 Замечания при разборе:
-- Command at 9 was not recognized: смен-
-- Command at 10 was not recognized: ный
-- Command at 11 was not recognized: Б
-- Command at 12 was not recognized: Л
-- Command at 13 was not recognized: О
-- Command at 14 was not recognized: К
-- Command at 26 was not recognized: H
-- Command at 48 was not recognized: П
-- Command at 100 was not recognized: И
+- не разобрано на 10: ный
+- не разобрано на 11: Б
+- не разобрано на 12: Л
+- не разобрано на 13: О
+- не разобрано на 14: К
+- не разобрано на 26: H
+- не разобрано на 48: П
+- не разобрано на −0: И
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.

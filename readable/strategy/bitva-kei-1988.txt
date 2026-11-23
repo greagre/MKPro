@@ -112,12 +112,12 @@
 97     52   082  В/О
 
 Замечания при разборе:
-- Command at 12 was not recognized: Fx>0
-- Command at 42 was not recognized: 3ВП
-- Command at 85 was not recognized: Кx>00
-- Command at 90 was not recognized: Fx>0
-- Command at 94 was not recognized: Fo
-- Command at 95 was not recognized: Fo
+- не разобрано на 12: Fx>0
+- не разобрано на 42: 3ВП
+- не разобрано на 85: Кx>00
+- не разобрано на 90: Fx>0
+- не разобрано на 94: Fo
+- не разобрано на 95: Fo
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.

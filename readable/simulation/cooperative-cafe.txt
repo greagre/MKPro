@@ -120,28 +120,28 @@
 −4     00   000  168
 
 Замечания при разборе:
-- Command at 0 was not recognized: 103
-- Command at 2 was not recognized: 168
-- Command at 13 was not recognized: 208
-- Command at 17 was not recognized: 168
-- Command at 18 was not recognized: 101
-- Command at 24 was not recognized: 109
-- Command at 27 was not recognized: Б/К
-- Command at 39 was not recognized: 108
-- Command at 40 was not recognized: 107
-- Command at 44 was not recognized: Б/К
-- Command at 47 was not recognized: 102
-- Command at 55 was not recognized: 104
-- Command at 65 was not recognized: 106
-- Command at 68 was not recognized: 105
-- Command at 72 was not recognized: 137
-- Command at 73 was not recognized: 106
-- Command at 76 was not recognized: 152
-- Command at 77 was not recognized: 106
-- Command at 80 was not recognized: 152
-- Command at 99 was not recognized: 100
-- Command at 101 was not recognized: 208
-- Command at 104 was not recognized: 168
+- не разобрано на 00: 103
+- не разобрано на 02: 168
+- не разобрано на 13: 208
+- не разобрано на 17: 168
+- не разобрано на 18: 101
+- не разобрано на 24: 109
+- не разобрано на 27: Б/К
+- не разобрано на 39: 108
+- не разобрано на 40: 107
+- не разобрано на 44: Б/К
+- не разобрано на 47: 102
+- не разобрано на 55: 104
+- не разобрано на 65: 106
+- не разобрано на 68: 105
+- не разобрано на 72: 137
+- не разобрано на 73: 106
+- не разобрано на 76: 152
+- не разобрано на 77: 106
+- не разобрано на 80: 152
+- не разобрано на 99: 100
+- не разобрано на −1: 208
+- не разобрано на −4: 168
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.

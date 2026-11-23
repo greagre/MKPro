@@ -9,6 +9,9 @@
 Серия: lunar-landing
 Листинг каталога: games/simulation/uchebnyy-polyot-modernized.txt
 
+Осторожно:
+- современная переработка, не оригинал 1980-х
+
 Шагов: 105 из 105
 Перед пуском: R0, R2, R6, RA, RB, RC, RD, RE — задать значения
 

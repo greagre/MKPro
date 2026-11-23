@@ -102,9 +102,9 @@
 87     11   017  11
 
 Замечания при разборе:
-- Command at 21 was not recognized: Fx>0
-- Command at 47 was not recognized: Fx>0
-- Command at 53 was not recognized: Fx>0
+- не разобрано на 21: Fx>0
+- не разобрано на 47: Fx>0
+- не разобрано на 53: Fx>0
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.

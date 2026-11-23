@@ -7,6 +7,9 @@
 Серия: arkticheskiy-reys
 Листинг каталога: games/simulation/arkticheskiy-reys-c3000.txt
 
+Осторожно:
+- другой калькулятор (C3000), не МК-61
+
 Шагов: 49 из 105
 Перед пуском: R4, R8, R9, RA, RB, RC, RD — задать значения
 

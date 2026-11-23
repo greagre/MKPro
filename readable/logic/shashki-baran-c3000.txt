@@ -6,6 +6,9 @@
 Теги: classic, magazine, variant, vs-calculator
 Листинг каталога: games/logic/shashki-baran-c3000.txt
 
+Осторожно:
+- другой калькулятор (C3000), не МК-61
+
 Шагов: 103 из 105
 Перед пуском: R0, R1, R4, R6, R7, R9, RC, RE — задать значения
 

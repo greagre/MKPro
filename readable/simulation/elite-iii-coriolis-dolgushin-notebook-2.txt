@@ -8,99 +8,102 @@
 Серия: elite
 Листинг каталога: games/simulation/elite-iii-coriolis-dolgushin-notebook-2.txt
 
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
+
 Шагов: 105 из 105
-Перед пуском: R4, R7, R8 — задать значения
+Перед пуском: R0, R4, R6, R7, R8, R9, RB, RC, RD, RE — задать значения
 
 Листинг:
 адрес  hex  dec  команда
 00     A9   169  КПП9
-01     00   000  П-хd
-02     00   000  П-х9
+01     6D   109  П-хd
+02     69   105  П-х9
 03     50   080  С/П
 04     77   119  Кx≠07
 05     C8   200  Кx<08
 06     0B   011  /-/
-07     00   000  х-ПA
+07     4A   074  х-ПA
 08     50   080  С/П
-09     00   000  КП-хA
-10     00   000  К{}
+09     DA   218  КП-хA
+10     35   053  К{}
 11     10   016  +
-12     00   000  Кx-ПA
+12     BA   186  Кx-ПA
 13     8B   139  КБПB
-14     00   000  П-хC
+14     6C   108  П-хC
 15     57   087  Fx≠0
 16     01   001  01
-17     00   000  П-хE
+17     6E   110  П-хE
 18     59   089  Fx>=0
 19     57   087  57
 20     05   005  5
 21     50   080  С/П
 22     04   004  4
-23     00   000  х-ПA
-24     00   000  П-хA
+23     4A   074  х-ПA
+24     6A   106  П-хA
 25     01   001  1
 26     11   017  -
-27     00   000  х-ПA
+27     4A   074  х-ПA
 28     3B   059  КСЧ
-29     00   000  КП-хA
+29     DA   218  КП-хA
 30     59   089  Fx>=0
 31     53   083  53
-32     00   000  П-хE
+32     6E   110  П-хE
 33     11   017  -
 34     5C   092  Fx<0
 35     24   036  24
 36     25   037  F↻
-37     00   000  КП-хA
-38     00   000  К{}
+37     DA   218  КП-хA
+38     35   053  К{}
 39     12   018  ×
 40     0E   014  В↑
-41     00   000  КП-хA
+41     DA   218  КП-хA
 42     11   017  -
 43     0B   011  /-/
-44     00   000  Кx-ПA
+44     BA   186  Кx-ПA
 45     14   020  ↔
-46     00   000  П-хB
+46     6B   107  П-хB
 47     12   018  ×
-48     00   000  х-П5
+48     45   069  х-П5
 49     12   018  ×
-50     00   000  П-хd
+50     6D   109  П-хd
 51     10   016  +
-52     00   000  х-Пd
+52     4D   077  х-Пd
 53     0D   013  Сх
-54     00   000  х-ПC
-55     00   000  х-ПE
+54     4C   076  х-ПC
+55     4E   078  х-ПE
 56     8B   139  КБПB
 57     25   037  F↻
 58     3B   059  КСЧ
 59     21   033  F√
 60     04   004  4
 61     12   018  ×
-62     00   000  К[]
-63     00   000  х-ПA
-64     00   000  П-х0
+62     34   052  К[]
+63     4A   074  х-ПA
+64     60   096  П-х0
 65     50   080  С/П
 66     57   087  Fx≠0
 67     54   084  54
 68     09   009  9
-69     00   000  КП-хA
+69     DA   218  КП-хA
 70     12   018  ×
-71     00   000  П-хd
+71     6D   109  П-хd
 72     14   020  ↔
 73     11   017  -
 74     98   152  Кx>=08
-75     00   000  х-Пd
-76     00   000  КП-хA
-77     00   000  П-х6
+75     4D   077  х-Пd
+76     DA   218  КП-хA
+77     66   102  П-х6
 78     10   016  +
-79     00   000  Кx-ПA
+79     BA   186  Кx-ПA
 80     51   081  БП
 81     53   083  53
 82     A9   169  КПП9
-83     00   000  П-хC
+83     6C   108  П-хC
 84     77   119  Кx≠07
 85     51   081  БП
 86     03   003  03
-87     00   000  П-хC
+87     6C   108  П-хC
 88     5E   094  Fx=0
 89     A4   164  A4
 90     25   037  F↻
@@ -112,12 +115,51 @@
 96     0E   014  В↑
 97     64   100  Пх4
 98     12   018  ×
-99     00   000  х-ПE
+99     4E   078  х-ПE
 −0     14   020  ↔
-−1     00   000  К[]
+−1     34   052  К[]
 −2     31   049  К|x|
-−3     00   000  х-ПC
+−3     4C   076  х-ПC
 −4     52   082  В/О
+
+Подписи, приведённые к формату ядра:
+- П-хd → ПXd
+- П-х9 → ПX9
+- х-ПA → XПA
+- КП-хA → KПXA
+- К{} → K{X}
+- Кx-ПA → KXПA
+- П-хC → ПXC
+- П-хE → ПXE
+- х-ПA → XПA
+- П-хA → ПXA
+- х-ПA → XПA
+- КП-хA → KПXA
+- П-хE → ПXE
+- КП-хA → KПXA
+- К{} → K{X}
+- КП-хA → KПXA
+- Кx-ПA → KXПA
+- П-хB → ПXB
+- х-П5 → XП5
+- П-хd → ПXd
+- х-Пd → XПd
+- х-ПC → XПC
+- х-ПE → XПE
+- К[] → K[X]
+- х-ПA → XПA
+- П-х0 → ПX0
+- КП-хA → KПXA
+- П-хd → ПXd
+- х-Пd → XПd
+- КП-хA → KПXA
+- П-х6 → ПX6
+- Кx-ПA → KXПA
+- П-хC → ПXC
+- П-хC → ПXC
+- х-ПE → XПE
+- К[] → K[X]
+- х-ПC → XПC
 
 Замечания при разборе:
 - строка не похожа на команду: ELITE III (CORiOLiS)
@@ -125,43 +167,6 @@
 - строка не похожа на команду: Дата: март 2001 г.
 - строка не похожа на команду: Номер в тетради: 57
 - строка не похожа на команду: Источник: https://vk.com/wall-115251268_126; вторая тетрадь Александра Долгушина "Мои игры МК-61", Рисунок (15).jpg; Рисунок (16).jpg; Рисунок (17).jpg
-- Command at 1 was not recognized: П-хd
-- Command at 2 was not recognized: П-х9
-- Command at 7 was not recognized: х-ПA
-- Command at 9 was not recognized: КП-хA
-- Command at 10 was not recognized: К{}
-- Command at 12 was not recognized: Кx-ПA
-- Command at 14 was not recognized: П-хC
-- Command at 17 was not recognized: П-хE
-- Command at 23 was not recognized: х-ПA
-- Command at 24 was not recognized: П-хA
-- Command at 27 was not recognized: х-ПA
-- Command at 29 was not recognized: КП-хA
-- Command at 32 was not recognized: П-хE
-- Command at 37 was not recognized: КП-хA
-- Command at 38 was not recognized: К{}
-- Command at 41 was not recognized: КП-хA
-- Command at 44 was not recognized: Кx-ПA
-- Command at 46 was not recognized: П-хB
-- Command at 48 was not recognized: х-П5
-- Command at 50 was not recognized: П-хd
-- Command at 52 was not recognized: х-Пd
-- Command at 54 was not recognized: х-ПC
-- Command at 55 was not recognized: х-ПE
-- Command at 62 was not recognized: К[]
-- Command at 63 was not recognized: х-ПA
-- Command at 64 was not recognized: П-х0
-- Command at 69 was not recognized: КП-хA
-- Command at 71 was not recognized: П-хd
-- Command at 75 was not recognized: х-Пd
-- Command at 76 was not recognized: КП-хA
-- Command at 77 was not recognized: П-х6
-- Command at 79 was not recognized: Кx-ПA
-- Command at 83 was not recognized: П-хC
-- Command at 87 was not recognized: П-хC
-- Command at 99 was not recognized: х-ПE
-- Command at 101 was not recognized: К[]
-- Command at 103 was not recognized: х-ПC
 - строка не похожа на команду: Начальная загрузка:
 - строка не похожа на команду: - 80888 В↑ 85633 К∨ К{} ВП 4 В↑ х-П0
 - строка не похожа на команду: - 25 х-П4

@@ -119,19 +119,19 @@
 −4     05   005  5
 
 Замечания при разборе:
-- Command at 8 was not recognized: 108
-- Command at 11 was not recognized: 108
-- Command at 17 was not recognized: 218
-- Command at 22 was not recognized: 108
-- Command at 28 was not recognized: 220
-- Command at 29 was not recognized: 186
-- Command at 31 was not recognized: 188
-- Command at 35 was not recognized: 106
-- Command at 42 was not recognized: Б/К
-- Command at 44 was not recognized: 107
-- Command at 51 was not recognized: 109
-- Command at 101 was not recognized: 186
-- Command at 102 was not recognized: 106
+- не разобрано на 08: 108
+- не разобрано на 11: 108
+- не разобрано на 17: 218
+- не разобрано на 22: 108
+- не разобрано на 28: 220
+- не разобрано на 29: 186
+- не разобрано на 31: 188
+- не разобрано на 35: 106
+- не разобрано на 42: Б/К
+- не разобрано на 44: 107
+- не разобрано на 51: 109
+- не разобрано на −1: 186
+- не разобрано на −2: 106
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.

@@ -6,6 +6,9 @@
 Теги: book, classic
 Листинг каталога: games/simulation/vozhdenie-avtomobilya-c3000.txt
 
+Осторожно:
+- другой калькулятор (C3000), не МК-61
+
 Шагов: 74 из 105
 Перед пуском: R2, R3, R4, R5, R6, R7, R8, R9, RA, RB, RD — задать значения
 

@@ -8,6 +8,9 @@
 Серия: arkticheskiy-reys
 Листинг каталога: games/simulation/arkticheskiy-reys-dolgushin-notebook.txt
 
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
+
 Шагов: 52 из 105
 Перед пуском: R0, R8, R9, RA, RB, RC, RD, RE — задать значения
 

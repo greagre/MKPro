@@ -112,13 +112,13 @@
 97     52   082  В/О
 
 Замечания при разборе:
-- Command at 39 was not recognized: П5(6)
-- Command at 42 was not recognized: 4(5)
-- Command at 56 was not recognized: 5(6)
-- Command at 63 was not recognized: ИП5(6)
-- Command at 64 was not recognized: П4(5)
-- Command at 80 was not recognized: Fo
-- Command at 92 was not recognized: 4(5)
+- не разобрано на 39: П5(6)
+- не разобрано на 42: 4(5)
+- не разобрано на 56: 5(6)
+- не разобрано на 63: ИП5(6)
+- не разобрано на 64: П4(5)
+- не разобрано на 80: Fo
+- не разобрано на 92: 4(5)
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.

@@ -82,7 +82,7 @@
 61     6A   106  ПхА
 62     6D   109  ПхД
 63     37   055  KΛ
-64     00   000  C/П
+64     50   080  C/П
 65     D8   216  КПх8
 66     34   052  K[х]
 67     B8   184  КхП8
@@ -124,8 +124,8 @@
 −3     34   052  K[х]
 −4     52   082  В/О
 
-Замечания при разборе:
-- Command at 64 was not recognized: C/П
+Подписи, приведённые к формату ядра:
+- C/П → С/П
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -309,7 +309,7 @@
 34     11   017  -
 35     6E   110  ПxE
 36     13   019  ÷
-37     00   000  F10ˣ
+37     15   021  F10ˣ
 38     6E   110  ПxE
 39     35   053  K{x}
 40     13   019  ÷
@@ -378,11 +378,13 @@
 −0     12   018  ×
 −0     52   082  В/О
 
+Подписи, приведённые к формату ядра:
+- F10ˣ → 10^X
+
 Замечания при разборе:
-- Command at 14 was not recognized: Ftgᐨ¹
-- Command at 37 was not recognized: F10ˣ
-- Command at 53 was not recognized: Fѻ
-- Command at 75 was not recognized: Fѻ
+- не разобрано на 14: Ftgᐨ¹
+- не разобрано на 53: Fѻ
+- не разобрано на 75: Fѻ
 - адрес −0 задан дважды: ÷
 - адрес −0 задан дважды: Пx2
 - адрес −0 задан дважды: ×
@@ -402,6 +404,9 @@
 Теги: book, classic, naval, variant
 Серия: arkticheskiy-reys
 Листинг каталога: games/simulation/arkticheskiy-reys-c3000.txt
+
+Осторожно:
+- другой калькулятор (C3000), не МК-61
 
 Шагов: 49 из 105
 Перед пуском: R4, R8, R9, RA, RB, RC, RD — задать значения
@@ -473,6 +478,9 @@
 Коллекция-источник: dolgushin-notebook
 Серия: arkticheskiy-reys
 Листинг каталога: games/simulation/arkticheskiy-reys-dolgushin-notebook.txt
+
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
 
 Шагов: 52 из 105
 Перед пуском: R0, R8, R9, RA, RB, RC, RD, RE — задать значения
@@ -671,6 +679,9 @@
 Раздел: simulation · тип: game
 Теги: aviation, book, classic
 Листинг каталога: games/simulation/aviatsionnyy-perelet-c3000.txt
+
+Осторожно:
+- другой калькулятор (C3000), не МК-61
 
 Шагов: 39 из 105
 Перед пуском: R4, R6, R7, R8, R9 — задать значения
@@ -899,7 +910,7 @@
 41     A9   169  КПП9
 42     65   101  Пх5
 43     01   001  1
-44     00   000  •
+44     12   018  •
 45     01   001  1
 46     12   018  х
 47     45   069  хП5
@@ -956,8 +967,8 @@
 98     0F   015  FBx
 99     52   082  В/О
 
-Замечания при разборе:
-- Command at 44 was not recognized: •
+Подписи, приведённые к формату ядра:
+- • → *
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -1189,7 +1200,7 @@
 96     52   082  В/О
 
 Замечания при разборе:
-- Command at 80 was not recognized: K
+- не разобрано на 80: K
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -1206,6 +1217,9 @@
 Теги: classic, economy
 Коллекция-источник: lordbss
 Листинг каталога: games/simulation/birzha-lordbss.txt
+
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
 
 Шагов: 105 из 105
 Перед пуском: R3, R6, R7, R9, RB, RC, RE — задать значения
@@ -1459,6 +1473,9 @@
 Теги: economy, management, manuscript
 Коллекция-источник: dolgushin-notebook
 Листинг каталога: games/simulation/bussinesman-dolgushin-notebook.txt
+
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
 
 Шагов: 56 из 105
 Перед пуском: R7, R8, R9, RA, RC, RD — задать значения
@@ -1957,9 +1974,9 @@
 −4     BE   190  КхПЕ
 
 Замечания при разборе:
-- Command at 10 was not recognized: А1
-- Command at 27 was not recognized: А0
-- Command at 63 was not recognized: А0
+- не разобрано на 10: А1
+- не разобрано на 27: А0
+- не разобрано на 63: А0
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -2089,28 +2106,28 @@
 −4     00   000  168
 
 Замечания при разборе:
-- Command at 0 was not recognized: 103
-- Command at 2 was not recognized: 168
-- Command at 13 was not recognized: 208
-- Command at 17 was not recognized: 168
-- Command at 18 was not recognized: 101
-- Command at 24 was not recognized: 109
-- Command at 27 was not recognized: Б/К
-- Command at 39 was not recognized: 108
-- Command at 40 was not recognized: 107
-- Command at 44 was not recognized: Б/К
-- Command at 47 was not recognized: 102
-- Command at 55 was not recognized: 104
-- Command at 65 was not recognized: 106
-- Command at 68 was not recognized: 105
-- Command at 72 was not recognized: 137
-- Command at 73 was not recognized: 106
-- Command at 76 was not recognized: 152
-- Command at 77 was not recognized: 106
-- Command at 80 was not recognized: 152
-- Command at 99 was not recognized: 100
-- Command at 101 was not recognized: 208
-- Command at 104 was not recognized: 168
+- не разобрано на 00: 103
+- не разобрано на 02: 168
+- не разобрано на 13: 208
+- не разобрано на 17: 168
+- не разобрано на 18: 101
+- не разобрано на 24: 109
+- не разобрано на 27: Б/К
+- не разобрано на 39: 108
+- не разобрано на 40: 107
+- не разобрано на 44: Б/К
+- не разобрано на 47: 102
+- не разобрано на 55: 104
+- не разобрано на 65: 106
+- не разобрано на 68: 105
+- не разобрано на 72: 137
+- не разобрано на 73: 106
+- не разобрано на 76: 152
+- не разобрано на 77: 106
+- не разобрано на 80: 152
+- не разобрано на 99: 100
+- не разобрано на −1: 208
+- не разобрано на −4: 168
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -2254,125 +2271,168 @@
 Коллекция-источник: dolgushin-notebook
 Листинг каталога: games/simulation/course-of-voyage-caston-city-dolgushin-notebook-2.txt
 
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
+
 Шагов: 113 из 105
 ВНИМАНИЕ: программа длиннее памяти МК-61 на 8 шагов.
-Перед пуском: R0, R6, R7, R8, R9 — задать значения
+Перед пуском: R0, R1, R2, R3, R6, R7, R8, R9, RB, RC, RD, RE — задать значения
 
 Листинг:
 адрес  hex  dec  команда
-00     00   000  П-хE
+00     6E   110  П-хE
 01     59   089  Fx>=0
 02     76   118  76
-03     00   000  П-хB
-04     00   000  П-хC
+03     6B   107  П-хB
+03     00   000  04 БП 12 - вечное топливо
+04     6C   108  П-хC
 05     11   017  -
-06     00   000  х-ПB
+06     4B   075  х-ПB
 07     5C   092  Fx<0
 08     12   018  12
-09     00   000  П-хC
+09     6C   108  П-хC
 10     21   033  F√
-11     00   000  х-ПC
+11     4C   076  х-ПC
 12     5D   093  FL0
 13     46   070  46
 14     69   105  Пх9
 15     50   080  С/П
+15     4A   074  хПA
 16     57   087  Fx≠0
 17     34   052  34
 18     5C   092  Fx<0
 19     45   069  45
-20     00   000  П-хA
+20     6A   106  П-хA
 21     50   080  С/П
 22     0E   014  В↑
 23     31   049  К|x|
 24     06   006  6
+24     00   000  Пх6 разворот руля 49 градусов, а не 5
 25     11   017  -
 26     5C   092  Fx<0
 27     20   032  20
 28     14   020  ↔
-29     00   000  П-хA
+29     6A   106  П-хA
 30     10   016  +
-31     00   000  х-ПA
+31     4A   074  х-ПA
 32     51   081  БП
 33     15   021  15
-34     00   000  П-хC
+34     6C   108  П-хC
 35     50   080  С/П
-36     00   000  П-хB
+36     6B   107  П-хB
 37     59   089  Fx>=0
 38     14   020  14
 39     14   020  ↔
-40     00   000  П-хC
+40     6C   108  П-хC
 41     10   016  +
-42     00   000  х-ПC
+42     4C   076  х-ПC
 43     51   081  БП
 44     15   021  15
 45     40   064  хП0
-46     00   000  П-хA
+46     6A   106  П-хA
 47     1C   028  Fsin
-48     00   000  П-хC
+48     6C   108  П-хC
 49     12   018  ×
-50     00   000  П-х3
+50     63   099  П-х3
+50     46   070  хП6
 51     11   017  -
-52     00   000  П-х1
+52     61   097  П-х1
 53     11   017  -
 54     44   068  хП4
-55     00   000  П-хE
+55     6E   110  П-хE
 56     10   016  +
 57     4E   078  хПE
-58     00   000  П-хA
+58     6A   106  П-хA
 59     1D   029  Fcos
-60     00   000  П-хC
+60     6C   108  П-хC
 61     12   018  ×
-62     00   000  П-х3
+62     63   099  П-х3
 63     10   016  +
-64     00   000  П-хd
+64     6D   109  П-хd
 65     10   016  +
-66     00   000  х-Пd
+66     4D   077  х-Пd
 67     98   152  Кx>=08
-68     00   000  К[]
-69     00   000  П-х6
+68     34   052  К[]
+69     66   102  П-х6
 70     13   019  /
-71     00   000  К[]
+71     34   052  К[]
 72     1C   028  Fsin
 73     3A   058  КИНВ
-74     00   000  х-П9
+74     49   073  х-П9
 75     88   136  КБП8
-76     00   000  П-хA
+76     6A   106  П-хA
 77     77   119  Кx≠07
 78     5C   092  Fx<0
 79     82   130  82
-80     00   000  П-х2
+80     62   098  П-х2
+80     47   071  хП7
+80     4C   076  хПC
 81     50   080  С/П
-82     00   000  П-хC
+82     6C   108  П-хC
 83     02   002  2
+83     00   000  5 максимальная скорость при посадке не более 50 м/с
 84     01   001  1
 85     11   017  -
 86     C7   199  Кx<07
-87     00   000  П-х4
+87     64   100  П-х4
 88     06   006  6
 89     10   016  +
 90     97   151  Кx>=07
-91     00   000  х-ПE
+91     4E   078  х-ПE
 92     45   069  хП5
 93     50   080  С/П
-94     00   000  П-х6
+94     66   102  П-х6
 95     22   034  Fx²
-96     00   000  х-ПB
-97     00   000  П-х8
+96     4B   075  х-ПB
+97     68   104  П-х8
 98     0B   011  /-/
-99     00   000  х-Пd
-−0     00   000  КП-х9
+99     4D   077  х-Пd
+−0     D9   217  КП-х9
 −1     09   009  9
-−2     00   000  х-П3
-−3     88   136  КБП8
-50     46   070  хП6
-80     47   071  хП7
-15     4A   074  хПA
-80     4C   076  хПC
-03     00   000  04 БП 12 - вечное топливо
-24     00   000  Пх6 разворот руля 49 градусов, а не 5
-83     00   000  5 максимальная скорость при посадке не более 50 м/с
 −1     00   000  F√ во втором уровне груз будет ужасно тяжелым
+−2     43   067  х-П3
+−3     88   136  КБП8
 −3     00   000  Fe^x; A4 хПE во втором уровне начнете играть с высоты 8103 м
+
+Подписи, приведённые к формату ядра:
+- П-хE → ПXE
+- П-хB → ПXB
+- П-хC → ПXC
+- х-ПB → XПB
+- П-хC → ПXC
+- х-ПC → XПC
+- П-хA → ПXA
+- П-хA → ПXA
+- х-ПA → XПA
+- П-хC → ПXC
+- П-хB → ПXB
+- П-хC → ПXC
+- х-ПC → XПC
+- П-хA → ПXA
+- П-хC → ПXC
+- П-х3 → ПX3
+- П-х1 → ПX1
+- П-хE → ПXE
+- П-хA → ПXA
+- П-хC → ПXC
+- П-х3 → ПX3
+- П-хd → ПXd
+- х-Пd → XПd
+- К[] → K[X]
+- П-х6 → ПX6
+- К[] → K[X]
+- х-П9 → XП9
+- П-хA → ПXA
+- П-х2 → ПX2
+- П-хC → ПXC
+- П-х4 → ПX4
+- х-ПE → XПE
+- П-х6 → ПX6
+- х-ПB → XПB
+- П-х8 → ПX8
+- х-Пd → XПd
+- КП-х9 → KПX9
+- х-П3 → XП3
 
 Замечания при разборе:
 - строка не похожа на команду: COURSE OF <VOYAGE> - CASTON CITY
@@ -2383,56 +2443,14 @@
 - строка не похожа на команду: Дата: 19.07.2001
 - строка не похожа на команду: Режим: переключатель Р-ГРД-Г поставить в положение "Г".
 - строка не похожа на команду: Листинг
-- Command at 0 was not recognized: П-хE
-- Command at 3 was not recognized: П-хB
-- Command at 4 was not recognized: П-хC
-- Command at 6 was not recognized: х-ПB
-- Command at 9 was not recognized: П-хC
-- Command at 11 was not recognized: х-ПC
-- Command at 20 was not recognized: П-хA
-- Command at 29 was not recognized: П-хA
-- Command at 31 was not recognized: х-ПA
-- Command at 34 was not recognized: П-хC
-- Command at 36 was not recognized: П-хB
-- Command at 40 was not recognized: П-хC
-- Command at 42 was not recognized: х-ПC
-- Command at 46 was not recognized: П-хA
-- Command at 48 was not recognized: П-хC
-- Command at 50 was not recognized: П-х3
-- Command at 52 was not recognized: П-х1
-- Command at 55 was not recognized: П-хE
-- Command at 58 was not recognized: П-хA
-- Command at 60 was not recognized: П-хC
-- Command at 62 was not recognized: П-х3
-- Command at 64 was not recognized: П-хd
-- Command at 66 was not recognized: х-Пd
-- Command at 68 was not recognized: К[]
-- Command at 69 was not recognized: П-х6
-- Command at 71 was not recognized: К[]
-- Command at 74 was not recognized: х-П9
-- Command at 76 was not recognized: П-хA
-- Command at 80 was not recognized: П-х2
-- Command at 82 was not recognized: П-хC
-- Command at 87 was not recognized: П-х4
-- Command at 91 was not recognized: х-ПE
-- Command at 94 was not recognized: П-х6
-- Command at 96 was not recognized: х-ПB
-- Command at 97 was not recognized: П-х8
-- Command at 99 was not recognized: х-Пd
-- Command at 100 was not recognized: КП-х9
-- Command at 102 was not recognized: х-П3
 - строка не похожа на команду: Исходные данные
 - строка не похожа на команду: Ввести в регистры памяти:
 - строка не похожа на команду: 1 хП0
 - строка не похожа на команду: 9,81 хП1
 - строка не похожа на команду: 5 хП3
-- адрес 50 задан дважды: хП6
-- адрес 80 задан дважды: хП7
 - строка не похожа на команду: 2100 хП8
 - строка не похожа на команду: 8 хП9
-- адрес 15 задан дважды: хПA
 - строка не похожа на команду: 1000 хПB
-- адрес 80 задан дважды: хПC
 - строка не похожа на команду: /-/ 8 00 хПd
 - строка не похожа на команду: 100 хПE
 - строка не похожа на команду: 88008 В↑ 85154 К∨ К{} ВП 4 хП2
@@ -2468,19 +2486,18 @@
 - строка не похожа на команду: |--------| 88L-ГL | 8L766L6- | 8ГСС-6-8 | 868-9
 - строка не похожа на команду: Коды
 - строка не похожа на команду: Адрес	Код	Что станет
-- Command at 3 was not recognized: 04 БП 12 - вечное топливо
-- адрес 03 задан дважды: 04 БП 12 - вечное топливо
-- Command at 24 was not recognized: Пх6 разворот руля 49 градусов, а не 5
-- адрес 24 задан дважды: Пх6 разворот руля 49 градусов, а не 5
-- Command at 83 was not recognized: 5 максимальная скорость при посадке не более 50 м/с
-- адрес 83 задан дважды: 5 максимальная скорость при посадке не более 50 м/с
-- Command at 101 was not recognized: F√ во втором уровне груз будет ужасно тяжелым
-- адрес −1 задан дважды: F√ во втором уровне груз будет ужасно тяжелым
-- Command at 103 was not recognized: Fe^x; A4 хПE во втором уровне начнете играть с высоты 8103 м
-- адрес −3 задан дважды: Fe^x; A4 хПE во втором уровне начнете играть с высоты 8103 м
 - строка не похожа на команду: Примечания
 - строка не похожа на команду: В тетради адреса после 99 записаны как "-0", "-1", "-2", "-3"; здесь они нормализованы как A0-A3.
 - строка не похожа на команду: Последний код в тетради записан как "-3 F e^x ХПE"; по смыслу это замена хвоста программы для записи высоты во втором уровне.
+- адрес 50 задан дважды: хП6
+- адрес 80 задан дважды: хП7
+- адрес 15 задан дважды: хПA
+- адрес 80 задан дважды: хПC
+- не разобрано на 03: 04 БП 12 - вечное топливо
+- не разобрано на 24: Пх6 разворот руля 49 градусов, а не 5
+- не разобрано на 83: 5 максимальная скорость при посадке не более 50 м/с
+- не разобрано на −1: F√ во втором уровне груз будет ужасно тяжелым
+- не разобрано на −3: Fe^x; A4 хПE во втором уровне начнете играть с высоты 8103 м
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -2730,8 +2747,8 @@
 −3     30   048  30
 
 Замечания при разборе:
-- Command at 1 was not recognized: К
-- Command at 3 was not recognized: Н
+- не разобрано на 01: К
+- не разобрано на 03: Н
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -3131,6 +3148,9 @@
 Серия: elite
 Листинг каталога: games/simulation/elite-2-dolgushin-notebook.txt
 
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
+
 Шагов: 102 из 105
 Перед пуском: R1, R2, R3, RD — задать значения
 
@@ -3254,6 +3274,9 @@
 Коллекция-источник: dolgushin-notebook
 Серия: elite
 Листинг каталога: games/simulation/elite-dolgushin-notebook.txt
+
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
 
 Шагов: 105 из 105
 Перед пуском: R0, R1, R2, R7, R8, R9, RA, RB, RC, RD, RE — задать значения
@@ -3382,99 +3405,102 @@
 Серия: elite
 Листинг каталога: games/simulation/elite-iii-coriolis-dolgushin-notebook-2.txt
 
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
+
 Шагов: 105 из 105
-Перед пуском: R4, R7, R8 — задать значения
+Перед пуском: R0, R4, R6, R7, R8, R9, RB, RC, RD, RE — задать значения
 
 Листинг:
 адрес  hex  dec  команда
 00     A9   169  КПП9
-01     00   000  П-хd
-02     00   000  П-х9
+01     6D   109  П-хd
+02     69   105  П-х9
 03     50   080  С/П
 04     77   119  Кx≠07
 05     C8   200  Кx<08
 06     0B   011  /-/
-07     00   000  х-ПA
+07     4A   074  х-ПA
 08     50   080  С/П
-09     00   000  КП-хA
-10     00   000  К{}
+09     DA   218  КП-хA
+10     35   053  К{}
 11     10   016  +
-12     00   000  Кx-ПA
+12     BA   186  Кx-ПA
 13     8B   139  КБПB
-14     00   000  П-хC
+14     6C   108  П-хC
 15     57   087  Fx≠0
 16     01   001  01
-17     00   000  П-хE
+17     6E   110  П-хE
 18     59   089  Fx>=0
 19     57   087  57
 20     05   005  5
 21     50   080  С/П
 22     04   004  4
-23     00   000  х-ПA
-24     00   000  П-хA
+23     4A   074  х-ПA
+24     6A   106  П-хA
 25     01   001  1
 26     11   017  -
-27     00   000  х-ПA
+27     4A   074  х-ПA
 28     3B   059  КСЧ
-29     00   000  КП-хA
+29     DA   218  КП-хA
 30     59   089  Fx>=0
 31     53   083  53
-32     00   000  П-хE
+32     6E   110  П-хE
 33     11   017  -
 34     5C   092  Fx<0
 35     24   036  24
 36     25   037  F↻
-37     00   000  КП-хA
-38     00   000  К{}
+37     DA   218  КП-хA
+38     35   053  К{}
 39     12   018  ×
 40     0E   014  В↑
-41     00   000  КП-хA
+41     DA   218  КП-хA
 42     11   017  -
 43     0B   011  /-/
-44     00   000  Кx-ПA
+44     BA   186  Кx-ПA
 45     14   020  ↔
-46     00   000  П-хB
+46     6B   107  П-хB
 47     12   018  ×
-48     00   000  х-П5
+48     45   069  х-П5
 49     12   018  ×
-50     00   000  П-хd
+50     6D   109  П-хd
 51     10   016  +
-52     00   000  х-Пd
+52     4D   077  х-Пd
 53     0D   013  Сх
-54     00   000  х-ПC
-55     00   000  х-ПE
+54     4C   076  х-ПC
+55     4E   078  х-ПE
 56     8B   139  КБПB
 57     25   037  F↻
 58     3B   059  КСЧ
 59     21   033  F√
 60     04   004  4
 61     12   018  ×
-62     00   000  К[]
-63     00   000  х-ПA
-64     00   000  П-х0
+62     34   052  К[]
+63     4A   074  х-ПA
+64     60   096  П-х0
 65     50   080  С/П
 66     57   087  Fx≠0
 67     54   084  54
 68     09   009  9
-69     00   000  КП-хA
+69     DA   218  КП-хA
 70     12   018  ×
-71     00   000  П-хd
+71     6D   109  П-хd
 72     14   020  ↔
 73     11   017  -
 74     98   152  Кx>=08
-75     00   000  х-Пd
-76     00   000  КП-хA
-77     00   000  П-х6
+75     4D   077  х-Пd
+76     DA   218  КП-хA
+77     66   102  П-х6
 78     10   016  +
-79     00   000  Кx-ПA
+79     BA   186  Кx-ПA
 80     51   081  БП
 81     53   083  53
 82     A9   169  КПП9
-83     00   000  П-хC
+83     6C   108  П-хC
 84     77   119  Кx≠07
 85     51   081  БП
 86     03   003  03
-87     00   000  П-хC
+87     6C   108  П-хC
 88     5E   094  Fx=0
 89     A4   164  A4
 90     25   037  F↻
@@ -3486,12 +3512,51 @@
 96     0E   014  В↑
 97     64   100  Пх4
 98     12   018  ×
-99     00   000  х-ПE
+99     4E   078  х-ПE
 −0     14   020  ↔
-−1     00   000  К[]
+−1     34   052  К[]
 −2     31   049  К|x|
-−3     00   000  х-ПC
+−3     4C   076  х-ПC
 −4     52   082  В/О
+
+Подписи, приведённые к формату ядра:
+- П-хd → ПXd
+- П-х9 → ПX9
+- х-ПA → XПA
+- КП-хA → KПXA
+- К{} → K{X}
+- Кx-ПA → KXПA
+- П-хC → ПXC
+- П-хE → ПXE
+- х-ПA → XПA
+- П-хA → ПXA
+- х-ПA → XПA
+- КП-хA → KПXA
+- П-хE → ПXE
+- КП-хA → KПXA
+- К{} → K{X}
+- КП-хA → KПXA
+- Кx-ПA → KXПA
+- П-хB → ПXB
+- х-П5 → XП5
+- П-хd → ПXd
+- х-Пd → XПd
+- х-ПC → XПC
+- х-ПE → XПE
+- К[] → K[X]
+- х-ПA → XПA
+- П-х0 → ПX0
+- КП-хA → KПXA
+- П-хd → ПXd
+- х-Пd → XПd
+- КП-хA → KПXA
+- П-х6 → ПX6
+- Кx-ПA → KXПA
+- П-хC → ПXC
+- П-хC → ПXC
+- х-ПE → XПE
+- К[] → K[X]
+- х-ПC → XПC
 
 Замечания при разборе:
 - строка не похожа на команду: ELITE III (CORiOLiS)
@@ -3499,43 +3564,6 @@
 - строка не похожа на команду: Дата: март 2001 г.
 - строка не похожа на команду: Номер в тетради: 57
 - строка не похожа на команду: Источник: https://vk.com/wall-115251268_126; вторая тетрадь Александра Долгушина "Мои игры МК-61", Рисунок (15).jpg; Рисунок (16).jpg; Рисунок (17).jpg
-- Command at 1 was not recognized: П-хd
-- Command at 2 was not recognized: П-х9
-- Command at 7 was not recognized: х-ПA
-- Command at 9 was not recognized: КП-хA
-- Command at 10 was not recognized: К{}
-- Command at 12 was not recognized: Кx-ПA
-- Command at 14 was not recognized: П-хC
-- Command at 17 was not recognized: П-хE
-- Command at 23 was not recognized: х-ПA
-- Command at 24 was not recognized: П-хA
-- Command at 27 was not recognized: х-ПA
-- Command at 29 was not recognized: КП-хA
-- Command at 32 was not recognized: П-хE
-- Command at 37 was not recognized: КП-хA
-- Command at 38 was not recognized: К{}
-- Command at 41 was not recognized: КП-хA
-- Command at 44 was not recognized: Кx-ПA
-- Command at 46 was not recognized: П-хB
-- Command at 48 was not recognized: х-П5
-- Command at 50 was not recognized: П-хd
-- Command at 52 was not recognized: х-Пd
-- Command at 54 was not recognized: х-ПC
-- Command at 55 was not recognized: х-ПE
-- Command at 62 was not recognized: К[]
-- Command at 63 was not recognized: х-ПA
-- Command at 64 was not recognized: П-х0
-- Command at 69 was not recognized: КП-хA
-- Command at 71 was not recognized: П-хd
-- Command at 75 was not recognized: х-Пd
-- Command at 76 was not recognized: КП-хA
-- Command at 77 was not recognized: П-х6
-- Command at 79 was not recognized: Кx-ПA
-- Command at 83 was not recognized: П-хC
-- Command at 87 was not recognized: П-хC
-- Command at 99 was not recognized: х-ПE
-- Command at 101 was not recognized: К[]
-- Command at 103 was not recognized: х-ПC
 - строка не похожа на команду: Начальная загрузка:
 - строка не похожа на команду: - 80888 В↑ 85633 К∨ К{} ВП 4 В↑ х-П0
 - строка не похожа на команду: - 25 х-П4
@@ -3744,6 +3772,9 @@
 Теги: book, classic, economy, management, modernized, variant
 Коллекция-источник: poloczek-spiele-1983
 Листинг каталога: games/simulation/hamurabi-poloczek-1983.txt
+
+Осторожно:
+- современная переработка, не оригинал 1980-х
 
 Шагов: 105 из 105
 Перед пуском: R1, R2, R4, R6, R7, R8, RA, RB, RD, RE — задать значения
@@ -3983,38 +4014,38 @@
 −4     65   101  65
 
 Замечания при разборе:
-- Command at 0 was not recognized: 103
-- Command at 5 was not recognized: 137
-- Command at 10 was not recognized: 151
-- Command at 14 was not recognized: 151
-- Command at 17 was not recognized: 100
-- Command at 21 was not recognized: 160
-- Command at 23 was not recognized: 134
-- Command at 29 was not recognized: 101
-- Command at 32 was not recognized: 108
-- Command at 37 was not recognized: 208
-- Command at 39 was not recognized: 137
-- Command at 40 was not recognized: 109
-- Command at 45 was not recognized: 109
-- Command at 47 was not recognized: 208
-- Command at 51 was not recognized: 137
-- Command at 57 was not recognized: 108
-- Command at 60 was not recognized: 208
-- Command at 64 was not recognized: 160
-- Command at 66 was not recognized: 107
-- Command at 69 was not recognized: 134
-- Command at 70 was not recognized: 208
-- Command at 71 was not recognized: Б/К
-- Command at 72 was not recognized: 130
-- Command at 73 was not recognized: 102
-- Command at 75 was not recognized: 108
-- Command at 78 was not recognized: 193
-- Command at 82 was not recognized: 106
-- Command at 86 was not recognized: 134
-- Command at 88 was not recognized: 160
-- Command at 90 was not recognized: 134
-- Command at 93 was not recognized: 106
-- Command at 99 was not recognized: 109
+- не разобрано на 00: 103
+- не разобрано на 05: 137
+- не разобрано на 10: 151
+- не разобрано на 14: 151
+- не разобрано на 17: 100
+- не разобрано на 21: 160
+- не разобрано на 23: 134
+- не разобрано на 29: 101
+- не разобрано на 32: 108
+- не разобрано на 37: 208
+- не разобрано на 39: 137
+- не разобрано на 40: 109
+- не разобрано на 45: 109
+- не разобрано на 47: 208
+- не разобрано на 51: 137
+- не разобрано на 57: 108
+- не разобрано на 60: 208
+- не разобрано на 64: 160
+- не разобрано на 66: 107
+- не разобрано на 69: 134
+- не разобрано на 70: 208
+- не разобрано на 71: Б/К
+- не разобрано на 72: 130
+- не разобрано на 73: 102
+- не разобрано на 75: 108
+- не разобрано на 78: 193
+- не разобрано на 82: 106
+- не разобрано на 86: 134
+- не разобрано на 88: 160
+- не разобрано на 90: 134
+- не разобрано на 93: 106
+- не разобрано на 99: 109
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -4143,39 +4174,39 @@
 −4     65   101  65
 
 Замечания при разборе:
-- Command at 0 was not recognized: 103
-- Command at 3 was not recognized: 137
-- Command at 10 was not recognized: 151
-- Command at 14 was not recognized: 151
-- Command at 17 was not recognized: 100
-- Command at 21 was not recognized: 160
-- Command at 23 was not recognized: 134
-- Command at 29 was not recognized: 101
-- Command at 32 was not recognized: 108
-- Command at 37 was not recognized: 208
-- Command at 39 was not recognized: 137
-- Command at 40 was not recognized: 109
-- Command at 45 was not recognized: 109
-- Command at 47 was not recognized: 208
-- Command at 51 was not recognized: 137
-- Command at 57 was not recognized: 108
-- Command at 60 was not recognized: 208
-- Command at 64 was not recognized: 160
-- Command at 66 was not recognized: 107
-- Command at 69 was not recognized: 134
-- Command at 70 was not recognized: 208
-- Command at 71 was not recognized: Б/К
-- Command at 72 was not recognized: 130
-- Command at 73 was not recognized: 102
-- Command at 75 was not recognized: 108
-- Command at 78 was not recognized: 193
-- Command at 82 was not recognized: 106
-- Command at 86 was not recognized: 134
-- Command at 88 was not recognized: 160
-- Command at 90 was not recognized: 134
-- Command at 93 was not recognized: 106
-- Command at 98 was not recognized: 101
-- Command at 101 was not recognized: 109
+- не разобрано на 00: 103
+- не разобрано на 03: 137
+- не разобрано на 10: 151
+- не разобрано на 14: 151
+- не разобрано на 17: 100
+- не разобрано на 21: 160
+- не разобрано на 23: 134
+- не разобрано на 29: 101
+- не разобрано на 32: 108
+- не разобрано на 37: 208
+- не разобрано на 39: 137
+- не разобрано на 40: 109
+- не разобрано на 45: 109
+- не разобрано на 47: 208
+- не разобрано на 51: 137
+- не разобрано на 57: 108
+- не разобрано на 60: 208
+- не разобрано на 64: 160
+- не разобрано на 66: 107
+- не разобрано на 69: 134
+- не разобрано на 70: 208
+- не разобрано на 71: Б/К
+- не разобрано на 72: 130
+- не разобрано на 73: 102
+- не разобрано на 75: 108
+- не разобрано на 78: 193
+- не разобрано на 82: 106
+- не разобрано на 86: 134
+- не разобрано на 88: 160
+- не разобрано на 90: 134
+- не разобрано на 93: 106
+- не разобрано на 98: 101
+- не разобрано на −1: 109
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -4190,6 +4221,9 @@
 Раздел: simulation · тип: game
 Теги: aviation, book, classic
 Листинг каталога: games/simulation/ispytateli-vertoletov-c3000.txt
+
+Осторожно:
+- другой калькулятор (C3000), не МК-61
 
 Шагов: 62 из 105
 Перед пуском: R0, R2, R3, R4, R5, R6, R8, R9, RA, RB, RC, RD — задать значения
@@ -4523,7 +4557,7 @@
 39     40   064  хП0
 40     22   034  Fx^2
 41     22   034  Fx^2
-42     00   000  Fx^10
+42     15   021  Fx^10
 43     6C   108  ПхС
 44     64   100  Пх4
 45     13   019  ÷
@@ -4579,8 +4613,8 @@
 95     62   098  Пх2
 96     52   082  В/О
 
-Замечания при разборе:
-- Command at 42 was not recognized: Fx^10
+Подписи, приведённые к формату ядра:
+- Fx^10 → 10^X
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -4655,7 +4689,7 @@
 49     13   019  ÷
 50     13   019  ÷
 51     54   084  Кноп
-52     00   000  Ftg^-1
+52     1B   027  Ftg^-1
 53     D7   215  КПх7
 54     12   018  х
 55     0F   015  FBx
@@ -4699,8 +4733,8 @@
 93     12   018  x
 94     52   082  В/О
 
-Замечания при разборе:
-- Command at 52 was not recognized: Ftg^-1
+Подписи, приведённые к формату ядра:
+- Ftg^-1 → arctg
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -7350,6 +7384,9 @@
 Серия: kosmicheskaya-posadka
 Листинг каталога: games/simulation/kosmicheskaya-posadka-brp4.txt
 
+Осторожно:
+- модуль расширения БРП-4, коды из PDF и бинарника
+
 Шагов: 98 из 105
 Перед пуском: R6, R7, R9, RA, RB, RC, RD — задать значения
 
@@ -7467,6 +7504,10 @@
 Раздел: simulation · тип: game
 Теги: classic, space
 Листинг каталога: games/simulation/kosmicheskaya-posadka-c3000.txt
+
+Осторожно:
+- другой калькулятор (C3000), не МК-61
+- модуль расширения БРП-4, коды из PDF и бинарника
 
 Шагов: 98 из 105
 Перед пуском: R6, R7, R9, RA, RB, RC, RD — задать значения
@@ -7797,6 +7838,9 @@
 Теги: manuscript, space
 Коллекция-источник: dolgushin-notebook
 Листинг каталога: games/simulation/kosmicheskiy-perelet-dolgushin-notebook.txt
+
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
 
 Шагов: 98 из 105
 Перед пуском: R0, R1, R2, R4, R5, R6, RC, RD, RE — задать значения
@@ -8680,6 +8724,9 @@
 Коллекция-источник: dolgushin-notebook
 Листинг каталога: games/simulation/manager-dolgushin-notebook.txt
 
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
+
 Шагов: 101 из 105
 Перед пуском: R0, R3, R9, RB, RD, RE — задать значения
 
@@ -8843,7 +8890,7 @@
 33     5C   092  Fx<o
 34     37   055  37
 35     0C   012  ВП
-36     00   000  •
+36     12   018  •
 37     09   009  9
 38     4E   078  хПЕ
 39     6A   106  ПхА
@@ -8894,8 +8941,8 @@
 84     32   050  Кзн
 85     52   082  В/О
 
-Замечания при разборе:
-- Command at 36 was not recognized: •
+Подписи, приведённые к формату ядра:
+- • → *
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -8985,10 +9032,10 @@
 64     5C   092  Fx<o
 65     00   000  00
 66     0C   012  ВП
-67     00   000  •
+67     12   018  •
 
-Замечания при разборе:
-- Command at 67 was not recognized: •
+Подписи, приведённые к формату ядра:
+- • → *
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -9005,18 +9052,21 @@
 Коллекция-источник: renat-menkov-notebook
 Листинг каталога: games/simulation/menedzher-renat-notebook-2.txt
 
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
+
 Шагов: 66 из 105
-Перед пуском: R1, RA, RD — задать значения
+Перед пуском: R1, RD, RE — задать значения
 
 Листинг:
 адрес  hex  dec  команда
-00     00   000  П-хd
-01     00   000  П-хE
+00     6D   109  П-хd
+01     6E   110  П-хE
 02     0A   010  .
 03     34   052  К[x]
-04     00   000  х-Пd
+04     4D   077  х-Пd
 05     50   080  С/П
-06     00   000  х-ПA
+06     4A   074  х-ПA
 07     3B   059  КСЧ
 08     0E   014  В↑
 09     3B   059  КСЧ
@@ -9028,12 +9078,12 @@
 15     0A   010  .
 16     0A   010  .
 17     34   052  К[x]
-18     00   000  х-ПВ
+18     4B   075  х-ПВ
 19     DA   218  КПхA
 20     10   016  +
 21     34   052  К[x]
-22     00   000  х-ПС
-23     00   000  П-хВ
+22     4C   076  х-ПС
+23     6B   107  П-хВ
 24     50   080  С/П
 25     57   087  Fx≠0
 26     56   086  56
@@ -9044,10 +9094,10 @@
 31     57   087  Fx≠0
 32     23   035  23
 33     DA   218  КПхA
-34     00   000  П-хd
-35     00   000  П-хС
+34     6D   109  П-хd
+35     6C   108  П-хС
 36     10   016  +
-37     00   000  х-Пd
+37     4D   077  х-Пd
 38     51   081  БП
 39     00   000  00
 40     DA   218  КПхA
@@ -9058,42 +9108,42 @@
 45     20   032  Fπ
 46     10   016  +
 47     BA   186  КхПA
-48     00   000  П-хd
-49     00   000  П-хС
+48     6D   109  П-хd
+49     6C   108  П-хС
 50     11   017  -
-51     00   000  х-Пd
+51     4D   077  х-Пd
 52     51   081  БП
 53     61   097  61
 54     DA   218  КПхA
 55     35   053  К{x}
 56     57   087  Fx≠0
 57     00   000  00
-58     00   000  П-хd
-59     00   000  П-хВ
+58     6D   109  П-хd
+59     6B   107  П-хВ
 60     10   016  +
-61     00   000  х-Пd
+61     4D   077  х-Пd
 62     5C   092  Fx<0
 63     00   000  00
 64     0C   012  ВП
 65     0A   010  ,
 
-Замечания при разборе:
-- Command at 0 was not recognized: П-хd
-- Command at 1 was not recognized: П-хE
-- Command at 4 was not recognized: х-Пd
-- Command at 6 was not recognized: х-ПA
-- Command at 18 was not recognized: х-ПВ
-- Command at 22 was not recognized: х-ПС
-- Command at 23 was not recognized: П-хВ
-- Command at 34 was not recognized: П-хd
-- Command at 35 was not recognized: П-хС
-- Command at 37 was not recognized: х-Пd
-- Command at 48 was not recognized: П-хd
-- Command at 49 was not recognized: П-хС
-- Command at 51 was not recognized: х-Пd
-- Command at 58 was not recognized: П-хd
-- Command at 59 was not recognized: П-хВ
-- Command at 61 was not recognized: х-Пd
+Подписи, приведённые к формату ядра:
+- П-хd → ПXd
+- П-хE → ПXE
+- х-Пd → XПd
+- х-ПA → XПA
+- х-ПВ → XПВ
+- х-ПС → XПС
+- П-хВ → ПXВ
+- П-хd → ПXd
+- П-хС → ПXС
+- х-Пd → XПd
+- П-хd → ПXd
+- П-хС → ПXС
+- х-Пd → XПd
+- П-хd → ПXd
+- П-хВ → ПXВ
+- х-Пd → XПd
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -9109,6 +9159,9 @@
 Теги: manuscript, naval
 Коллекция-источник: dolgushin-notebook
 Листинг каталога: games/simulation/morskoe-puteshestvie-dolgushin-notebook.txt
+
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
 
 Шагов: 77 из 105
 Перед пуском: R0, R1, R5, R6, R7, R8, RA, RC, RE — задать значения
@@ -9208,6 +9261,9 @@
 Коллекция-источник: romanovskis-1987
 Серия: lunar-landing
 Листинг каталога: games/simulation/myagkaya-posadka-romanovskis-1987.txt
+
+Осторожно:
+- современная переработка, не оригинал 1980-х
 
 Шагов: 105 из 105
 Перед пуском: R0, R1, R2, R6, R7, R8, R9, RB, RC, RD, RE — задать значения
@@ -9581,6 +9637,9 @@
 Теги: —
 Листинг каталога: games/simulation/opasnyy-reys.txt
 
+Осторожно:
+- модуль расширения БРП-4, коды из PDF и бинарника
+
 Шагов: 98 из 105
 Перед пуском: R1, R3, R6, R8, RA, RB — задать значения
 
@@ -9821,6 +9880,9 @@
 Серия: termodirizhabl
 Листинг каталога: games/simulation/perelet-na-termodirizhable-brp4.txt
 
+Осторожно:
+- модуль расширения БРП-4, коды из PDF и бинарника
+
 Шагов: 98 из 105
 Перед пуском: R0, R1, R2, R3, R4, R5, R6, R7, R9, RA, RB, RC, RD — задать значения
 
@@ -9961,7 +10023,7 @@
 12     3A   058  Кинв
 13     68   104  Пх8
 14     14   020  ↔
-15     00   000  C/П
+15     50   080  C/П
 16     15   021  F10^x
 17     6C   108  ПхС
 18     12   018  х
@@ -10052,8 +10114,8 @@
 −3     3B   059  Ксч
 −4     4C   076  хПС
 
-Замечания при разборе:
-- Command at 15 was not recognized: C/П
+Подписи, приведённые к формату ядра:
+- C/П → С/П
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -10068,6 +10130,9 @@
 Раздел: simulation · тип: game
 Теги: modernized, naval
 Листинг каталога: games/simulation/podvodnaya-lodka-lazarev.txt
+
+Осторожно:
+- современная переработка, не оригинал 1980-х
 
 Шагов: 105 из 105
 Перед пуском: R0, R1, R5, R6, R7, R8, R9, RA, RB, RD, RE — задать значения
@@ -10196,6 +10261,9 @@
 Серия: podvodnye-apparaty
 Листинг каталога: games/simulation/podvodnoe-puteshestvie-brp4.txt
 
+Осторожно:
+- модуль расширения БРП-4, коды из PDF и бинарника
+
 Шагов: 98 из 105
 Перед пуском: R2, R3, R4, R5, R6, R7, R8, R9, RA, RB, RC, RD — задать значения
 
@@ -10313,6 +10381,9 @@
 Раздел: simulation · тип: game
 Теги: book, classic, naval
 Листинг каталога: games/simulation/podvodnoe-puteshestvie-c3000.txt
+
+Осторожно:
+- другой калькулятор (C3000), не МК-61
 
 Шагов: 70 из 105
 Перед пуском: R0, R1, R2, R3, R4, R5, R6, R7, R8, R9, RA, RB, RC — задать значения
@@ -10506,7 +10577,7 @@
 93     08   008  08
 
 Замечания при разборе:
-- Command at 64 was not recognized: Fx>0
+- не разобрано на 64: Fx>0
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -10631,6 +10702,9 @@
 Раздел: simulation · тип: game
 Теги: aviation, book, classic
 Листинг каталога: games/simulation/polet-na-avialaynere-c3000.txt
+
+Осторожно:
+- другой калькулятор (C3000), не МК-61
 
 Шагов: 58 из 105
 Перед пуском: R1, R2, R3, R4, R5, R6, R7, R8, R9, RA, RB, RC, RD — задать значения
@@ -11163,6 +11237,9 @@
 Серия: lunar-landing
 Листинг каталога: games/simulation/posadka-na-lunu-c3000.txt
 
+Осторожно:
+- другой калькулятор (C3000), не МК-61
+
 Шагов: 60 из 105
 Перед пуском: R0, R4, R5, R6, R7, R8, R9, RA, RB, RC — задать значения
 
@@ -11495,7 +11572,7 @@
 21     D1   209  КПх1
 22     AE   174  КППЕ
 23     21   033  F√
-24     00   000  Ftg^-1
+24     1B   027  Ftg^-1
 25     63   099  Пх3
 26     12   018  х
 27     02   002  2
@@ -11574,8 +11651,8 @@
 −0     0F   015  FBx
 −1     52   082  В/О
 
-Замечания при разборе:
-- Command at 24 was not recognized: Ftg^-1
+Подписи, приведённые к формату ядра:
+- Ftg^-1 → arctg
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -11710,6 +11787,9 @@
 Коллекция-источник: dolgushin-notebook
 Листинг каталога: games/simulation/rock-star-ate-my-hamster-dolgushin-notebook.txt
 
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
+
 Шагов: 105 из 105
 Перед пуском: R2, R4, R9, RA, RD — задать значения
 
@@ -11728,7 +11808,7 @@
 10     62   098  Пх2
 11     13   019  ÷
 12     DE   222  КПхE
-13     00   000  K{}
+13     35   053  K{}
 14     12   018  ×
 15     69   105  Пх9
 16     21   033  F√
@@ -11821,8 +11901,8 @@
 −3     21   033  F√
 −4     52   082  В/О
 
-Замечания при разборе:
-- Command at 13 was not recognized: K{}
+Подписи, приведённые к формату ядра:
+- K{} → K{X}
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -12230,7 +12310,7 @@
 21     11   017  -
 22     6E   110  ПxE
 23     13   019  ÷
-24     00   000  F10ˣ
+24     15   021  F10ˣ
 25     48   072  xП8
 26     12   018  ×
 27     12   018  ×
@@ -12312,11 +12392,13 @@
 −3     13   019  ÷
 −4     52   082  В/О
 
+Подписи, приведённые к формату ядра:
+- F10ˣ → 10^X
+
 Замечания при разборе:
-- Command at 9 was not recognized: Ftgᐨ¹
-- Command at 24 was not recognized: F10ˣ
-- Command at 56 was not recognized: Fѻ
-- Command at 79 was not recognized: Fѻ
+- не разобрано на 09: Ftgᐨ¹
+- не разобрано на 56: Fѻ
+- не разобрано на 79: Fѻ
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -12331,6 +12413,9 @@
 Раздел: simulation · тип: game
 Теги: book, classic, naval
 Листинг каталога: games/simulation/shkola-kapitanov-na-podvodnykh-krylyakh-c3000.txt
+
+Осторожно:
+- другой калькулятор (C3000), не МК-61
 
 Шагов: 34 из 105
 Перед пуском: R4, R7, R8, R9, RA, RB, RC — задать значения
@@ -12385,6 +12470,9 @@
 Раздел: simulation · тип: game
 Теги: aviation, book, classic
 Листинг каталога: games/simulation/shkola-vysshego-pilotazha-c3000.txt
+
+Осторожно:
+- другой калькулятор (C3000), не МК-61
 
 Шагов: 87 из 105
 Перед пуском: R0, R1, R2, R3, R4, R5, R6, R7, R8, R9, RA, RB, RC, RD — задать значения
@@ -12612,6 +12700,9 @@
 Коллекция-источник: dolgushin-notebook
 Листинг каталога: games/simulation/sim-city-dolgushin-notebook.txt
 
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
+
 Шагов: 105 из 105
 Перед пуском: R2, R5, RA, RB, RC, RD — задать значения
 
@@ -12738,6 +12829,9 @@
 Коллекция-источник: dolgushin-notebook
 Листинг каталога: games/simulation/space-travel-dolgushin-notebook.txt
 
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
+
 Шагов: 105 из 105
 Перед пуском: R0, R1, R7, R9, RA, RB, RD — задать значения
 
@@ -12863,6 +12957,9 @@
 Теги: book, classic, modernized, space, variant
 Коллекция-источник: poloczek-spiele-1983
 Листинг каталога: games/simulation/star-trek-classen-1983.txt
+
+Осторожно:
+- современная переработка, не оригинал 1980-х
 
 Шагов: 105 из 105
 Перед пуском: R0, R1, R2, R3, R4, R5, R6, R8, R9, RA, RB, RD, RE — задать значения
@@ -13126,13 +13223,13 @@
 02     61   097  ИП1
 03     61   097  ИП1
 04     61   097  ИП1
-05     00   000  С\П
+05     50   080  С\П
 06     6B   107  ИПВ
 07     0E   014  В^
 08     02   002  2
 09     00   000  0
 10     11   017  -
-11     00   000  Fx>/=0
+11     59   089  Fx>/=0
 12     19   025  19
 13     08   008  8
 14     00   000  0
@@ -13140,104 +13237,106 @@
 16     01   001  1
 17     03   003  3
 18     3A   058  КИНВ
-19     00   000  С\П
+19     50   080  С\П
 20     6B   107  ИПВ
 21     0E   014  В^
 22     01   001  1
 23     10   016  +
 24     4B   075  ПВ
-25     00   000  С\П
+25     50   080  С\П
 26     0D   013  СХ
 27     6C   108  ИПС
 28     0E   014  В^
 29     01   001  1
 30     00   000  0
 31     11   017  -
-32     00   000  Fx>/=0
+32     59   089  Fx>/=0
 33     35   053  35
 34     63   099  ИП3
-35     00   000  С\П
+35     50   080  С\П
 36     6D   109  ИПD
 37     0E   014  В^
 38     01   001  1
 39     05   005  5
 40     11   017  -
-41     00   000  Fx>/=0
+41     59   089  Fx>/=0
 42     44   068  44
 43     63   099  ИП3
-44     00   000  С\П
+44     50   080  С\П
 45     68   104  ИП8
 46     0E   014  В^
 47     01   001  1
 48     00   000  0
 49     11   017  -
-50     00   000  Fx>/=0
+50     59   089  Fx>/=0
 52     53   083  53
 53     63   099  ИП3
-54     00   000  СП
-55     00   000  ВО
+54     50   080  СП
+55     52   082  ВО
 56     6D   109  ИПD
 57     0E   014  В^
 58     02   002  2
 59     11   017  -
 60     4D   077  ПD
-61     00   000  C/П
+61     50   080  C/П
 62     66   102  ИП6
 63     67   103  ИП7
 64     08   008  8
-65     00   000  ВО
+65     52   082  ВО
 66     6C   108  ИПС
 67     0E   014  В^
 68     02   002  2
 69     11   017  -
 70     4C   076  ПС
 71     00   000  О
-72     00   000  СП
+72     50   080  СП
 73     69   105  ИП9
 74     6A   106  ИПА
-75     00   000  ВО
+75     52   082  ВО
 76     68   104  ИП8
 77     0E   014  В^
 78     03   003  3
 79     11   017  -
 80     48   072  П8
-81     00   000  С\П
+81     50   080  С\П
 82     64   100  ИП4
-83     00   000  С\П
-84     00   000  ВО
+83     50   080  С\П
+84     52   082  ВО
 85     6B   107  ИПВ
 86     0E   014  В^
 87     10   016  10
 88     11   017  -
-89     00   000  Fx>/=0
+89     59   089  Fx>/=0
 90     93   147  93
 91     62   098  ИП2
 92     41   065  П1
-93     00   000  ВО
+93     52   082  ВО
+
+Подписи, приведённые к формату ядра:
+- С\П → С/П
+- Fx>/=0 → Fx>=0
+- С\П → С/П
+- С\П → С/П
+- Fx>/=0 → Fx>=0
+- С\П → С/П
+- Fx>/=0 → Fx>=0
+- С\П → С/П
+- Fx>/=0 → Fx>=0
+- СП → С/П
+- ВО → В/О
+- C/П → С/П
+- ВО → В/О
+- СП → С/П
+- ВО → В/О
+- С\П → С/П
+- С\П → С/П
+- ВО → В/О
+- Fx>/=0 → Fx>=0
+- ВО → В/О
 
 Замечания при разборе:
-- Command at 5 was not recognized: С\П
-- Command at 11 was not recognized: Fx>/=0
-- Command at 19 was not recognized: С\П
-- Command at 25 was not recognized: С\П
-- Command at 32 was not recognized: Fx>/=0
-- Command at 35 was not recognized: С\П
-- Command at 41 was not recognized: Fx>/=0
-- Command at 44 was not recognized: С\П
-- Command at 50 was not recognized: Fx>/=0
 - строка не похожа на команду: 51
-- Command at 54 was not recognized: СП
-- Command at 55 was not recognized: ВО
-- Command at 61 was not recognized: C/П
-- Command at 65 was not recognized: ВО
-- Command at 71 was not recognized: О
-- Command at 72 was not recognized: СП
-- Command at 75 was not recognized: ВО
-- Command at 81 was not recognized: С\П
-- Command at 83 was not recognized: С\П
-- Command at 84 was not recognized: ВО
-- Command at 89 was not recognized: Fx>/=0
-- Command at 93 was not recognized: ВО
+- не разобрано на 71: О
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -13423,61 +13522,64 @@
 Коллекция-источник: renat-menkov-notebook
 Листинг каталога: games/simulation/trenazher-dlya-letchikov-renat-notebook-2.txt
 
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
+
 Шагов: 35 из 105
-Перед пуском: регистры задавать не нужно
+Перед пуском: R9, RA — задать значения
 
 Листинг:
 адрес  hex  dec  команда
-00     00   000  П-х9
-01     00   000  х-П2
-02     00   000  х-П7
+00     69   105  П-х9
+01     42   066  х-П2
+02     47   071  х-П7
 03     13   019  /
 04     02   002  2
 05     0A   010  .
 06     21   033  F√
-07     00   000  х-П3
-08     00   000  х-П6
+07     43   067  х-П3
+08     46   070  х-П6
 09     0A   010  .
 10     10   016  +
-11     00   000  х-П1
+11     41   065  х-П1
 12     0A   010  .
-13     00   000  П-хA
+13     6A   106  П-хA
 14     BA   186  КхПA
-15     00   000  х-ПA
-16     00   000  х-П9
+15     4A   074  х-ПA
+16     49   073  х-П9
 17     11   017  -
 18     5E   094  Fx=0
 19     21   033  21
-20     00   000  х-П0
+20     40   064  х-П0
 21     50   080  С/П
 22     B6   182  КхП6
-23     00   000  х-П6
+23     46   070  х-П6
 24     03   003  3
 25     11   017  -
 26     59   089  Fx>=0
 27     01   001  01
 28     0D   013  Сх
-29     00   000  П-х6
+29     66   102  П-х6
 30     B5   181  КхП5
-31     00   000  х-П5
+31     45   069  х-П5
 32     50   080  С/П
 33     51   081  БП
 34     00   000  00
 
-Замечания при разборе:
-- Command at 0 was not recognized: П-х9
-- Command at 1 was not recognized: х-П2
-- Command at 2 was not recognized: х-П7
-- Command at 7 was not recognized: х-П3
-- Command at 8 was not recognized: х-П6
-- Command at 11 was not recognized: х-П1
-- Command at 13 was not recognized: П-хA
-- Command at 15 was not recognized: х-ПA
-- Command at 16 was not recognized: х-П9
-- Command at 20 was not recognized: х-П0
-- Command at 23 was not recognized: х-П6
-- Command at 29 was not recognized: П-х6
-- Command at 31 was not recognized: х-П5
+Подписи, приведённые к формату ядра:
+- П-х9 → ПX9
+- х-П2 → XП2
+- х-П7 → XП7
+- х-П3 → XП3
+- х-П6 → XП6
+- х-П1 → XП1
+- П-хA → ПXA
+- х-ПA → XПA
+- х-П9 → XП9
+- х-П0 → XП0
+- х-П6 → XП6
+- П-х6 → ПX6
+- х-П5 → XП5
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -13495,6 +13597,9 @@
 Коллекция-источник: lordbss
 Серия: lunar-landing
 Листинг каталога: games/simulation/uchebnyy-polyot.txt
+
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
 
 Шагов: 100 из 105
 Перед пуском: R0, R1, R6, R8, RB, RC, RD, RE — задать значения
@@ -13743,6 +13848,9 @@
 Коллекция-источник: chramov
 Серия: lunar-landing
 Листинг каталога: games/simulation/uchebnyy-polyot-modernized.txt
+
+Осторожно:
+- современная переработка, не оригинал 1980-х
 
 Шагов: 105 из 105
 Перед пуском: R0, R2, R6, RA, RB, RC, RD, RE — задать значения
@@ -13994,6 +14102,9 @@
 Раздел: simulation · тип: game
 Теги: book, classic, space
 Листинг каталога: games/simulation/upravlenie-raketoy-c3000.txt
+
+Осторожно:
+- другой калькулятор (C3000), не МК-61
 
 Шагов: 77 из 105
 Перед пуском: R0, R1, R2, R3, R4, R6, R7, R8, R9, RA, RB, RC, RD — задать значения
@@ -14574,12 +14685,12 @@
 94     5C   092  Fx<o
 95     00   000  00
 96     0C   012  ВП
-97     00   000  •
+97     12   018  •
 98     64   100  Пх4
 99     50   080  С/П
 
-Замечания при разборе:
-- Command at 97 was not recognized: •
+Подписи, приведённые к формату ядра:
+- • → *
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -15003,7 +15114,7 @@
 33     59   089  Fx≥o
 34     A0   160  A0
 35     01   001  1
-36     00   000  •
+36     12   018  •
 37     00   000  0
 38     01   001  1
 39     66   102  Пх6
@@ -15073,8 +15184,8 @@
 −3     51   081  БП
 −4     94   148  94
 
-Замечания при разборе:
-- Command at 36 was not recognized: •
+Подписи, приведённые к формату ядра:
+- • → *
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -15130,7 +15241,7 @@
 30     39   057  39
 31     61   097  Пх1
 32     64   100  Пх4
-33     00   000  Fcos^-1
+33     1A   026  Fcos^-1
 34     11   017  -
 35     5C   092  Fx<o
 36     39   057  39
@@ -15201,8 +15312,8 @@
 −1     51   081  БП
 −2     20   032  20
 
-Замечания при разборе:
-- Command at 33 was not recognized: Fcos^-1
+Подписи, приведённые к формату ядра:
+- Fcos^-1 → arccos
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
@@ -15470,6 +15581,9 @@
 Теги: book, classic
 Листинг каталога: games/simulation/vozhdenie-avtomobilya-c3000.txt
 
+Осторожно:
+- другой калькулятор (C3000), не МК-61
+
 Шагов: 74 из 105
 Перед пуском: R2, R3, R4, R5, R6, R7, R8, R9, RA, RB, RD — задать значения
 
@@ -15563,6 +15677,9 @@
 Раздел: simulation · тип: game
 Теги: book, classic, naval
 Листинг каталога: games/simulation/vysshie-morekhodnye-kursy-c3000.txt
+
+Осторожно:
+- другой калькулятор (C3000), не МК-61
 
 Шагов: 46 из 105
 Перед пуском: R0, R2, R3, R4, R5, R6, R8, R9, RB — задать значения
@@ -15701,7 +15818,7 @@
 61     40   064  хП0
 62     69   105  Пх9
 63     13   019  ÷
-64     00   000  Fsin^-1
+64     19   025  Fsin^-1
 65     60   096  Пх0
 66     02   002  2
 67     13   019  ÷
@@ -15730,8 +15847,8 @@
 90     51   081  БП
 91     18   024  18
 
-Замечания при разборе:
-- Command at 64 was not recognized: Fsin^-1
+Подписи, приведённые к формату ядра:
+- Fsin^-1 → arcsin
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.

@@ -6,6 +6,9 @@
 Теги: aviation, book, classic
 Листинг каталога: games/simulation/aviatsionnyy-perelet-c3000.txt
 
+Осторожно:
+- другой калькулятор (C3000), не МК-61
+
 Шагов: 39 из 105
 Перед пуском: R4, R6, R7, R8, R9 — задать значения
 

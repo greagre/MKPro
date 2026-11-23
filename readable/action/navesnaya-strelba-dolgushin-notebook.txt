@@ -8,6 +8,9 @@
 Серия: navesnaya-strelba
 Листинг каталога: games/action/navesnaya-strelba-dolgushin-notebook.txt
 
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
+
 Шагов: 49 из 105
 Перед пуском: R1, R4, R7, R8, R9, RC, RE — задать значения
 

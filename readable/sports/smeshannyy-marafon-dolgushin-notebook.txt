@@ -7,6 +7,9 @@
 Коллекция-источник: dolgushin-notebook
 Листинг каталога: games/sports/smeshannyy-marafon-dolgushin-notebook.txt
 
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
+
 Шагов: 36 из 105
 Перед пуском: R0, R1, R2, R3, RB, RC, RD — задать значения
 

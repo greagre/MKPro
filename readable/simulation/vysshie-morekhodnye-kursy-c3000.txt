@@ -6,6 +6,9 @@
 Теги: book, classic, naval
 Листинг каталога: games/simulation/vysshie-morekhodnye-kursy-c3000.txt
 
+Осторожно:
+- другой калькулятор (C3000), не МК-61
+
 Шагов: 46 из 105
 Перед пуском: R0, R2, R3, R4, R5, R6, R8, R9, RB — задать значения
 

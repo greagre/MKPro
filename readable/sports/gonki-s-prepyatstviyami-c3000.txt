@@ -6,6 +6,9 @@
 Теги: book, classic, racing
 Листинг каталога: games/sports/gonki-s-prepyatstviyami-c3000.txt
 
+Осторожно:
+- другой калькулятор (C3000), не МК-61
+
 Шагов: 42 из 105
 Перед пуском: RA, RB, RC, RD — задать значения
 

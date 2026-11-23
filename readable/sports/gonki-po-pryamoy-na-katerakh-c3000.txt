@@ -6,6 +6,9 @@
 Теги: book, classic, naval, racing
 Листинг каталога: games/sports/gonki-po-pryamoy-na-katerakh-c3000.txt
 
+Осторожно:
+- другой калькулятор (C3000), не МК-61
+
 Шагов: 25 из 105
 Перед пуском: R4, R7, R8, R9, RB — задать значения
 

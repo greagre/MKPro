@@ -7,6 +7,9 @@
 Коллекция-источник: dolgushin-notebook
 Листинг каталога: games/simulation/kosmicheskiy-perelet-dolgushin-notebook.txt
 
+Осторожно:
+- листинг перепечатан с фото, часть кодов могла не сохраниться
+
 Шагов: 98 из 105
 Перед пуском: R0, R1, R2, R4, R5, R6, RC, RD, RE — задать значения
 

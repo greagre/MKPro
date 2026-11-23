@@ -119,39 +119,39 @@
 −4     65   101  65
 
 Замечания при разборе:
-- Command at 0 was not recognized: 103
-- Command at 3 was not recognized: 137
-- Command at 10 was not recognized: 151
-- Command at 14 was not recognized: 151
-- Command at 17 was not recognized: 100
-- Command at 21 was not recognized: 160
-- Command at 23 was not recognized: 134
-- Command at 29 was not recognized: 101
-- Command at 32 was not recognized: 108
-- Command at 37 was not recognized: 208
-- Command at 39 was not recognized: 137
-- Command at 40 was not recognized: 109
-- Command at 45 was not recognized: 109
-- Command at 47 was not recognized: 208
-- Command at 51 was not recognized: 137
-- Command at 57 was not recognized: 108
-- Command at 60 was not recognized: 208
-- Command at 64 was not recognized: 160
-- Command at 66 was not recognized: 107
-- Command at 69 was not recognized: 134
-- Command at 70 was not recognized: 208
-- Command at 71 was not recognized: Б/К
-- Command at 72 was not recognized: 130
-- Command at 73 was not recognized: 102
-- Command at 75 was not recognized: 108
-- Command at 78 was not recognized: 193
-- Command at 82 was not recognized: 106
-- Command at 86 was not recognized: 134
-- Command at 88 was not recognized: 160
-- Command at 90 was not recognized: 134
-- Command at 93 was not recognized: 106
-- Command at 98 was not recognized: 101
-- Command at 101 was not recognized: 109
+- не разобрано на 00: 103
+- не разобрано на 03: 137
+- не разобрано на 10: 151
+- не разобрано на 14: 151
+- не разобрано на 17: 100
+- не разобрано на 21: 160
+- не разобрано на 23: 134
+- не разобрано на 29: 101
+- не разобрано на 32: 108
+- не разобрано на 37: 208
+- не разобрано на 39: 137
+- не разобрано на 40: 109
+- не разобрано на 45: 109
+- не разобрано на 47: 208
+- не разобрано на 51: 137
+- не разобрано на 57: 108
+- не разобрано на 60: 208
+- не разобрано на 64: 160
+- не разобрано на 66: 107
+- не разобрано на 69: 134
+- не разобрано на 70: 208
+- не разобрано на 71: Б/К
+- не разобрано на 72: 130
+- не разобрано на 73: 102
+- не разобрано на 75: 108
+- не разобрано на 78: 193
+- не разобрано на 82: 106
+- не разобрано на 86: 134
+- не разобрано на 88: 160
+- не разобрано на 90: 134
+- не разобрано на 93: 106
+- не разобрано на 98: 101
+- не разобрано на −1: 109
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.

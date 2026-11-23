@@ -118,9 +118,9 @@
 −4     BE   190  КхПЕ
 
 Замечания при разборе:
-- Command at 10 was not recognized: А1
-- Command at 27 was not recognized: А0
-- Command at 63 was not recognized: А0
+- не разобрано на 10: А1
+- не разобрано на 27: А0
+- не разобрано на 63: А0
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.

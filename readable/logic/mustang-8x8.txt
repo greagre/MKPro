@@ -111,32 +111,32 @@
 97     00   000  138
 
 Замечания при разборе:
-- Command at 5 was not recognized: 123
-- Command at 9 was not recognized: 123
-- Command at 10 was not recognized: 108
-- Command at 11 was not recognized: 220
-- Command at 21 was not recognized: 155
-- Command at 25 was not recognized: 155
-- Command at 28 was not recognized: 203
-- Command at 51 was not recognized: 235
-- Command at 54 was not recognized: 105
-- Command at 58 was not recognized: 153
-- Command at 62 was not recognized: 188
-- Command at 63 was not recognized: 105
-- Command at 65 was not recognized: 160
-- Command at 69 was not recognized: 188
-- Command at 70 was not recognized: 106
-- Command at 73 was not recognized: 173
-- Command at 75 was not recognized: 173
-- Command at 77 was not recognized: 173
-- Command at 79 was not recognized: 173
-- Command at 80 was not recognized: 106
-- Command at 81 was not recognized: Б/К
-- Command at 82 was not recognized: 133
-- Command at 83 was not recognized: 109
-- Command at 88 was not recognized: 107
-- Command at 90 was not recognized: 105
-- Command at 97 was not recognized: 138
+- не разобрано на 05: 123
+- не разобрано на 09: 123
+- не разобрано на 10: 108
+- не разобрано на 11: 220
+- не разобрано на 21: 155
+- не разобрано на 25: 155
+- не разобрано на 28: 203
+- не разобрано на 51: 235
+- не разобрано на 54: 105
+- не разобрано на 58: 153
+- не разобрано на 62: 188
+- не разобрано на 63: 105
+- не разобрано на 65: 160
+- не разобрано на 69: 188
+- не разобрано на 70: 106
+- не разобрано на 73: 173
+- не разобрано на 75: 173
+- не разобрано на 77: 173
+- не разобрано на 79: 173
+- не разобрано на 80: 106
+- не разобрано на 81: Б/К
+- не разобрано на 82: 133
+- не разобрано на 83: 109
+- не разобрано на 88: 107
+- не разобрано на 90: 105
+- не разобрано на 97: 138
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.

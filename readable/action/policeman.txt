@@ -15,6 +15,7 @@
 Листинг:
 адрес  hex  dec  команда
 00     00   000  сво
+00     14   020  ↔
 01     00   000  бо
 02     00   000  дн
 03     00   000  ая
@@ -119,17 +120,15 @@
 −2     12   018  x
 −3     10   016  +
 −4     3A   058  Кинв
-00     14   020  ↔
 
 Замечания при разборе:
-- Command at 0 was not recognized: сво
-- Command at 1 was not recognized: бо
-- Command at 2 was not recognized: дн
-- Command at 3 was not recognized: ая
-- Command at 4 was not recognized: _
-- Command at 5 was not recognized: зо
-- Command at 6 was not recognized: на
-- адрес 00 задан дважды: ↔
+- не разобрано на 00: сво
+- не разобрано на 01: бо
+- не разобрано на 02: дн
+- не разобрано на 03: ая
+- не разобрано на 04: _
+- не разобрано на 05: зо
+- не разобрано на 06: на
 
 Коды получены разбором ядра MKPro (tests/emulator/mk61.cjs),
 ожидаемый экран здесь не указан: он берётся из отдельного прогона.
